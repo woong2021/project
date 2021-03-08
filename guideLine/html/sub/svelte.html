@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../../assets/" target="_blank" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <main id="container">
+        <section id="characteristic">
+            <h2>Svelte 특징</h2>
+            <ol>
+                <li>
+                    <p>Diffing 이나  Overhead 가 일어나지 않아 처리속도 가 빠르다.</p>
+                    <ul>
+                        <li>diffing : "가상돔(Virtual DOM)"을 생성하고 비교하는 행위</li>
+                        <li>Overhead : 어떤 처리를 위해 들어가는, 간접적인 시간이나 메모리</li>
+                    </ul>
+                </li>
+                <li>애플리케이션 상태의 변화가 DOM에 자동으로 반영 (반응성)</li>
+            </ol>
+        </section>
+        <section id="disadvantages">
+            <h2>Svelte 단점</h2>
+            <ul>
+                <li>작은 생태계 (2019년 4월 3릴리즈)</li>
+                <li>runtime으로 동작하지 않기 때문에 CDN 미제공</li>
+                <li>IE 미지원</li>
+            </ul>
+        </section>
+        <section id="disadvantages">
+            <h2>Svelte 명령어</h2>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">npx degit sveltejs/template [프로젝트명]</th>
+                        <td>프로젝트 생성및 설치</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">code .</th>
+                        <td>현재 프로젝트 열기</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">npm i</th>
+                        <td>프로젝트 모듈 설치</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">npm run dev</th>
+                        <td>프로젝트 실행</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer id="footer">
+
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#header").load("../layout/header.html");  // 원하는 파일 경로를 삽입하면 된다
+            $("#footer").load("../layout/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        });
+    </script>
+</body>
+</html>

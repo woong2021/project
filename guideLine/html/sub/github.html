@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../../assets/" target="_blank" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+
+    </header>
+    <main id="container">
+        <section id="gitCli">
+            <h2>GIT (CLI)</h2>
+            <p>- gitBash에서 작업 진행</p>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$pwd</th>
+                        <td>현재 나의 위치 확인</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$ls</th>
+                        <td>현재 위치에 디렉토리및 파일 확인</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$cd</th>
+                        <td>디렉토리 선택</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$cd ..</th>
+                        <td>상위 디렉토리 선택</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$git init</th>
+                        <td>git으로 버전관리 할 프로젝트 선택(git 초기화)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$ls -al</th>
+                        <td>현재 위치에 디렉토리및 파일 확인(숨은 디렉토리까지)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$git add [파일명]</th>
+                        <td>"commit" 할 파일 선택</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$ git add .</th>
+                        <td>"commit" 할 파일 전체 선택</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$git commit -m "[메모]"</th>
+                        <td>선택한 파일들을 한 묶음으로 만들고 메모 입력</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$git log</th>
+                        <td>생성한 커밋 보기</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="remote">
+            <h2>원격 저장소에 올리기</h2>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$git remote add [저장할 주소]</th>
+                        <td>$git remote add origin https://github.com/woong2021/project.git</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">git remote -v</th>
+                        <td>원격저장소 연결상태 확인</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$git push origin master</th>
+                        <td>gitHub 사이트에 commit 하기</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="clone">
+            <h2>원격 저장소에 받아오기</h2>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$git clone [받아올 주소]</th>
+                        <td>
+                            <p class="clone"></p>
+                            <p>$git clone https://github.com/woong2021/project.git .</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">$rm -rf [디렉토리명]</th>
+                        <td>디렉토리 삭제</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="Error">
+            <h2>Error</h2>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">LF will be replaced by CRLF</th>
+                        <td>"git config --global core.autocrlf true" 입력</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

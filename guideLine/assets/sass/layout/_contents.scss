@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// *----------------------------
+//	Contents
+// ----------------------------*
+
+/* Contents */
+#container{
+    margin: 0 auto;
+    width: 1000px;
+
+    #clone{
+        .clone{
+            @include imagePush;
+        }
+    }
+}

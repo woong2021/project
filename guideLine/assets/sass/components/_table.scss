@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// *----------------------------
+//	Table
+// ----------------------------*
+
+/* Table */
+.default-table{
+    margin-bottom: 20px;
+    border: 1px solid;
+    width: 100%;
+
+    tr{
+        th, td{
+            padding: 10px;
+            border: 1px solid;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        th{
+            background: $gray;
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/* Header */
+/* Contents */
+#container { margin: 0 auto; width: 1000px; }
+#container #clone .clone { background: url("../images/img-git-01.png") no-repeat; height: 400px; }
+
+/* Footer */
+/* Button */
+/* Bullet */
+/* Common */
+h1 { font-size: 32px; }
+
+h2 { margin-bottom: 15px; padding: 15px 0; border-bottom: 2px solid #000000; font-size: 30px; font-weight: 600; }
+
+h3 { font-size: 28px; }
+
+h4 { font-size: 26px; }
+
+h5 { font-size: 24px; }
+
+h6 { font-size: 22px; }
+
+ol { position: relative; left: 30px; list-style: decimal-leading-zero; }
+
+/* Form */
+/* Table */
+.default-table { margin-bottom: 20px; border: 1px solid; width: 100%; }
+.default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: nowrap; }
+.default-table tr th { background: #cccccc; font-weight: 400; }
+
+/*# sourceMappingURL=style.css.map */
