@@ -37,6 +37,12 @@ var app = (function () {
     function detach(node) {
         node.parentNode.removeChild(node);
     }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
     function element(name) {
         return document.createElement(name);
     }
@@ -309,6 +315,15 @@ var app = (function () {
         dispatch_dev('SvelteDOMSetData', { node: text, data });
         text.data = data;
     }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
     function validate_slots(name, slot, keys) {
         for (const slot_key of Object.keys(slot)) {
             if (!~keys.indexOf(slot_key)) {
@@ -340,7 +355,13 @@ var app = (function () {
 
     const file = "src\\App.svelte";
 
-    // (35:2) {:else}
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[8] = list[i];
+    	return child_ctx;
+    }
+
+    // (42:2) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -348,7 +369,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "No name!!";
-    			add_location(div, file, 35, 4, 519);
+    			add_location(div, file, 42, 4, 664);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -363,14 +384,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(35:2) {:else}",
+    		source: "(42:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:2) {#if toggle}
+    // (40:2) {#if toggle}
     function create_if_block(ctx) {
     	let div;
     	let t0;
@@ -383,7 +404,7 @@ var app = (function () {
     			t0 = text("Hello ");
     			t1 = text(/*name*/ ctx[0]);
     			t2 = text("!");
-    			add_location(div, file, 33, 4, 480);
+    			add_location(div, file, 40, 4, 625);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -403,7 +424,42 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(33:2) {#if toggle}",
+    		source: "(40:2) {#if toggle}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (46:4) {#each fruits as fruit}
+    function create_each_block(ctx) {
+    	let li;
+    	let t_value = /*fruit*/ ctx[8] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file, 46, 6, 734);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*fruits*/ 8 && t_value !== (t_value = /*fruit*/ ctx[8] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(46:4) {#each fruits as fruit}",
     		ctx
     	});
 
@@ -429,6 +485,10 @@ var app = (function () {
     	let t9;
     	let button1;
     	let t11;
+    	let t12;
+    	let ul;
+    	let t13;
+    	let button2;
     	let mounted;
     	let dispose;
 
@@ -439,6 +499,13 @@ var app = (function () {
 
     	let current_block_type = select_block_type(ctx);
     	let if_block = current_block_type(ctx);
+    	let each_value = /*fruits*/ ctx[3];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
 
     	const block = {
     		c: function create() {
@@ -462,18 +529,30 @@ var app = (function () {
     			button1.textContent = "Toggle";
     			t11 = space();
     			if_block.c();
+    			t12 = space();
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t13 = space();
+    			button2 = element("button");
+    			button2.textContent = "Eat it!!";
     			attr_dev(h1, "class", "svelte-1e9puaw");
-    			add_location(h1, file, 19, 2, 196);
-    			add_location(p, file, 20, 2, 221);
+    			add_location(h1, file, 26, 2, 341);
+    			add_location(p, file, 27, 2, 366);
     			if (img.src !== (img_src_value = "")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*name*/ ctx[0]);
-    			add_location(img, file, 21, 2, 236);
+    			add_location(img, file, 28, 2, 381);
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 22, 2, 264);
-    			add_location(button0, file, 24, 2, 327);
-    			add_location(button1, file, 25, 2, 373);
+    			add_location(input, file, 30, 2, 430);
+    			add_location(button0, file, 31, 2, 472);
+    			add_location(button1, file, 32, 2, 518);
+    			add_location(ul, file, 44, 2, 695);
+    			add_location(button2, file, 49, 2, 773);
     			attr_dev(main, "class", "svelte-1e9puaw");
-    			add_location(main, file, 18, 0, 187);
+    			add_location(main, file, 25, 0, 332);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -498,12 +577,22 @@ var app = (function () {
     			append_dev(main, button1);
     			append_dev(main, t11);
     			if_block.m(main, null);
+    			append_dev(main, t12);
+    			append_dev(main, ul);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			append_dev(main, t13);
+    			append_dev(main, button2);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
-    					listen_dev(button0, "click", /*assign*/ ctx[3], false, false, false),
-    					listen_dev(button1, "click", /*click_handler*/ ctx[5], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[6]),
+    					listen_dev(button0, "click", /*assign*/ ctx[4], false, false, false),
+    					listen_dev(button1, "click", /*click_handler*/ ctx[7], false, false, false),
+    					listen_dev(button2, "click", /*deleteFruit*/ ctx[5], false, false, false)
     				];
 
     				mounted = true;
@@ -529,8 +618,32 @@ var app = (function () {
 
     				if (if_block) {
     					if_block.c();
-    					if_block.m(main, null);
+    					if_block.m(main, t12);
     				}
+    			}
+
+    			if (dirty & /*fruits*/ 8) {
+    				each_value = /*fruits*/ ctx[3];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
     			}
     		},
     		i: noop,
@@ -538,6 +651,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			if_block.d();
+    			destroy_each(each_blocks, detaching);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -557,7 +671,7 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let { name } = $$props;
+    	let name = "world";
     	let age = 38;
 
     	//바인드
@@ -568,7 +682,14 @@ var app = (function () {
 
     	let toggle = false;
 
-    	const writable_props = ["name"];
+    	//반복문 예시
+    	let fruits = ["Apple", "Banana", "Cherry", "Orange", "Mango"];
+
+    	function deleteFruit() {
+    		$$invalidate(3, fruits = fruits.slice(1));
+    	}
+
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
@@ -583,29 +704,42 @@ var app = (function () {
     		$$invalidate(2, toggle = !toggle);
     	};
 
-    	$$self.$$set = $$props => {
-    		if ("name" in $$props) $$invalidate(0, name = $$props.name);
-    	};
-
-    	$$self.$capture_state = () => ({ name, age, assign, toggle });
+    	$$self.$capture_state = () => ({
+    		name,
+    		age,
+    		assign,
+    		toggle,
+    		fruits,
+    		deleteFruit
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ("name" in $$props) $$invalidate(0, name = $$props.name);
     		if ("age" in $$props) $$invalidate(1, age = $$props.age);
     		if ("toggle" in $$props) $$invalidate(2, toggle = $$props.toggle);
+    		if ("fruits" in $$props) $$invalidate(3, fruits = $$props.fruits);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name, age, toggle, assign, input_input_handler, click_handler];
+    	return [
+    		name,
+    		age,
+    		toggle,
+    		fruits,
+    		assign,
+    		deleteFruit,
+    		input_input_handler,
+    		click_handler
+    	];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -613,21 +747,6 @@ var app = (function () {
     			options,
     			id: create_fragment.name
     		});
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-
-    		if (/*name*/ ctx[0] === undefined && !("name" in props)) {
-    			console.warn("<App> was created without expected prop 'name'");
-    		}
-    	}
-
-    	get name() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 

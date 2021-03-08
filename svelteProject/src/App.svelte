@@ -1,5 +1,5 @@
 <script>
-  export let name;
+  let name = "world";
   let age = 38;
 
   //바인드
@@ -10,9 +10,16 @@
 
   let toggle = false;
 
-  //조건문
+  //조건문 예시
   if (toggle) {
   } else {
+  }
+
+  //반복문 예시
+  let fruits = ["Apple", "Banana", "Cherry", "Orange", "Mango"];
+
+  function deleteFruit() {
+    fruits = fruits.slice(1);
   }
 </script>
 
@@ -20,8 +27,8 @@
   <h1>Hello {name}!</h1>
   <p>{age}</p>
   <img src="" alt={name} />
-  <input type="text" bind:value={name} />
   <!-- bind: 양방향 -->
+  <input type="text" bind:value={name} />
   <button on:click={assign}> Assign </button>
   <button
     on:click={() => {
@@ -35,6 +42,12 @@
   {:else}
     <div>No name!!</div>
   {/if}
+  <ul>
+    {#each fruits as fruit}
+      <li>{fruit}</li>
+    {/each}
+  </ul>
+  <button on:click={deleteFruit}> Eat it!! </button>
 </main>
 
 <style>
