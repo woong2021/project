@@ -16,6 +16,13 @@
     height: 400px;
 }
 
+@mixin captionPush($directory: "projectitem"){
+    counter-reset: num;
+    counter-increment: num;
+    background: url("images/capture/capture-"+ $directory + "-" + counter(num) + ".png") no-repeat;
+    height: 250px;
+}
+
 // *----------------------------
 //	gradient
 // ----------------------------*
