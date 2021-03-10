@@ -32,10 +32,31 @@
     <main>
         <section id="container">
             <section>
-                <h2>HTML5</h2>
-                <h3>Reset.css</h3>
-                <article class="explanation-box">
-                    <a href="https://www.jsdelivr.com/package/npm/reset-css">사이트 바로가기</a>
+                <h2>JQUERY</h2>
+                <h3>기본태그(동적)</h3>
+                <article>
+                    <xmp>
+$(document).on("click", "[클래스 & 아이디 & 속성]", function(){
+
+});
+                    </xmp>
+                </article>
+                <h3>클릭시 특정앨리먼트로 이동</h3>
+                <article>
+                    <xmp>
+<span class="gallery">gallery</span>
+<section id="image">
+    <article>
+        <img src="" alt="일본여행">
+    </article>
+</section>
+
+$(document).on("click", ".gallery", function(){
+    const move = $("#image").offset().top;
+    
+    $('html, body').animate({scrollTop : move}, 300);
+});
+                    </xmp>   
                 </article>
             </section>
         </section>

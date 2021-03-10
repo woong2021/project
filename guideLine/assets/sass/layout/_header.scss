@@ -6,7 +6,44 @@
 
 /* Header */
 header {
+    position: sticky;
     border: 1px solid;
-    width: 100%;
-    min-height: 100px;
+    background: $white;
+    top: 0;
+    height: 100px;
+
+    section{
+        margin: 0 auto;
+        width: 1000px;
+        height: 100px;
+        line-height: 100px;
+
+        h1{
+            display:inline-block;
+        }
+        nav{
+            &#menuList{
+                display:flex;
+                width: 70%;
+                float: right;
+    
+                div{
+                    width: 120px;
+                    text-align: center;
+                }
+            }
+        }
+
+        aside{
+            &.Quick{
+                position: fixed;
+                border: 1px solid;
+                width: 100px;
+                height: 200px;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+   
 }
