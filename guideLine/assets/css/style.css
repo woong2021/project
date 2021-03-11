@@ -25,11 +25,18 @@ footer { border: 1px solid; width: 100%; min-height: 100px; }
 /* Button */
 /* Bullet */
 /* Common */
+/* Font-face */
+@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url("../fonts/NanumGothic-Regular.eot"); src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 700; src: url("../fonts/NanumGothic-Bold.eot"); src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
+body, table, div, p { font-family: 'Nanum Gothic'; font-size: 16px; }
+
+/* H tag */
 h1 { font-size: 32px; }
 
 h2 { margin-bottom: 15px; padding: 15px 0; border-bottom: 2px solid #000000; font-size: 30px; font-weight: 600; }
 
-h3 { display: inline-block; margin: 5px 0; padding: 5px 20px; background: #333333; font-size: 28px; color: #ffffff; }
+h3 { display: inline-block; margin: 5px 0; padding: 10px 20px; background: #333333; font-size: 18px; color: #ffffff; }
 
 h4 { font-size: 26px; }
 
@@ -39,11 +46,13 @@ h6 { font-size: 22px; }
 
 ol { position: relative; left: 30px; list-style: decimal-leading-zero; }
 
-xmp, .explanation-box { padding: 10px 20px; border: 1px solid; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+xmp, .explanation-box { margin: 15px 0; padding: 10px 20px; border: 1px solid; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.bold { font-weight: 900; color: brown; }
 
 /* Form */
 /* Table */
-.default-table { margin-bottom: 20px; border: 1px solid; width: 100%; }
+.default-table { margin-top: 15px; margin-bottom: 20px; border: 1px solid; width: 100%; }
 .default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: nowrap; }
 .default-table tr th { background: #cccccc; font-weight: 400; }
 

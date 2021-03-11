@@ -18,3 +18,8 @@
 - [index.html] quick 영역, slide 영역 프로토 작업
 - [jquery.html] 신규페이지 생성 및 컨텐츠 업데이트
 - [htm.html] 컨텐츠 업데이트
+
+### 2021.03.11
+
+- [공통] header, footer include 작업
+- [svelte.html] "선언적랜더링" 컨텐츠 업데이트
