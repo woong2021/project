@@ -1,4 +1,6 @@
 <script>
+  import Header from "./layout/Header.svelte";
+  import Footer from "./layout/Footer.svelte";
   let name = "world";
   let age = 38;
 
@@ -23,6 +25,7 @@
   }
 </script>
 
+<{Header} />
 <main>
   <h1>Hello {name}!</h1>
   <p>{age}</p>
@@ -49,13 +52,19 @@
   </ul>
   <button on:click={deleteFruit}> Eat it!! </button>
 </main>
+<Footer />
 
-<style>
+<style lang="scss">
   main {
     text-align: center;
     padding: 1em;
     max-width: 240px;
     margin: 0 auto;
+    min-height: 740px;
+
+    p {
+      border: 1px solid;
+    }
   }
 
   h1 {
