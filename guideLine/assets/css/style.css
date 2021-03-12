@@ -1,67 +1,308 @@
 /* Header */
-header { position: -webkit-sticky; position: sticky; border: 1px solid; background: #ffffff; top: 0; height: 100px; }
-header section { margin: 0 auto; width: 1000px; height: 100px; line-height: 100px; }
-header section h1 { display: inline-block; }
-header section nav#menuList { display: -webkit-box; display: -ms-flexbox; display: flex; width: 70%; float: right; }
-header section nav#menuList div { width: 120px; text-align: center; }
-header section aside.Quick { position: fixed; border: 1px solid; width: 100px; height: 200px; bottom: 0; right: 0; }
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  border-bottom: 2px solid;
+  background: #ffffff;
+  top: 0;
+  height: 100px;
+  z-index: 1;
+}
+header section {
+  margin: 0 auto;
+  width: 1000px;
+  height: 100px;
+  line-height: 100px;
+}
+header section h1 {
+  display: inline-block;
+}
+header section nav#menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  float: right;
+}
+header section nav#menuList div {
+  width: 120px;
+  text-align: center;
+}
 
 /* Contents */
-#sliderContainer { border: 1px solid; width: 100%; height: 400px; }
-#sliderContainer .post-wrapper .post { font-size: 40px; font-weight: 700; }
-@media (min-width: 320px) { #sliderContainer .post-wrapper .post { width: 100%; height: 30vh; } }
-@media (min-width: 768px) { #sliderContainer .post-wrapper .post { width: 1920px; height: 400px; } }
-#sliderContainer .post-wrapper .post:nth-child(2) { color: red; }
-#sliderContainer .post-wrapper .post:nth-child(3) { color: green; }
-#sliderContainer .post-wrapper .post:nth-child(4) { color: blue; }
-#sliderContainer .post-wrapper .post:nth-child(5) { color: orange; }
-#sliderContainer .post-wrapper .post:nth-child(6) { color: black; }
+#sliderContainer {
+  border: 1px solid;
+  width: 100%;
+  height: 400px;
+}
+#sliderContainer .post-wrapper .post {
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (min-width: 320px) {
+  #sliderContainer .post-wrapper .post {
+    width: 100%;
+    height: 30vh;
+  }
+}
+@media (min-width: 768px) {
+  #sliderContainer .post-wrapper .post {
+    width: 1920px;
+    height: 400px;
+  }
+}
+#sliderContainer .post-wrapper .post:nth-child(2) {
+  color: red;
+}
+#sliderContainer .post-wrapper .post:nth-child(3) {
+  color: orange;
+}
+#sliderContainer .post-wrapper .post:nth-child(4) {
+  color: yellow;
+}
+#sliderContainer .post-wrapper .post:nth-child(5) {
+  color: green;
+}
+#sliderContainer .post-wrapper .post:nth-child(6) {
+  color: blue;
+}
+#sliderContainer .post-wrapper .post:nth-child(7) {
+  color: Indigo;
+}
+#sliderContainer .post-wrapper .post:nth-child(8) {
+  color: purple;
+}
 
-#container { margin: 30px auto; width: 1000px; }
-#container section.projectList { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 10px 0 20px; width: 100%; }
-#container section.projectList .project-item { margin-right: 10px; margin-bottom: 10px; border: 1px solid; height: 250px; }
-@media (min-width: 320px) { #container section.projectList .project-item { width: 100%; } }
-@media (min-width: 768px) { #container section.projectList .project-item { width: 240px; } }
-#container section.projectList .project-item:nth-child(4n) { margin-right: 0; }
-#container section.projectList .project-item figure img { width: 100%; height: 170px; }
-#container section.projectList .project-item figure figcaption { margin-top: 20px; text-align: center; }
-#container #clone .clone { background: url("../images/img-git-01.png") no-repeat; height: 400px; }
+aside.Quick {
+  position: fixed;
+  padding-bottom: 20px;
+  border: 1px solid;
+  background: #ffffff;
+  width: 130px;
+  height: auto;
+  bottom: 10px;
+  right: 10px;
+}
+aside.Quick h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #cccccc;
+  background: #000000;
+  color: #ffffff;
+}
+aside.Quick ul {
+  margin: 0 auto;
+  border: 1px solid;
+  background: #cccccc;
+  width: 80%;
+}
+aside.Quick ul li {
+  margin: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#container {
+  margin: 30px auto;
+  width: 1000px;
+}
+#container section.projectList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+#container section.projectList .project-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  height: 250px;
+}
+@media (min-width: 320px) {
+  #container section.projectList .project-item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #container section.projectList .project-item {
+    width: 240px;
+  }
+}
+#container section.projectList .project-item:nth-child(4n) {
+  margin-right: 0;
+}
+#container section.projectList .project-item figure img {
+  width: 100%;
+  height: 170px;
+}
+#container section.projectList .project-item figure figcaption {
+  margin-top: 20px;
+  text-align: center;
+}
+#container #clone .clone {
+  background: url("../images/img-git-01.png") no-repeat;
+  height: 400px;
+}
 
 /* Footer */
-footer { border: 1px solid; width: 100%; min-height: 100px; }
+footer {
+  border-top: 2px solid;
+  background: #000000;
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+}
+footer article {
+  text-align: center;
+  padding: 20px;
+}
+footer article ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer article ul li {
+  padding: 10px;
+  border: 1px solid;
+  width: 200px;
+}
+footer article ul li a {
+  color: #ffffff;
+}
+footer article:first-child {
+  padding-bottom: 10px;
+}
 
 /* Button */
 /* Bullet */
 /* Common */
 /* Font-face */
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url("../fonts/NanumGothic-Regular.eot"); src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype"); }
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 700; src: url("../fonts/NanumGothic-Bold.eot"); src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype"); }
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
-body, table, div, p { font-family: 'Nanum Gothic'; font-size: 16px; }
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NanumGothic-Regular.eot");
+  src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NanumGothic-Bold.eot");
+  src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/NanumGothic-ExtraBold.eot");
+  src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+}
+body, table, div, p {
+  font-family: 'Nanum Gothic';
+  font-size: 16px;
+}
 
 /* H tag */
-h1 { font-size: 32px; }
+h1 {
+  font-size: 32px;
+}
 
-h2 { margin-bottom: 15px; padding: 15px 0; border-bottom: 2px solid #000000; font-size: 30px; font-weight: 600; }
+h2 {
+  margin-bottom: 15px;
+  padding: 15px 0;
+  border-bottom: 2px solid #000000;
+  font-size: 30px;
+  font-weight: 600;
+}
 
-h3 { display: inline-block; margin: 5px 0; padding: 10px 20px; background: #333333; font-size: 18px; color: #ffffff; }
+h3 {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 10px 20px;
+  background: #333333;
+  font-size: 18px;
+  color: #ffffff;
+}
 
-h4 { font-size: 26px; }
+h4 {
+  font-size: 26px;
+}
 
-h5 { font-size: 24px; }
+h5 {
+  font-size: 24px;
+}
 
-h6 { font-size: 22px; }
+h6 {
+  font-size: 22px;
+}
 
-ol { position: relative; left: 30px; list-style: decimal-leading-zero; }
+ol {
+  position: relative;
+  left: 30px;
+  list-style: decimal-leading-zero;
+}
 
-xmp, .explanation-box { margin: 15px 0; padding: 10px 20px; border: 1px solid; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+xmp,
+.explanation-box {
+  margin: 15px 0;
+  padding: 10px 20px;
+  border: 1px solid;
+  width: 100%;
+  min-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-.bold { font-weight: 900; color: brown; }
+.bold {
+  font-weight: 900;
+  color: brown;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  font-weight: 700;
+}
+
+.notice {
+  padding: 0 10px;
+  border: 1px solid #ff0000;
+  background: #f8dade;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 /* Form */
 /* Table */
-.default-table { margin-top: 15px; margin-bottom: 20px; border: 1px solid; width: 100%; }
-.default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: nowrap; }
-.default-table tr th { background: #cccccc; font-weight: 400; }
+.default-table {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  width: 100%;
+}
+.default-table tr th, .default-table tr td {
+  padding: 10px;
+  border: 1px solid;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.default-table tr th {
+  background: #cccccc;
+  font-weight: 400;
+}
 
 /*# sourceMappingURL=style.css.map */

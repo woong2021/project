@@ -17,7 +17,7 @@ header section #gnbNav .gnbNav-inner nav a:hover { color: #0075C1; }
 @media (min-width: 768px) { main section#mainSlider { height: 700px; } }
 main section#mainSlider #slider .slider-item { position: relative; }
 @media (min-width: 320px) { main section#mainSlider #slider .slider-item { width: 100%; height: 50vh; } }
-@media (min-width: 768px) { main section#mainSlider #slider .slider-item { width: 1920px; height: 700px; } }
+@media (min-width: 768px) { main section#mainSlider #slider .slider-item { width: 100%; height: 700px; } }
 main section#mainSlider #slider .slider-item:nth-child(2) { background: url("../images/img-main-01.png") no-repeat; }
 main section#mainSlider #slider .slider-item:nth-child(2) div { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 30%; text-align: center; }
 main section#mainSlider #slider .slider-item:nth-child(2) div h2 { margin-bottom: 20px; font-size: 45px; font-weight: 700; color: #0051A3; }
@@ -27,7 +27,7 @@ main section#mainSlider #slider .slider-item:nth-child(3) div { position: absolu
 main section#mainSlider #slider .slider-item:nth-child(3) div h2 { margin-bottom: 20px; font-size: 40px; font-weight: 700; color: #ffffff; }
 main section#mainSlider #slider .slider-item:nth-child(3) div p { margin-top: 10px; font-size: 23px; color: #ffffff; }
 main section#mainSlider #slider .slider-item:nth-child(4) { background: url("../images/img-main-03.png") no-repeat; }
-main section#mainSlider #slider .slider-item:nth-child(4) div { position: absolute; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 30%; text-align: center; }
+main section#mainSlider #slider .slider-item:nth-child(4) div { position: absolute; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; text-align: center; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) { top: 30%; left: 65%; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) h2 { margin-bottom: 15px; font-size: 40px; color: #192E4E; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) p { font-size: 20px; color: #666666; }

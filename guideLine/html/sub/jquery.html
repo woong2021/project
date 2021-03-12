@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>PORTFOLIO - Jquery</title>
+
+    <!-- Cascading Style Sheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
@@ -13,22 +15,39 @@
     <script defer src="../../assets/js/common.js"></script>
 </head>
 <body>
+    <!-- Header Area -->
     <header id="header"></header>
-    <main>
-        <section id="container">
-            <section>
-                <h2>JQUERY</h2>
-                <h3>기본태그(동적)</h3>
-                <article>
-                    <xmp>
+
+    <!-- Quick Menu -->
+    <section>
+        <aside class="Quick">
+            <h2>QUICK</h2>
+            <ul>
+                <li><a href="#basicTag">기본태그</a></li>
+                <li><a href="#elementMove">클릭시 특정앨리먼트로 이동</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <!-- Main Content -->
+    <main id="container">
+        <section id="basicTag">
+            <h2>JQUERY</h2>
+            <h3>기본태그(동적)</h3>
+            <article>
+                <xmp>
 $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 
 });
-                    </xmp>
-                </article>
-                <h3>클릭시 특정앨리먼트로 이동</h3>
-                <article>
-                    <xmp>
+                </xmp>
+            </article>
+        </section>
+        <section id="elementMove">
+            <h3>클릭시 특정앨리먼트로 이동</h3>
+            <article>
+                <xmp>
 <span class="gallery">gallery</span>
 <section id="image">
     <article>
@@ -37,15 +56,16 @@ $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 </section>
 
 $(document).on("click", ".gallery", function(){
-    const move = $("#image").offset().top;
-    
-    $('html, body').animate({scrollTop : move}, 300);
+const move = $("#image").offset().top;
+
+$('html, body').animate({scrollTop : move}, 300);
 });
-                    </xmp>   
-                </article>
-            </section>
+                </xmp>   
+            </article>
         </section>
     </main>
+
+    <!-- Footer Area-->
     <footer id="footer"></footer>
 </body>
 </html>

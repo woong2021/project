@@ -7,10 +7,11 @@
 /* Header */
 header {
     position: sticky;
-    border: 1px solid;
+    border-bottom: 2px solid;
     background: $white;
     top: 0;
     height: 100px;
+    z-index: 1;
 
     section{
         margin: 0 auto;
@@ -33,17 +34,5 @@ header {
                 }
             }
         }
-
-        aside{
-            &.Quick{
-                position: fixed;
-                border: 1px solid;
-                width: 100px;
-                height: 200px;
-                bottom: 0;
-                right: 0;
-            }
-        }
     }
-   
 }
