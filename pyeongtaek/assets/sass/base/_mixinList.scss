@@ -11,15 +11,14 @@
 // *----------------------------
 //	Image
 // ----------------------------*
-@mixin imagePush($directory : "git", $number : "01"){
+@mixin imagePush($directory : "main", $number : "01"){
     background: url("../images/img-"+ $directory + "-" + $number + ".png") no-repeat;
-    height: 400px;
 }
 
-@mixin captionPush($directory: "projectitem"){
+@mixin captionPush($directory: "main"){
     counter-reset: num;
     counter-increment: num;
-    background: url("images/capture/capture-"+ $directory + "-" + counter(num) + ".png") no-repeat;
+    background: url("images/capture/img-"+ $directory + "-" + counter(num) + ".png") no-repeat;
     height: 250px;
 }
 

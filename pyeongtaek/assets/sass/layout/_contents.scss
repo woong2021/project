@@ -5,3 +5,287 @@
 // ----------------------------*
 
 /* Contents */
+main{
+    section{
+        &#mainSlider{    
+            @media (min-width: 320px){
+                height: 50vh;
+            }
+
+            @media (min-width: 768px){
+                height: 700px;
+            }
+            #slider{
+                .slider-item{  
+                    position: relative;
+
+                    @media (min-width: 320px){
+                        width: 100%;
+                        height: 50vh;
+                    }
+
+                    @media (min-width: 768px){
+                        width: 1920px;
+                        height: 700px;                        
+                    }
+
+                    &:nth-child(2){
+                        @include imagePush($number : "01");
+
+                        div{
+                            position:absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 30%;
+                            text-align: center;
+
+                            h2{
+                                margin-bottom: 20px;
+                                font: {
+                                    size: 45px;
+                                    weight: 700;
+                                }
+                                color: $blue;
+                            }
+
+                            p{
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        @include imagePush($number : "02");
+
+                        div{
+                            position: absolute;
+                            top: 55%;
+                            left: 30%;
+                            transform: translate(-50%, -50%);
+                            width: 30%;
+                            text-align: left;
+
+                            h2{
+                                margin-bottom: 20px;
+
+                                font: {
+                                    size: 40px;
+                                    weight: 700;
+                                }
+
+                                color: $white;
+                            }
+
+                            p{
+                                margin-top: 10px;
+                                font-size: 23px;
+                                color: $white;
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        @include imagePush($number : "03");
+
+                        div{
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            width: 30%;
+                            text-align: center;
+
+                            
+
+                            &:nth-child(1){
+                                top: 30%;
+                                left: 65%;
+
+                                h2{
+                                    margin-bottom: 15px;
+                                    font-size: 40px;
+                                    color:#192E4E;
+                                }
+
+                                p{
+                                    font-size: 20px;
+                                    color: $fontGray6;
+                                }
+                                
+                            }
+
+                            &:nth-child(2){
+                                top: 70%;
+                                left: 65%;
+
+                                p{
+                                    margin-top: 10px;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#container{
+            p, h2, article{
+                text-align: center;
+            }
+
+            p{
+                &.subheading{
+                    font-size: 22px;
+                    color: $fontGray9;
+                }
+            }
+
+            h2{
+                font-size: 48px;
+            }
+
+            article{
+                position: relative;
+
+                &.parking-service{
+                    height: 700px;
+
+                   .service-list{
+                        display:flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        height: 236px;
+
+                        .service-item{
+                            @media (min-width: 320px){
+                                width: 100%;
+                            }
+
+                            @media (min-width: 768px){
+                                width: 168px;
+                            }
+
+                            img{
+                                @media (min-width: 320px){
+                                    width: 100%;
+                                    height: 50vh;
+                                }
+                                @media (min-width: 768px){
+                                    width: 162px;
+                                    height: 162px;
+                                }
+                            }     
+                        }
+                    }
+                }
+    
+                &.parking-realtime{
+                    background: $bgGray;
+                    height: 664px;
+                    
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-flow: wrap;
+
+                        div{    
+                            
+                            border: 1px solid;
+                            
+                            @media (min-width: 320px){
+                                width: 100%;
+                                height: 80vh;
+                            }
+
+                            @media (min-width: 768px){
+                                width: 228px;
+                                height: 269px;
+                            }
+                         }
+                    }
+                }
+
+                &.parking-appeal{
+                    height: 170px;
+
+                    @include imagePush($number : "04");
+
+                    .parkingbox-inner{
+                        display:flex;
+                        justify-content: space-between;
+
+                        > div{
+                            p{
+                                color: $white;
+    
+                                &:first-child{
+                                    font : {
+                                        size: 25px;
+                                        style: italic;
+                                    }
+                                
+                                &:last-child{
+                                    font : {
+                                        size: 29px;
+                                    }
+                                }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.parking-info{
+                    height: 700px;
+                    border: 1px solid #ff0000;
+
+                    .parkingbox-inner{
+                        display: flex;
+                        justify-content: space-between;
+
+                        section{
+                            padding: 10px 60px;
+                            height: 513px;
+                            background: $bgGray;
+                            border: 1px solid;
+
+                            > p{
+                              font-size: 30px;
+                              color: blue;  
+                            }
+                            ul{
+                                width: 450px;
+                                border: 1px solid;
+                                
+                                li{
+                                    padding: 23px 82px 20px 45px;
+                                    background: $white;
+                                    height: 131px; 
+
+                                    &:first-child{
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .parkingbox-inner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+    
+                @media (min-width: 768px){
+                    width: 1200px;    
+                }
+            }
+            
+        }
+    }
+}

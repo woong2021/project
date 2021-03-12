@@ -5,3 +5,60 @@
 // ----------------------------*
 
 /* Header */
+header{
+    section{
+        #gnbTop{
+            border-bottom: 1px solid $gray;
+            height: 80px;
+            box-sizing: border-box;
+
+            .gnbTop-inner{
+                margin: 0 auto;
+            
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+                @media (min-width: 768px){
+                    width: 1200px;
+                }
+                h1{
+                    display: inline-block;
+                }
+                nav{
+                    display: flex;
+                    align-items: center;
+                    height: 80px;
+                    float: right;
+                }
+            }
+        }
+
+        #gnbNav{
+            height: 52px;
+
+            .gnbNav-inner{
+                margin: 0 auto;
+
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+                @media (min-width: 768px){
+                    width: 1200px;
+                }
+
+                nav{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 52px;
+
+                    a{
+                        &:hover{
+                            color: $fontHover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
