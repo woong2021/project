@@ -23,9 +23,9 @@
         <aside class="Quick">
             <h2>QUICK</h2>
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#notationHtml">HTML 표기법</a></li>
+                <li><a href="#notationCss">CSS 표기법</a></li>
+                <li><a href="#notationSass">SASS 표기법</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </aside>
@@ -33,9 +33,91 @@
 
     <!-- Main Content -->
     <main id="container">
-        <section id="">
+        <section id="notationHtml">
             <h2>GuideLine</h2>
-            <h3>준비중</h3>
+            <p class="notice">해당 가이드는 개인적인 견해로 제작된 것으로 정답이 아닙니다. </p>
+            <h3>HTML 표기법</h3>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">id</th>
+                        <td>&lt;div id="defaultTable"&gt;(단어연결시 카멜케이스기법 사용)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">class</th>
+                        <td>&lt;div class="default-table"&gt;(단어연결시 하이픈 사용)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="notationCss">
+            <h3>CSS 표기법</h3>
+            <p class="notice">CSS는 직접 입력하지 않습니다. 입력은 SASS를 이용 </p>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">CSS 기본</th>
+                        <td> 
+                            <ul>
+                                <li>"인라인태그"로 작성은 자제</li>
+                                <li>속성과 값 사이에 한칸 띄워서 작성(예: width: 0;)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CSS 주석</th>
+                        <td>
+                            <xmp>
+/* Contents */
+                            </xmp>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hex 색상코드 사용</th>
+                        <td>color: #000000;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">숫자 0</th>
+                        <td> top: 0;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="notationSass">
+            <h3>SASS 표기법</h3>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">SASS 기본</th>
+                        <td> SCSS 를 사용</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SASS 주석</th>
+                        <td> 
+                            <xmp>
+// *----------------------------
+//	Contents
+// ----------------------------*
+                            </xmp>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="">
+            <h3>추가 준비중</h3>
             <article class="explanation-box">
             
             </article>
