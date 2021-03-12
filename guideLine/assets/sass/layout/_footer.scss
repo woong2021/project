@@ -15,6 +15,11 @@ footer {
     article{
         text-align: center;
         padding: 20px;
+
+        a{
+            color: $white;
+        }
+
         ul{
             display: flex;
             flex-wrap: wrap;
@@ -24,15 +29,15 @@ footer {
                 padding: 10px;
                 border: 1px solid;
                 width: 200px;
-                
-                a{
-                    color: $white;
-                }
             }
         }
 
         &:first-child{
             padding-bottom: 10px;
+        }
+
+        &:last-child{
+            padding-top: 0;
         }
     }
 }

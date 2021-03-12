@@ -160,6 +160,9 @@ footer article {
   text-align: center;
   padding: 20px;
 }
+footer article a {
+  color: #ffffff;
+}
 footer article ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,11 +178,11 @@ footer article ul li {
   border: 1px solid;
   width: 200px;
 }
-footer article ul li a {
-  color: #ffffff;
-}
 footer article:first-child {
   padding-bottom: 10px;
+}
+footer article:last-child {
+  padding-top: 0;
 }
 
 /* Button */
