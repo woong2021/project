@@ -19,16 +19,72 @@ header{
                     width: 100%;
                 }
                 @media (min-width: 768px){
+                    position: relative;
                     width: 1200px;
+                    height: 80px;
                 }
                 h1{
+                    position: absolute;
                     display: inline-block;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    a{
+                        display: block;
+                        width: 130px;
+                        height: 50px;
+                    }
                 }
                 nav{
                     display: flex;
                     align-items: center;
                     height: 80px;
                     float: right;
+
+                    div{
+                        position: relative;
+                        display: block;
+                        margin-right: 15px;
+                        width: 55px;
+                        height: 10px;
+                        border-right: 1px solid;
+
+                        &:nth-child(1){
+                            
+                            a{   
+                                &:before{
+                                    content:url("../images/icon-login.png");
+                                    position: absolute;
+                                    left: -20px;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+                            margin-right: 20px;
+                            width: 65px;
+                        }
+
+                        &:last-child{
+                            border-right: 0;
+                        }
+
+                        a{
+                            position: absolute;
+                            top: -2.5px;
+                            font : {
+                                size: 14px;
+                                weight: 400;
+                            }
+                            color: $black;
+                        }
+
+                        select{
+                            position: absolute;
+                            top: -3px;
+                        }
+                    }
                 }
             }
         }
@@ -47,14 +103,19 @@ header{
                 }
 
                 nav{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 52px;
+                    &#menuList{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 52px;
+    
+                        a{
+                            color: $black;
+                            font-weight: 600;
 
-                    a{
-                        &:hover{
-                            color: $fontHover;
+                            &:hover{
+                                color: $fontHover;
+                            }
                         }
                     }
                 }

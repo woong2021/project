@@ -2,73 +2,155 @@
 header section #gnbTop { border-bottom: 1px solid #cccccc; height: 80px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 header section #gnbTop .gnbTop-inner { margin: 0 auto; }
 @media (min-width: 320px) { header section #gnbTop .gnbTop-inner { width: 100%; } }
-@media (min-width: 768px) { header section #gnbTop .gnbTop-inner { width: 1200px; } }
-header section #gnbTop .gnbTop-inner h1 { display: inline-block; }
+@media (min-width: 768px) { header section #gnbTop .gnbTop-inner { position: relative; width: 1200px; height: 80px; } }
+header section #gnbTop .gnbTop-inner h1 { position: absolute; display: inline-block; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+header section #gnbTop .gnbTop-inner h1 a { display: block; width: 130px; height: 50px; }
 header section #gnbTop .gnbTop-inner nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 80px; float: right; }
+header section #gnbTop .gnbTop-inner nav div { position: relative; display: block; margin-right: 15px; width: 55px; height: 10px; border-right: 1px solid; }
+header section #gnbTop .gnbTop-inner nav div:nth-child(1) a:before { content: url("../images/icon-login.png"); position: absolute; left: -20px; width: 15px; height: 15px; }
+header section #gnbTop .gnbTop-inner nav div:nth-child(2) { margin-right: 20px; width: 65px; }
+header section #gnbTop .gnbTop-inner nav div:last-child { border-right: 0; }
+header section #gnbTop .gnbTop-inner nav div a { position: absolute; top: -2.5px; font-size: 14px; font-weight: 400; color: #333333; }
+header section #gnbTop .gnbTop-inner nav div select { position: absolute; top: -3px; }
 header section #gnbNav { height: 52px; }
 header section #gnbNav .gnbNav-inner { margin: 0 auto; }
 @media (min-width: 320px) { header section #gnbNav .gnbNav-inner { width: 100%; } }
 @media (min-width: 768px) { header section #gnbNav .gnbNav-inner { width: 1200px; } }
-header section #gnbNav .gnbNav-inner nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 52px; }
-header section #gnbNav .gnbNav-inner nav a:hover { color: #0075C1; }
+header section #gnbNav .gnbNav-inner nav#menuList { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 52px; }
+header section #gnbNav .gnbNav-inner nav#menuList a { color: #333333; font-weight: 600; }
+header section #gnbNav .gnbNav-inner nav#menuList a:hover { color: #0075C1; }
 
 /* Contents */
 @media (min-width: 320px) { main section#mainSlider { height: 50vh; } }
 @media (min-width: 768px) { main section#mainSlider { height: 700px; } }
 main section#mainSlider #slider .slider-item { position: relative; }
 @media (min-width: 320px) { main section#mainSlider #slider .slider-item { width: 100%; height: 50vh; } }
-@media (min-width: 768px) { main section#mainSlider #slider .slider-item { width: 100%; height: 700px; } }
+@media (min-width: 768px) { main section#mainSlider #slider .slider-item { width: 1920px; height: 700px; } }
 main section#mainSlider #slider .slider-item:nth-child(2) { background: url("../images/img-main-01.png") no-repeat; }
 main section#mainSlider #slider .slider-item:nth-child(2) div { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 30%; text-align: center; }
+main section#mainSlider #slider .slider-item:nth-child(2) div.icon-mainbanner { top: 30%; }
 main section#mainSlider #slider .slider-item:nth-child(2) div h2 { margin-bottom: 20px; font-size: 45px; font-weight: 700; color: #0051A3; }
 main section#mainSlider #slider .slider-item:nth-child(2) div p { margin-top: 10px; }
 main section#mainSlider #slider .slider-item:nth-child(3) { background: url("../images/img-main-02.png") no-repeat; }
 main section#mainSlider #slider .slider-item:nth-child(3) div { position: absolute; top: 55%; left: 30%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 30%; text-align: left; }
+main section#mainSlider #slider .slider-item:nth-child(3) div.icon-mainbanner { top: 30%; left: 20%; }
 main section#mainSlider #slider .slider-item:nth-child(3) div h2 { margin-bottom: 20px; font-size: 40px; font-weight: 700; color: #ffffff; }
 main section#mainSlider #slider .slider-item:nth-child(3) div p { margin-top: 10px; font-size: 23px; color: #ffffff; }
 main section#mainSlider #slider .slider-item:nth-child(4) { background: url("../images/img-main-03.png") no-repeat; }
-main section#mainSlider #slider .slider-item:nth-child(4) div { position: absolute; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; text-align: center; }
+main section#mainSlider #slider .slider-item:nth-child(4) div { position: absolute; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 30%; text-align: center; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) { top: 30%; left: 65%; }
-main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) h2 { margin-bottom: 15px; font-size: 40px; color: #192E4E; }
+main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) h2 { margin-bottom: 15px; font-size: 40px; font-weight: 600; color: #192E4E; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(1) p { font-size: 20px; color: #666666; }
 main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(2) { top: 70%; left: 65%; }
-main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(2) p { margin-top: 10px; color: #ffffff; }
+main section#mainSlider #slider .slider-item:nth-child(4) div:nth-child(2) p { margin-top: 10px; color: #ffffff; font-weight: 100; }
 main section#container p, main section#container h2, main section#container article { text-align: center; }
 main section#container p.subheading { font-size: 22px; color: #999999; }
-main section#container h2 { font-size: 48px; }
+main section#container h2 { margin: 10px 0 55px; font-family: "Noto Sans CJK KR"; font-size: 48px; font-weight: 600; }
 main section#container article { position: relative; }
 main section#container article.parking-service { height: 700px; }
 main section#container article.parking-service .service-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 236px; }
 @media (min-width: 320px) { main section#container article.parking-service .service-list .service-item { width: 100%; } }
 @media (min-width: 768px) { main section#container article.parking-service .service-list .service-item { width: 168px; } }
+main section#container article.parking-service .service-list .service-item .circle { width: 160px; height: 160px; border-radius: 50%; position: relative; margin-bottom: 20px; background: transparent -webkit-gradient(linear, left top, left bottom, from(#0075C1), to(#083190)); background: transparent linear-gradient(#0075C1 0%, #083190 100%); }
+main section#container article.parking-service .service-list .service-item .circle div { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 @media (min-width: 320px) { main section#container article.parking-service .service-list .service-item img { width: 100%; height: 50vh; } }
 @media (min-width: 768px) { main section#container article.parking-service .service-list .service-item img { width: 162px; height: 162px; } }
 main section#container article.parking-realtime { background: #f6f6f6; height: 664px; }
-main section#container article.parking-realtime ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-flow: wrap; flex-flow: wrap; }
-main section#container article.parking-realtime ul div { border: 1px solid; }
-@media (min-width: 320px) { main section#container article.parking-realtime ul div { width: 100%; height: 80vh; } }
-@media (min-width: 768px) { main section#container article.parking-realtime ul div { width: 228px; height: 269px; } }
+main section#container article.parking-realtime div#realtimeSlider { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-flow: wrap; flex-flow: wrap; width: 1040px; left: 80px; }
+main section#container article.parking-realtime div#realtimeSlider .slick-prev, main section#container article.parking-realtime div#realtimeSlider .slick-next { position: absolute; border: 0; background: url(../images/sprite/more-sprites.png) -10px -10px; top: 50%; width: 50px; height: 50px; z-index: 10; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+main section#container article.parking-realtime div#realtimeSlider .slick-prev { left: -70px; -webkit-transform: translateY(-50%) rotate(180deg); transform: translateY(-50%) rotate(180deg); }
+main section#container article.parking-realtime div#realtimeSlider .slick-prev:hover { background: url("../images/sprite/more-sprites.png") -10px -80px; }
+main section#container article.parking-realtime div#realtimeSlider .slick-next { right: -70px; }
+main section#container article.parking-realtime div#realtimeSlider .slick-next:hover { background: url("../images/sprite/more-sprites.png") -10px -80px; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item { margin: 0 15px; width: 230px !important; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime { position: relative; }
+@media (min-width: 320px) { main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime { width: 100%; height: 80vh; } }
+@media (min-width: 768px) { main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime { width: 228px; height: 269px; } }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime > ul { position: absolute; background: black; padding: 10px 25px; bottom: 0; opacity: .7; width: 177px; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime > ul li { text-align: center; width: 100%; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime > ul li:first-child { color: #ffffff; font-size: 14px; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime > ul li:last-child { margin-top: 5px; color: #FFF2AF; font-size: 17px; }
+main section#container article.parking-realtime div#realtimeSlider div.realtimeslider-item div.realtime:hover { background: black; }
 main section#container article.parking-appeal { height: 170px; background: url("../images/img-main-04.png") no-repeat; }
 main section#container article.parking-appeal .parkingbox-inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+main section#container article.parking-appeal .parkingbox-inner > div { position: relative; padding-right: 100px; }
 main section#container article.parking-appeal .parkingbox-inner > div p { color: #ffffff; }
-main section#container article.parking-appeal .parkingbox-inner > div p:first-child { font-size: 25px; font-style: italic; }
-main section#container article.parking-appeal .parkingbox-inner > div p:first-child:last-child { font-size: 29px; }
-main section#container article.parking-info { height: 700px; border: 1px solid #ff0000; }
+main section#container article.parking-appeal .parkingbox-inner > div p:first-child { font-size: 25px; font-style: italic; font-weight: 100; margin-bottom: 15px; }
+main section#container article.parking-appeal .parkingbox-inner > div p:last-child { font-size: 29px; font-weight: 100; }
+main section#container article.parking-appeal .parkingbox-inner > div p span { color: #FFF2AF; }
+main section#container article.parking-appeal .parkingbox-inner > div:first-child:after, main section#container article.parking-appeal .parkingbox-inner > div:nth-child(2):after { content: "/"; color: #ffffff; position: absolute; top: 0; right: 0; font-size: 70px; font-weight: 100; }
+main section#container article.parking-info { height: 700px; }
 main section#container article.parking-info .parkingbox-inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-main section#container article.parking-info .parkingbox-inner section { padding: 10px 60px; height: 513px; background: #f6f6f6; border: 1px solid; }
-main section#container article.parking-info .parkingbox-inner section > p { font-size: 30px; color: blue; }
-main section#container article.parking-info .parkingbox-inner section ul { width: 450px; border: 1px solid; }
-main section#container article.parking-info .parkingbox-inner section ul li { padding: 23px 82px 20px 45px; background: #ffffff; height: 131px; }
+main section#container article.parking-info .parkingbox-inner section { padding: 0 60px; height: 513px; background: #f6f6f6; }
+main section#container article.parking-info .parkingbox-inner section:first-child > p:first-child:before { content: ""; position: absolute; background: url("../images/sprite/main-sprites.png") -272px -74px; width: 50px; height: 50px; left: -70px; top: 23px; }
+main section#container article.parking-info .parkingbox-inner section:last-child > p:first-child:before { content: ""; position: absolute; background: url("../images/sprite/main-sprites.png") -169px -153px; width: 50px; height: 50px; left: -70px; top: 23px; }
+main section#container article.parking-info .parkingbox-inner section > p { padding: 30px 0; text-align: left; font-size: 30px; font-weight: 600; color: #0051A3; }
+main section#container article.parking-info .parkingbox-inner section > p:first-child { position: relative; left: 70px; }
+main section#container article.parking-info .parkingbox-inner section > p:last-child { position: relative; margin: 0 auto; font-size: 16px; font-weight: 300; color: #999999; text-align: center; top: 20px; left: 30px; width: 200px; cursor: pointer; }
+main section#container article.parking-info .parkingbox-inner section > p:last-child:before { content: ""; position: absolute; display: block; width: 50px; height: 50px; background: url("../images/sprite/more-sprites.png") -10px -10px; top: 50%; left: -10px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+main section#container article.parking-info .parkingbox-inner section > p:last-child:hover { color: #0051A3; }
+main section#container article.parking-info .parkingbox-inner section > p:last-child:hover:before { content: ""; position: absolute; display: block; width: 50px; height: 50px; background: url("../images/sprite/more-sprites.png") -10px -80px; top: 50%; left: -10px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+main section#container article.parking-info .parkingbox-inner section ul { padding-top: 20px; border-top: 1px solid #dddddd; width: 450px; }
+main section#container article.parking-info .parkingbox-inner section ul li { background: #ffffff; height: 130px; text-align: left; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 3px 5px 2px #E2E2E2; box-shadow: 3px 5px 2px #E2E2E2; }
 main section#container article.parking-info .parkingbox-inner section ul li:first-child { margin-bottom: 20px; }
+main section#container article.parking-info .parkingbox-inner section ul li a { display: block; padding: 30px 50px 20px 45px; color: black; }
+main section#container article.parking-info .parkingbox-inner section ul li a h3 { margin-bottom: 10px; font-size: 18px; color: #0075C1; }
+main section#container article.parking-info .parkingbox-inner section ul li a p { margin-bottom: 10px; text-align: left; }
+main section#container article.parking-info .parkingbox-inner section ul li a p:first-child { font-size: 18px; }
+main section#container article.parking-info .parkingbox-inner section ul li a p:last-child { font-size: 16px; color: #666666; }
 main section#container .parkingbox-inner { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 @media (min-width: 320px) { main section#container .parkingbox-inner { width: 100%; } }
 @media (min-width: 768px) { main section#container .parkingbox-inner { width: 1200px; } }
+main section#container .parkingbox-inner div.realtime { background: url("../images/img-temp-01.png") no-repeat; background-size: contain; }
 
 /* Footer */
-footer { background: #020210; }
+footer { background: #333333; height: 320px; }
+footer .parkingbox-inner { margin: 0 auto; }
+@media (min-width: 320px) { footer .parkingbox-inner { width: 100%; } }
+@media (min-width: 768px) { footer .parkingbox-inner { width: 1200px; } }
+footer .parkingbox-inner article h1 { float: left; cursor: pointer; }
+footer .parkingbox-inner article nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 40px; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+footer .parkingbox-inner article nav div a { font-size: 16px; font-weight: 100; color: #999999; }
+footer .parkingbox-inner article:first-child { padding-top: 40px; height: 80px; }
+footer .parkingbox-inner article:first-child div a { display: block; padding: 0 15px; border-right: 1px solid; height: 17px; }
+footer .parkingbox-inner article:first-child div:last-child a { border-right: 0; }
+footer .parkingbox-inner article:last-child { clear: both; border-top: 1px solid #999999; }
+footer .parkingbox-inner article:last-child div { color: #999999; }
+footer .parkingbox-inner article:last-child div address, footer .parkingbox-inner article:last-child div a { color: #999999; font-size: 16px; font-weight: 100; }
+footer .parkingbox-inner article:last-child div address { margin-right: 30px; }
+footer .parkingbox-inner article:last-child div a { margin-right: 10px; }
+footer .parkingbox-inner article:last-child p { margin-top: 20px; text-align: center; color: #999999; font-size: 16px; font-weight: 100; }
 
 /* Button */
+/* Logo */
+.logo-header { width: 126px; height: 44px; background: url("../images/sprite/main-sprites.png") -199px -10px; }
+
+.logo-footer { width: 150px; height: 53px; background: url("../images/sprite/main-sprites.png") -10px -80px; }
+
+/* Icon */
+.icon-calculate { width: 61px; height: 61px; background: url("../images/sprite/main-sprites.png") -88px -153px; }
+
+.icon-line { width: 5px; height: 23px; background: url("../images/sprite/main-sprites.png") -82px -242px; }
+
+.icon-login { width: 15px; height: 14px; background: url("../images/sprite/main-sprites.png") -239px -153px; }
+
+.icon-mainbanner { width: 169px !important; height: 50px; background: url("../images/sprite/main-sprites.png") -10px -10px; }
+
+.icon-notice { width: 50px; height: 50px; background: url("../images/sprite/main-sprites.png") -272px -74px; }
+
+.icon-qa { width: 50px; height: 50px; background: url("../images/sprite/main-sprites.png") -169px -153px; }
+
+.icon-parkinglot { width: 58px; height: 69px; background: url("../images/sprite/main-sprites.png") -10px -153px; }
+
+.icon-reduction { width: 53px; height: 50px; background: url("../images/sprite/main-sprites.png") -199px -74px; }
+
+.icon-unpaid { width: 52px; height: 66px; background: url("../images/sprite/main-sprites.png") -10px -242px; }
+
 /* Bullet */
+.icon-more { width: 50px; height: 50px; background: url("../images/sprite/more-sprites.png") -10px -10px; }
+
+.icon-more-hover { width: 50px; height: 50px; background: url("../images/sprite/more-sprites.png") -10px -80px; }
+
 /* Common */
 a:link, a:visited, a:hover { text-decoration: none; }
 

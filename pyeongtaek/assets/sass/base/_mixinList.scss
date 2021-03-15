@@ -23,7 +23,7 @@
 }
 
 // *----------------------------
-//	gradient
+//	Gradient
 // ----------------------------*
 @mixin linear-gradient1($from : #87DF6E, $to : #2D7E16){
     /*하위 버전 브라우저*/
@@ -57,4 +57,12 @@
     background-image: -ms-linear-gradient(to right, $from, $to);
     /*W3C*/
     background-image: linear-gradient(to right, $from, $to);
+}
+// *----------------------------
+//	Bullet
+// ----------------------------*
+@mixin circle($width: 160px, $height: 160px){
+    width: $width;
+    height: $height;
+    border-radius: 50%;
 }

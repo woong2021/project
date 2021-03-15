@@ -7,4 +7,97 @@
 /* Footer */
 footer{
     background: $black;
+    height: 320px;
+    .parkingbox-inner{
+        margin: 0 auto;
+
+        @media (min-width: 320px){
+            width: 100%;
+        }
+
+        @media (min-width: 768px){
+            width: 1200px;    
+        }
+        article{
+            h1{
+                float: left;
+                cursor: pointer;
+            }
+    
+            nav{
+                display: flex;
+                justify-content: center;
+                height: 40px;
+                align-items: flex-end;
+
+                div{
+                    a{
+                        font :{
+                            size: 16px;
+                            weight: 100;
+                        }
+
+                        color: $fontGray9;
+                    }
+                    
+                }
+            }
+            &:first-child{
+                padding-top: 40px;
+                height: 80px;
+
+                div{
+                    a{      
+                        display: block;
+                        padding: 0 15px;
+                        border-right: 1px solid;
+                        height: 17px;
+                    }
+
+                    &:last-child{
+                        a{
+                            border-right: 0;
+                        }
+                        
+                    }
+                }
+            }
+            &:last-child{
+                clear: both;
+                border-top: 1px solid $fontGray9;
+
+                div{
+                    color: $fontGray9;
+
+                    address, a{
+                        color: $fontGray9; 
+
+                        font :{
+                            size: 16px;
+                            weight: 100;
+                        }
+                    }
+
+                    address{
+                        margin-right: 30px;
+                    }
+
+                    a{
+                        margin-right: 10px;
+                    }
+                }
+
+                p{
+                    margin-top: 20px;
+                    text-align: center;
+                    color: $fontGray9;
+
+                    font :{
+                        size: 16px;
+                        weight: 100;
+                    }
+                }
+            }
+        }
+    }
 }

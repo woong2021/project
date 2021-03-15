@@ -19,7 +19,7 @@
         <section>
             <article id="gnbTop">
                 <div class="gnbTop-inner">
-                    <h1><a href="../main/index.html">평택시 로고</a></h1>
+                    <h1 class="logo-header"><a href="../main/index.html"></a></h1>
                     <nav> 
                         <div><a href="">로그인</a></div>
                         <div><a href="">회원가입</a></div>
@@ -52,6 +52,7 @@
         <section id="mainSlider">
             <div id="slider">
                 <article class="slider-item">
+                    <div class="icon-mainbanner"></div>
                     <div>
                         <h2>스마트 주차서비스</h2>
                         <p>시민 중심 새로운 평택!</p>
@@ -59,6 +60,7 @@
                     </div>
                 </article>
                 <article class="slider-item">
+                    <div class="icon-mainbanner"></div>
                     <div>
                         <h2>스마트 주차서비스</h2>
                         <p>시민 중심 새로운 평택! 평택시민들을 위한</p>
@@ -84,19 +86,27 @@
                     <h2>간편한 주차 서비스</h2>
                     <div class="service-list">
                         <div class="service-item">
-                            <img src="" alt="주차요금 사전결제">
+                            <div class="circle">
+                                <div class="icon-calculate"></div>
+                            </div>
                             <p>주차요금 사전결제</p>
                         </div>
-                        <div>
-                            <img src="" alt="미납주차 요금">
+                        <div class="service-item">
+                            <div class="circle">
+                                <div class="icon-unpaid"></div>
+                            </div>
                             <p>미납주차 요금</p>
                         </div>
-                        <div>
-                            <img src="" alt="공영주차장 지도검색">
+                        <div class="service-item">
+                            <div class="circle">
+                                <div class="icon-parkinglot"></div>
+                            </div>
                             <p>공영주차장 지도검색</p>
                         </div>
-                        <div>
-                            <img src="" alt="요금감면 자격확인">
+                        <div class="service-item">
+                            <div class="circle">
+                                <div class="icon-reduction"></div>
+                            </div>
                             <p>요금감면 자격확인</p>
                         </div>
                     </div>
@@ -106,55 +116,55 @@
                 <div class="parkingbox-inner">
                     <p class="subheading">평택시 실시간 주차장 현황을 한눈에!</p>
                     <h2>실시간 주차장 현황</h2>
-                    <ul>
-                        <li>
-                            <div>
+                    <div id="realtimeSlider">
+                        <div class="realtimeslider-item">
+                            <div class="realtime">
                             <ul>
-                                <li>평택시체육복지센터</li>
-                                <li>주차가능: 00면</li>
+                                <li class="realtime-img">평택시체육복지센터</li>
+                                <li>주차가능: 01면</li>
                             </ul> 
                             </div>
-                        </li>
-                        <li>
-                            <div>
+                        </div>
+                        <div class="realtimeslider-item">
+                            <div class="realtime">
                             <ul>
                                 <li>평택시체육복지센터</li>
-                                <li>주차가능: 00면</li>
+                                <li>주차가능: 02면</li>
                             </ul> 
                             </div>
-                        </li>
-                        <li>
-                            <div>
+                        </div>
+                        <div class="realtimeslider-item">
+                            <div class="realtime">
                             <ul>
                                 <li>평택시체육복지센터</li>
-                                <li>주차가능: 00면</li>
+                                <li>주차가능: 03면</li>
                             </ul> 
                             </div>
-                        </li>
-                        <li>
-                            <div>
+                        </div>
+                        <div class="realtimeslider-item">
+                            <div class="realtime">
                             <ul>
                                 <li>평택시체육복지센터</li>
-                                <li>주차가능: 00면</li>
+                                <li>주차가능: 04면</li>
                             </ul> 
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
             <article class="parking-appeal">
                 <div class="parkingbox-inner">
                     <div>
                         <p>INFINITE</p>
-                        <p><span>무한한</span>서비스 연계</p>
+                        <p><span>무한한 </span>서비스 연계</p>
                     </div>
                     <div>
                         <p>SIMPLE</p>
-                        <p><span>간편한</span>서비스 활용</p>
+                        <p><span>간편한 </span>서비스 활용</p>
                     </div>
                     <div>
                         <p>PERFEC</p>
-                        <p><span>완벽한</span>서비스 관리</p>
+                        <p><span>완벽한 </span>서비스 관리</p>
                     </div>
                 </div>
             </article>
@@ -164,14 +174,18 @@
                         <p>공지사항</p>
                         <ul>
                             <li>
-                                <h3>2020. 00. 00</h3>
-                                <p>정기권 연장 결제 안내 및 공지</p>
-                                <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                <a href="">
+                                    <h3>2020. 00. 00</h3>
+                                    <p>정기권 연장 결제 안내 및 공지</p>
+                                    <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                </a>
                             </li>
                             <li>
-                                <h3>2020. 00. 00</h3>
-                                <p>정기권 연장 결제 안내 및 공지</p>
-                                <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                <a href="">
+                                    <h3>2020. 00. 00</h3>
+                                    <p>정기권 연장 결제 안내 및 공지</p>
+                                    <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                </a>
                             </li>
                         </ul>
                         <p>READ MORE</p>
@@ -180,14 +194,18 @@
                         <p>자주하는 질문</p>
                         <ul>
                             <li>
-                                <h3>2020. 00. 00</h3>
-                                <p>정기권 연장 결제 안내 및 공지</p>
-                                <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                <a href="">
+                                    <h3>2020. 00. 00</h3>
+                                    <p>정기권 연장 결제 안내 및 공지</p>
+                                    <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                </a>
                             </li>
                             <li>
-                                <h3>2020. 00. 00</h3>
-                                <p>정기권 연장 결제 안내 및 공지</p>
-                                <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                <a href="">
+                                    <h3>2020. 00. 00</h3>
+                                    <p>정기권 연장 결제 안내 및 공지</p>
+                                    <p>코로나 19확산방지를 위한 공영주차장 무료운영...</p>
+                                </a>
                             </li>
                         </ul>
                         <p>READ MORE</p>
@@ -197,9 +215,9 @@
         </section>
     </main>
     <footer id="footer">
-        <section>
+        <section class="parkingbox-inner">
             <article>
-                <h1>평택시 로고</h1>
+                <h1 class="logo-footer"><a href="../main/index.html"></a></h1>
                 <nav>
                     <div><a href="">개인정보처리방침</a></div>
                     <div><a href="">이메일무단수집거부</a></div>
@@ -209,9 +227,10 @@
             <article>
                 <nav>
                     <div><address>(17725) 평택시 토일유통길 25(도일동)</address></div>
-                    <div><a href="tel:031-692-8800" target="_self"> 대표전화 TEL)031-692-8800 </a></div>
-                    <div>FAX)031-692-4337</div>
+                    <div><a href="tel:031-692-8800" target="_self"> 대표전화 TEL)031-692-8800, </a></div>
+                    <div> FAX)031-692-4337</div>
                 </nav>
+                <p>COPYRIGHT &copy; 2021 PYEONGRAEK CITY.ALL RIGHTS RESERVED</p>
             </article>
         </section>
     </footer>
@@ -229,6 +248,36 @@
                 pauseOnHover: true,
                 vertical: false,
                 draggable: false,
+
+                Responsive: [
+                    {
+                        breakpoint: 320,
+                        settings:{
+                            slidesToShow:1
+                        }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings:{
+                            slidesToShow:1
+                        }
+                    }
+                ]
+            });
+
+            $('#realtimeSlider').slick({
+                slide: '.realtimeslider-item',
+                Infinity : true,
+                slidesToShow: 3,
+                slidesToScroll : 1,
+                speed: 100,
+                arrows: true,
+                dots: false,
+                pauseOnHover: true,
+                vertical: false,
+                draggable: false,
+                prevArrow:"<button type='button' class='slick-prev'></button>", //이전버튼
+                nextArrow:"<button type='button' class='slick-next'></button>", //다음버튼
 
                 Responsive: [
                     {

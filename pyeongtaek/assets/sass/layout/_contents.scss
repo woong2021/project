@@ -40,6 +40,10 @@ main{
                             width: 30%;
                             text-align: center;
 
+                            &.icon-mainbanner{
+                                top: 30%;
+                            }
+
                             h2{
                                 margin-bottom: 20px;
                                 font: {
@@ -64,6 +68,11 @@ main{
                             transform: translate(-50%, -50%);
                             width: 30%;
                             text-align: left;
+
+                            &.icon-mainbanner{
+                                top: 30%;
+                                left: 20%;
+                            }
 
                             h2{
                                 margin-bottom: 20px;
@@ -92,23 +101,24 @@ main{
                             width: 30%;
                             text-align: center;
 
-                            
-
                             &:nth-child(1){
                                 top: 30%;
                                 left: 65%;
 
                                 h2{
                                     margin-bottom: 15px;
-                                    font-size: 40px;
-                                    color:#192E4E;
+
+                                    font : {
+                                        size: 40px;
+                                        weight: 600;
+                                    }
+                                    color: $sliderFont;
                                 }
 
                                 p{
                                     font-size: 20px;
                                     color: $fontGray6;
-                                }
-                                
+                                }                      
                             }
 
                             &:nth-child(2){
@@ -118,6 +128,7 @@ main{
                                 p{
                                     margin-top: 10px;
                                     color: $white;
+                                    font-weight: 100;
                                 }
                             }
                         }
@@ -139,7 +150,12 @@ main{
             }
 
             h2{
-                font-size: 48px;
+                margin: 10px 0 55px;
+                font : {
+                    family: "Noto Sans CJK KR";
+                    size: 48px;
+                    weight: 600;
+                }
             }
 
             article{
@@ -163,6 +179,20 @@ main{
                                 width: 168px;
                             }
 
+                            .circle{
+                                @include circle;
+                                position: relative;
+                                margin-bottom: 20px;
+                                background: transparent linear-gradient(#0075C1 0%, #083190 100%);
+
+                                div{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
+
                             img{
                                 @media (min-width: 320px){
                                     width: 100%;
@@ -180,26 +210,93 @@ main{
                 &.parking-realtime{
                     background: $bgGray;
                     height: 664px;
-                    
-                    ul{
+
+                    div#realtimeSlider{
+                        position: relative;
                         display: flex;
                         justify-content: space-between;
                         flex-flow: wrap;
+                        width: 1040px;
+                        left: 80px;
+                        
+                        .slick-prev,
+                        .slick-next{
+                            position: absolute; 
+                            border: 0;  
+                            background: url(../images/sprite/more-sprites.png) -10px -10px; 
+                            top: 50%; 
+                            width: 50px; 
+                            height: 50px; 
+                            z-index: 10;
+                            transform: translateY(-50%);
+                        }
+                        .slick-prev{
+                            left: -70px;
+                            transform: translateY(-50%) rotate(180deg);
 
-                        div{    
-                            
-                            border: 1px solid;
-                            
-                            @media (min-width: 320px){
-                                width: 100%;
-                                height: 80vh;
+                            &:hover{
+                                background: url('../images/sprite/more-sprites.png') -10px -80px;  
                             }
+                        }
+                        .slick-next{
+                            right: -70px;
 
-                            @media (min-width: 768px){
-                                width: 228px;
-                                height: 269px;
+                            &:hover{
+                                background: url('../images/sprite/more-sprites.png') -10px -80px;  
                             }
-                         }
+                        }
+
+                        div {
+                            &.realtimeslider-item{
+                                margin: 0 15px;
+                                width: 230px !important;
+
+                                div{
+                                    &.realtime{    
+                                        position: relative;    
+                                        
+                                        @media (min-width: 320px){
+                                            width: 100%;
+                                            height: 80vh;
+                                        }
+            
+                                        @media (min-width: 768px){
+                                            width: 228px;
+                                            height: 269px;
+                                        }
+            
+                                        > ul{
+                                            position: absolute;
+                                            background: black;
+                                            padding: 10px 25px;
+                                            bottom: 0;
+                                            opacity: .7;
+                                            width: 177px;
+            
+                                            li{
+                                                text-align: center;
+                                                width: 100%;
+            
+                                                &:first-child{
+                                                    color: $white;
+                                                    font-size: 14px;
+                                                }
+                                                &:last-child{
+                                                    margin-top: 5px;
+                                                    color: $yellow;
+                                                    font-size: 17px;
+                                                }
+                                            }
+                                        }
+            
+                                        &:hover{
+                                            background:black;
+                                            
+                                        }
+                                     }
+                                }
+                            }
+                        }   
                     }
                 }
 
@@ -213,6 +310,8 @@ main{
                         justify-content: space-between;
 
                         > div{
+                            position: relative;
+                            padding-right: 100px;
                             p{
                                 color: $white;
     
@@ -220,13 +319,33 @@ main{
                                     font : {
                                         size: 25px;
                                         style: italic;
+                                        weight: 100;
                                     }
-                                
+                                    margin-bottom: 15px;
+                                }
                                 &:last-child{
                                     font : {
                                         size: 29px;
+                                        weight: 100;
                                     }
                                 }
+                                
+                                span{
+                                    color: $yellow;
+                                }
+                            }
+                            &:first-child,
+                            &:nth-child(2){
+                                &:after{
+                                    content:"/";
+                                    color: $white;
+                                    position:absolute;
+                                    top: 0;
+                                    right: 0;
+                                    font : {
+                                        size: 70px;
+                                        weight: 100;
+                                    };
                                 }
                             }
                         }
@@ -235,33 +354,140 @@ main{
 
                 &.parking-info{
                     height: 700px;
-                    border: 1px solid #ff0000;
 
                     .parkingbox-inner{
                         display: flex;
                         justify-content: space-between;
 
                         section{
-                            padding: 10px 60px;
+                            padding: 0 60px;
                             height: 513px;
                             background: $bgGray;
-                            border: 1px solid;
 
+                            &:first-child{
+                                >p{
+                                    &:first-child{
+                                        &:before{
+                                            content: "";
+                                            position: absolute;
+                                            background: url('../images/sprite/main-sprites.png') -272px -74px;
+                                            width: 50px; height: 50px;
+                                            left: -70px;
+                                            top: 23px;
+                                        }  
+                                    }
+                                }      
+                            }
+
+                            &:last-child{
+                                >p{
+                                    &:first-child{
+                                        &:before{
+                                            content: "";
+                                            position: absolute;
+                                            background: url('../images/sprite/main-sprites.png') -169px -153px;
+                                            width: 50px; height: 50px;
+                                            left: -70px;
+                                            top: 23px;
+                                        }  
+                                    }
+                                }      
+                            }
                             > p{
-                              font-size: 30px;
-                              color: blue;  
+                                padding: 30px 0;
+                                text-align: left;
+
+                                font : {
+                                    size: 30px;
+                                    weight: 600;
+                                }
+                                color: $blue;  
+
+                                &:first-child{
+                                    position:relative;
+                                    left: 70px;
+                                }
+                                &:last-child{
+                                    position: relative;
+                                    margin: 0 auto;
+
+                                    font : {
+                                        size: 16px;
+                                        weight: 300;
+                                    }
+
+                                    color: $fontGray9;
+                                    text-align: center;
+                                    top: 20px;
+                                    left: 30px;
+                                    width: 200px;
+                                    cursor: pointer;
+
+                                    &:before{
+                                        content:"";
+                                        position:absolute;
+                                        display: block;
+                                        width: 50px; height: 50px;
+                                        background: url('../images/sprite/more-sprites.png') -10px -10px;
+                                        top: 50%;
+                                        left: -10px;
+                                        transform: translateY(-50%);
+                                    }
+
+                                    &:hover{
+                                        color: $blue;
+
+                                        &:before{
+                                            content:"";
+                                            position:absolute;
+                                            display: block;
+                                            width: 50px; height: 50px;
+                                            background: url('../images/sprite/more-sprites.png') -10px -80px;
+                                            top: 50%;
+                                            left: -10px;
+                                            transform: translateY(-50%);
+                                            
+                                        }
+                                    }
+                                }
                             }
                             ul{
+                                padding-top: 20px;
+                                border-top: 1px solid #dddddd;
                                 width: 450px;
-                                border: 1px solid;
                                 
                                 li{
-                                    padding: 23px 82px 20px 45px;
                                     background: $white;
-                                    height: 131px; 
+                                    height: 130px;
+                                    text-align:left; 
+                                    box-sizing: border-box;
+                                    box-shadow: 3px 5px 2px #E2E2E2;
 
                                     &:first-child{
                                         margin-bottom: 20px;
+                                    }
+                                    a{
+                                        display: block;
+                                        padding: 30px 50px 20px 45px;
+                                        color: black;
+
+                                        h3{
+                                            margin-bottom: 10px;
+                                            font-size: 18px;
+                                            color: $fontHover;
+                                        }
+                                        p{
+                                            margin-bottom: 10px;
+                                            text-align:left; 
+    
+                                            &:first-child{
+                                                font-size: 18px;
+                                            }
+                                            &:last-child{
+                                                font-size: 16px;
+                                                color: $fontGray6;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -283,6 +509,13 @@ main{
     
                 @media (min-width: 768px){
                     width: 1200px;    
+                }
+
+                div{
+                    &.realtime{
+                        @include imagePush("temp","01");
+                        background-size: contain;
+                    }
                 }
             }
             
