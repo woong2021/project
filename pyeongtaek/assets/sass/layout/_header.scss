@@ -6,7 +6,37 @@
 
 /* Header */
 header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    background: white;
+
     section{
+        @media (min-width: 320px){
+            &#gnb-m{
+                display:block;
+            }
+            &#gnb{
+                display: none;
+            }
+        }
+        @media (min-width: 768px){
+            &#gnb-m{
+                display:none;
+            }
+            &#gnb{
+                display: block;
+            }
+        }
+
+        &#gnb-m{
+            article{
+                &#gnbTop-m{
+                    display:flex;
+                }
+            }
+        }
         #gnbTop{
             border-bottom: 1px solid $gray;
             height: 80px;

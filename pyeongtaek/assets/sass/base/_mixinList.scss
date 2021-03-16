@@ -13,6 +13,7 @@
 // ----------------------------*
 @mixin imagePush($directory : "main", $number : "01"){
     background: url("../images/img-"+ $directory + "-" + $number + ".png") no-repeat;
+    background-size: cover;
 }
 
 @mixin captionPush($directory: "main"){
@@ -65,4 +66,73 @@
     width: $width;
     height: $height;
     border-radius: 50%;
+}
+
+@mixin Darken($color: $blue){
+    background:darken($color, 5%);
+}
+
+// *----------------------------
+//	KeyFrames
+// ----------------------------*
+@keyframes hoverAni {
+    0%{
+        height: 50px;
+     }
+  
+     100%{
+        height: 250px;
+     }
+}
+
+@keyframes hoverColor {
+    0%{
+        color: yellow;
+     }
+  
+     100%{
+        color: white;
+     }
+}
+
+@keyframes top-line{
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+/* 추가된 부분 */
+@keyframes line-top-rotate {
+    0% {transform:translateY(10px) rotateZ(0deg)}
+    100% {transform:translateY(10px) rotateZ(45deg)}
+  }
+
+@keyframes middle-line{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes bottom-line{
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes line-bot-rotate {
+0% {transform:translateY(-10px) rotateZ(0deg)}
+100% {transform:translateY(-8px) rotateZ(135deg)}
 }

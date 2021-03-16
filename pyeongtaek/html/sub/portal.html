@@ -16,7 +16,20 @@
 </head>
 <body>
     <header>
-        <section>
+        <section id="gnb-m">
+            <article id="gnbTop-m">
+                <div id="line-wrapper">
+                    <div id="top-line" class="line"></div>
+                    <div id="middle-line" class="line"></div>
+                    <div id="bottom-line" class="line"></div>
+                </div>
+                <div class="gnbTop-inner">
+                    <h1 class="logo-header"><a href="../main/index.html"></a></h1>
+                </div>
+                <div>로그인</div>
+            </article>
+        </section>
+        <section id="gnb">
             <article id="gnbTop">
                 <div class="gnbTop-inner">
                     <h1 class="logo-header"><a href="../main/index.html"></a></h1>
@@ -49,6 +62,69 @@
         </section>
     </header>
     <main>
+        <section id="dim"></section>
+        <section class="gnbNav-inner">
+            <article>
+                로그인하세요.
+            </article>
+            <article>
+                <nav id="menuList">
+                    <div>
+                        <a href="">공영주차장</a>
+                        <ul class="menu-list">
+                            <li><a href="">지도검색</a></li>
+                            <li><a href="">주차장검색</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">주차요금 사전결제</a>
+                        <ul class="menu-list">
+                            <li><a href="">안내</a></li>
+                            <li><a href="">조회/결제</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">미납주차요금</a>
+                        <ul class="menu-list">
+                            <li><a href=""></a>안내</li>
+                            <li><a href=""></a>조회/결제</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">무정차정산 신청</a>
+                        <ul class="menu-list">
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">공영주차장 정기권</a>
+                        <ul class="menu-list">
+                            <li><a href="">정기권안내</a></li>
+                            <li><a href="">정기권신청</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">요금감면 자격확인</a>
+                        <ul class="menu-list">
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="">열린공간</a>
+                        <ul class="menu-list">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">자주하는질문</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </article>
+            <article>
+                <div><a href="">로그인</a></div>
+                <div><a href="">회원가입</a></div>
+            </article>
+        </section>
         <section id="mainSlider">
             <div id="slider">
                 <article class="slider-item">
@@ -112,41 +188,49 @@
                     </div>
                 </div>
             </article>
-            <article class="parking-realtime">
+           <article class="parking-realtime">
                 <div class="parkingbox-inner">
                     <p class="subheading">평택시 실시간 주차장 현황을 한눈에!</p>
                     <h2>실시간 주차장 현황</h2>
                     <div id="realtimeSlider">
                         <div class="realtimeslider-item">
                             <div class="realtime">
-                            <ul>
-                                <li class="realtime-img">평택시체육복지센터</li>
-                                <li>주차가능: 01면</li>
-                            </ul> 
+                                <div class="realtime-inner">
+                                    <ul>
+                                        <li class="realtime-img">평택시체육복지센터</li>
+                                        <li>주차가능: 00면</li>
+                                    </ul> 
+                                </div>
                             </div>
                         </div>
                         <div class="realtimeslider-item">
                             <div class="realtime">
-                            <ul>
-                                <li>평택시체육복지센터</li>
-                                <li>주차가능: 02면</li>
-                            </ul> 
+                                <div class="realtime-inner">
+                                    <ul>
+                                        <li>평택시체육복지센터</li>
+                                        <li>주차가능: 00면</li>
+                                    </ul> 
+                                </div>
                             </div>
                         </div>
                         <div class="realtimeslider-item">
                             <div class="realtime">
-                            <ul>
-                                <li>평택시체육복지센터</li>
-                                <li>주차가능: 03면</li>
-                            </ul> 
+                                <div class="realtime-inner">
+                                    <ul>
+                                        <li>평택시체육복지센터</li>
+                                        <li>주차가능: 00면</li>
+                                    </ul> 
+                                </div>
                             </div>
                         </div>
                         <div class="realtimeslider-item">
                             <div class="realtime">
-                            <ul>
-                                <li>평택시체육복지센터</li>
-                                <li>주차가능: 04면</li>
-                            </ul> 
+                                <div class="realtime-inner">
+                                    <ul>
+                                        <li>평택시체육복지센터</li>
+                                        <li>주차가능: 00면</li>
+                                    </ul> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -235,65 +319,92 @@
         </section>
     </footer>
     <script>
-            $('#slider').slick({
-                slide: '.slider-item',
-                Infinity : true,
-                slidesToShow: 1,
-                slidesToScroll : 1,
-                speed: 100,
-                arrows: false,
-                dots: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                pauseOnHover: true,
-                vertical: false,
-                draggable: false,
+        // slider
+        $('#slider').slick({
+            slide: '.slider-item',
+            Infinity : true,
+            slidesToShow: 1,
+            slidesToScroll : 1,
+            speed: 100,
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            pauseOnHover: true,
+            vertical: false,
+            draggable: false,
 
-                Responsive: [
-                    {
-                        breakpoint: 320,
-                        settings:{
-                            slidesToShow:1
-                        }
-                    },
-                    {
-                        breakpoint: 320,
-                        settings:{
-                            slidesToShow:1
-                        }
+            Responsive: [
+                {
+                    breakpoint: 320,
+                    settings:{
+                        slidesToShow:1
                     }
-                ]
-            });
-
-            $('#realtimeSlider').slick({
-                slide: '.realtimeslider-item',
-                Infinity : true,
-                slidesToShow: 3,
-                slidesToScroll : 1,
-                speed: 100,
-                arrows: true,
-                dots: false,
-                pauseOnHover: true,
-                vertical: false,
-                draggable: false,
-                prevArrow:"<button type='button' class='slick-prev'></button>", //이전버튼
-                nextArrow:"<button type='button' class='slick-next'></button>", //다음버튼
-
-                Responsive: [
-                    {
-                        breakpoint: 320,
-                        settings:{
-                            slidesToShow:1
-                        }
-                    },
-                    {
-                        breakpoint: 320,
-                        settings:{
-                            slidesToShow:1
-                        }
+                },
+                {
+                    breakpoint: 768,
+                    settings:{
+                        slidesToShow:1
                     }
-                ]
-            });
+                }
+            ]
+        });
+
+        //realtimeSlider
+        $('#realtimeSlider').slick({
+            slide: '.realtimeslider-item',
+            Infinity : true,
+            slidesToShow: 3,
+            slidesToScroll : 1,
+            speed: 100,
+            arrows: true,
+            dots: false,
+            pauseOnHover: true,
+            vertical: false,
+            draggable: false,
+            prevArrow:"<button type='button' class='slick-prev'></button>",
+            nextArrow:"<button type='button' class='slick-next'></button>", 
+            mobileFirst: false,
+            initialSlide: -3,
+            
+            responsive: [
+                {
+                    breakpoint: 320,
+                    settings:{
+                        slidesToShow:1,
+                        
+                    }
+                },
+                {
+                    breakpoint: 768,
+
+                    settings:{
+                        slidesToShow:3
+                    }
+                }
+            ]
+        });
+
+        // 햄버거 메뉴
+        $(document).on("click", "#line-wrapper", function(){
+            $("#top-line").toggleClass('top-line');
+            $("#middle-line").toggleClass('middle-line');
+            $("#bottom-line").toggleClass('bottom-line');
+
+            $("#dim").toggleClass('on');
+            $(".gnbNav-inner").toggleClass('on');
+            $("body").toggleClass('on');
+        });
+   
+        //accordion
+        $(".menu-list").hide();
+        $(document).on("click", "#menuList div a", function(){
+            $(this).next().slideToggle(300);
+            $("#menuList div a").not(this).next().slideUp(300);
+            return false;
+        });
+
+        $("#menuList div a").eq(0).trigger("click");
     </script>
 </body>
 </html>
