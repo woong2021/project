@@ -20,7 +20,6 @@ a:link, a:visited, a:hover{text-decoration: none;}
     width: 15.556vw;
     height: 4.5vh;
     top: 0.375vh;
-    left: 1.9444vw;
     cursor: pointer;
 
     .line{
@@ -32,9 +31,14 @@ a:link, a:visited, a:hover{text-decoration: none;}
         height: 0.375vh;
         border-radius: 2px;
         box-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+        &:nth-child(1){
+           margin-top: 0.6vh;
+        }
     }
 
     .top-line{
+        margin-top: 4px;
         animation: top-line .5s forwards ease-out,
         line-top-rotate .3s .5s forwards ease-out;
     }

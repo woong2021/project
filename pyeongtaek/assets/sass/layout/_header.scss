@@ -17,6 +17,7 @@ header{
             &#gnb-m{
                 display:block;
             }
+
             &#gnb{
                 display: none;
             }
@@ -34,9 +35,22 @@ header{
             article{
                 &#gnbTop-m{
                     display:flex;
+                    padding: 1.25vh 4.5625vw;
+                    justify-content: space-between;
+
+                    .gnbTop-inner{
+                        position: relative; 
+                        top: 0.5vh;
+                        left: -1.5625vw;   
+                    }
+
+                    .icon-login-nor{
+                        margin-top: 1.3vh;
+                    }
                 }
             }
         }
+
         #gnbTop{
             border-bottom: 1px solid $gray;
             height: 80px;
@@ -53,6 +67,7 @@ header{
                     width: 1200px;
                     height: 80px;
                 }
+
                 h1{
                     position: absolute;
                     display: inline-block;
@@ -65,6 +80,7 @@ header{
                         height: 50px;
                     }
                 }
+
                 nav{
                     display: flex;
                     align-items: center;
@@ -78,9 +94,9 @@ header{
                         width: 55px;
                         height: 10px;
                         border-right: 1px solid;
+                        left: 15px;
 
                         &:nth-child(1){
-                            
                             a{   
                                 &:before{
                                     content:url("../images/icon-login.png");
@@ -91,6 +107,7 @@ header{
                                 }
                             }
                         }
+
                         &:nth-child(2){
                             margin-right: 20px;
                             width: 65px;
@@ -103,6 +120,7 @@ header{
                         a{
                             position: absolute;
                             top: -2.5px;
+
                             font : {
                                 size: 14px;
                                 weight: 400;
@@ -128,6 +146,7 @@ header{
                 @media (min-width: 320px){
                     width: 100%;
                 }
+
                 @media (min-width: 768px){
                     width: 1200px;
                 }
@@ -141,7 +160,11 @@ header{
     
                         a{
                             color: $black;
-                            font-weight: 600;
+                            font : {
+                                size: 17px;
+                                weight: 600;
+                            }
+                            
 
                             &:hover{
                                 color: $fontHover;

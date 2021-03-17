@@ -6,16 +6,28 @@
 
 /* Logo */
 .logo-header {
-    width: 126px; height: 44px;
-    background: url('../images/sprite/main-sprites.png') -199px -10px;
+    @media (min-width: 320px){
+        width: 110px; height: 26px;
+        background: url('../images/sprite/mainM-sprites.png') -10px -10px;
+    }
+
+    @media (min-width: 768px){
+        width: 126px; height: 44px;
+        background: url('../images/sprite/main-sprites.png') -199px -10px;
+    }
 }
 
 .logo-footer {
-    width: 150px; height: 53px;
-    background: url('../images/sprite/main-sprites.png') -10px -80px;
+    @media (min-width: 320px){
+       display: none; 
+    }
+
+    @media (min-width: 768px){
+        display: block;
+        width: 150px; height: 53px;
+        background: url('../images/sprite/main-sprites.png') -10px -80px;
+    }
 }
-
-
 
 /* Icon */
 .icon-calculate {
@@ -83,4 +95,39 @@
     background: url('../images/icon/icon-line-pc.png');
 }
 
-/* Bullet */
+/* mobile */
+.icon-arrow-l {
+    width: 35px; height: 35px;
+    background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+}
+
+.icon-arrow-r {
+    width: 35px; height: 35px;
+    background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+}
+
+.icon-login-nor {
+    width: 20px; height: 19px;
+    background: url('../images/sprite/mainM-sprites.png') -140px -60px;
+}
+
+.icon-login-sel {
+    width: 20px; height: 19px;
+    background: url('../images/sprite/mainM-sprites.png') -10px -111px;
+}
+
+.icon-line-mo {
+    width: 5px; height: 23px;
+    background: url('../images/sprite/mainM-sprites.png') -190px -10px;
+}
+
+.icon-qa-mo {
+    width: 16px; height: 17px;
+    background: url('../images/sprite/mainM-sprites.png') -50px -111px;
+}
+
+.icon-notice-mo {
+    width: 30px; height: 30px;
+    background: url('../images/sprite/mainM-sprites.png') -140px -10px;
+}
+

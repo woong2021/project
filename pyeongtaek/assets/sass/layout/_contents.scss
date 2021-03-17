@@ -21,7 +21,7 @@ main{
         
         position:fixed;
         background: $white;
-        top: 45px;
+        top: 7.1vh;
         width: 71.1111vw;
         height: 100%;
         z-index: 1;
@@ -61,7 +61,7 @@ main{
             &:first-child{
                 background: $fontGray9;
                 padding: 0 5.5556vw;
-                height: 50px;
+                height: 6vh;
                 color: $white;
                 
                 font : {
@@ -74,9 +74,8 @@ main{
 
             &:last-child{
                 position: absolute;
-                bottom: 5.6vh;
-    
                 display: flex;
+                bottom: 6.8vh;     
                 flex-wrap: nowrap;
                 width: 100%;
     
@@ -84,7 +83,7 @@ main{
                     width: 50%;
                     height: 5.625vh;
                     text-align: center;
-                    line-height: 5vh;
+                    line-height: 5.625vh;
     
                     &:first-child{
                         background: $fontHover;
@@ -212,15 +211,13 @@ main{
                         @media (min-width: 320px){
                             @include imagePush("mainM","02");
                             
-
                             .icon-mainbanner{
                                 display: none;
                             }
-
                         }
+
                         @media (min-width: 768px){
-                            @include imagePush($number : "02");
-                            
+                            @include imagePush($number : "02");   
 
                             .icon-mainbanner{
                                 display: block;
@@ -230,7 +227,7 @@ main{
 
                         div{
                             position: absolute;
-  
+                            text-align: left;
                             transform: translate(-50%, -50%);
 
                             @media (min-width: 320px){
@@ -243,9 +240,7 @@ main{
                                 top: 55%;
                                 left: 30%;
                                 width: 30%;    
-                            }
-                            
-                            text-align: left;
+                            }                          
 
                             &.icon-mainbanner{
                                 top: 30%;
@@ -253,11 +248,10 @@ main{
                             }
 
                             h2{
-                                
-
                                 font: {
                                     weight: 700;
                                 }
+                                color: $white;
 
                                 @media (min-width: 320px){
                                     margin-bottom:  1.25vh;
@@ -267,12 +261,12 @@ main{
                                 @media (min-width: 768px){
                                     margin-bottom: 20px;
                                     font-size: 40px;
-                                }
-                                color: $white;
+                                }                               
                             }
 
                             p{
                                 margin-top: 10px;
+                                color: $white;
 
                                 @media (min-width: 320px){
                                     font-size: 3.3333vw;
@@ -280,17 +274,16 @@ main{
 
                                 @media (min-width: 768px){
                                     font-size: 23px;    
-                                }
-                                
-                                color: $white;
+                                }                              
                             }
                         }
                     }
+
                     &:nth-child(4){
                         @media (min-width:320px){
-                            @include imagePush("mainM","03"); 
-                            
+                            @include imagePush("mainM","03");         
                         }
+
                         @media (min-width:768px){
                             @include imagePush($number : "03");
                         }
@@ -298,6 +291,7 @@ main{
                         div{
                             position: absolute;
                             transform: translate(-50%, -50%);
+                            text-align: center;
 
                             @media (min-width: 320px){
                                 width: 100%;
@@ -306,12 +300,10 @@ main{
                             @media (min-width: 768px){
                                 width: 30%;
                             }
-                            
-                            text-align: center;
 
                             &:nth-child(1){
                                 @media (min-width: 320px){
-                                    top: 20%;
+                                    top: 23%;
                                     left: 50%;
                                 }
 
@@ -322,6 +314,7 @@ main{
 
                                 h2{
                                     margin-bottom: 15px;
+                                    color: $sliderFont;
 
                                     @media (min-width: 320px){
                                         font : {
@@ -334,8 +327,7 @@ main{
                                         font : {
                                             size: 40px;
                                         }
-                                    }
-                                    color: $sliderFont;
+                                    }                                   
                                 }
 
                                 p{
@@ -353,7 +345,7 @@ main{
 
                             &:nth-child(2){
                                 @media (min-width: 320px){
-                                    top: 35%;
+                                    top: 37%;
                                     left: 50%;
                                 }
 
@@ -361,9 +353,9 @@ main{
                                     top: 70%;
                                     left: 65%;
                                 }
+
                                 p{
                                     margin-top: 10px;
-                                    
                                     font-weight: 100;
 
                                     @media (min-width: 320px){
@@ -389,8 +381,7 @@ main{
             }
 
             p{
-                &.subheading{
-                    
+                &.subheading{  
                     color: $fontGray9;
 
                     @media (min-width: 320px){
@@ -405,6 +396,7 @@ main{
 
             h2{
                 margin: 10px 0 55px;
+
                 font : {
                     family: "Noto Sans CJK KR";
                     weight: 600;
@@ -423,17 +415,17 @@ main{
                 position: relative;
 
                 &.parking-service{
-
                     @media (min-width: 320px){
+                        padding: 2vh 0;
                         height: 56.3vh;
                     }
 
                     @media (min-width: 768px){
+                        padding: 0;
                         height: 700px; 
                     }
                     
                     .parkingbox-inner{
-
                         @media (min-width: 320px){
                             top: 45%;
                         }
@@ -441,20 +433,30 @@ main{
                         @media (min-width: 768px){
                             top: 50%;
                         }
+
                         .service-list{
                             display:flex;
                             justify-content: space-between;
                             flex-wrap: wrap;
                             height: 236px;
-    
+                            
+                            @media (min-width: 320px){
+                                margin: 0 auto;
+                                width: 80%;
+                            }
+
+                            @media (min-width: 768px){
+                                
+                            }
+
                             .service-item{
                                 @media (min-width: 320px){
                                     width: 50%;
     
                                     p{
-                                        margin: 10px auto 20px;
+                                        margin: 1.25vh auto 5.5556vw;
                                         font-size: 3.6111vw;
-                                        width: 35%;
+                                        width: 43%;
                                     }
                                 }
     
@@ -474,7 +476,7 @@ main{
                                     background: $gradient;
                                     
                                     @media (min-width:320px){
-                                        @include circle(98px, 98px);
+                                        @include circle(27.225vw, 12.25vh);
                                         margin: 0 auto;
                                     }
     
@@ -490,7 +492,14 @@ main{
                                         position: absolute;
                                         top: 50%;
                                         left: 50%;
-                                        transform: translate(-50%, -50%);
+                                        @media (min-width: 320px){
+                                            transform: translate(-50%, -50%) scale(0.7);
+                                        }
+
+                                        @media (min-width: 768px){
+                                            transform: translate(-50%, -50%) scale(1);
+                                        }
+                                        
                                     }
                                 }
     
@@ -520,39 +529,39 @@ main{
                     @media (min-width: 768px){
                         height: 664px;
                     }
+
                     div#realtimeSlider{
                         position: relative;
                         display: flex;
                         justify-content: space-between;
                         flex-flow: wrap;
-                        
-                        
+                             
                         @media (min-width: 320px){
-                            left: 75px;
+                            left: 20.4375vw;
                             width: 55%;
 
                             .slick-list{
                                 width: 100%;
                                 height: 33.75vh;
+                                left: 3.1250vw;
                             }
                         }
 
                         @media(min-width: 768px){
                             left: 80px;
                             width: 1040px;
+
                             .slick-list{
                                 height: inherit;
-                            }
-                            
+                                left: 0;
+                            }   
                         }
+
                         .slick-prev,
                         .slick-next{
                             position: absolute; 
                             border: 0;  
-                            background: url(../images/sprite/more-sprites.png) -10px -10px; 
                             top: 50%; 
-                            width: 50px; 
-                            height: 50px; 
                             z-index: 10;
                             transform: translateY(-50%);
 
@@ -563,32 +572,68 @@ main{
                         }
                         .slick-prev{
                             @media (min-width: 320px){
-                                left: -55px;
+                                width: 35px; height: 35px;
+                                background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                                left: -15.1875vw;
+                                transform: translateY(-50%) rotate(180deg);
                             }
 
                             @media (min-width: 768px){
+                                width: 50px; height: 50px;
+                                background: url('../images/sprite/more-sprites.png') -10px -10px; 
                                 left: -70px;    
                             }
                             
                             transform: translateY(-50%) rotate(180deg);
 
                             &:hover{
-                                background: url('../images/sprite/more-sprites.png') -10px -80px;  
+                                @media (min-width: 320px){
+                                    width: 35px; height: 35px;
+                                    background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                    transform: translateY(-50%) rotate(0deg);
+                                }
+
+                                @media (min-width: 768px){
+                                    background: url('../images/sprite/more-sprites.png') -10px -80px; 
+                                }
+                                 
                             }
                         }
                         .slick-next{
                             right: -70px;
-
+                            @media (min-width: 320px){
+                                width: 35px; height: 35px;
+                                background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                            }
+                            @media (min-width: 768px){
+                                width: 50px; height: 50px;
+                                background: url('../images/sprite/more-sprites.png') -10px -10px; 
+                                left: -70px;    
+                            }
                             &:hover{
-                                background: url('../images/sprite/more-sprites.png') -10px -80px;  
-                                
+                                @media (min-width: 320px){
+                                    width: 35px; height: 35px;
+                                    background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                    transform: translateY(-50%) rotate(180deg);
+                                }
+
+                                @media (min-width: 768px){
+                                    background: url('../images/sprite/more-sprites.png') -10px -80px;  
+                                }   
                             }
                         }
 
                         div {
                             &.realtimeslider-item{
-                                margin: 0 15px;
-                                width: 230px !important;
+                                @media (min-width: 320px){
+                                    width: 55.1875vw !important;
+                                }
+
+                                
+                                @media (min-width: 768px){
+                                    width: 230px !important;
+                                    margin: 0 15px;
+                                }
 
                                 &:hover{
                                     div{
@@ -616,22 +661,29 @@ main{
 
                                         @media (min-width: 320px){
                                             width: 100%;
-                                            height: 80vh;
+                                            height: 34vh;
                                         }
             
                                         @media (min-width: 768px){
                                             width: 228px;
                                             height: 269px;
                                         }
+
                                        > div{
                                             position: absolute;
                                             background: rgba(0,0,0,0.5);
                                             padding: 10px 25px;
                                             bottom: 0;
-                                            width: 177px;
-                                            > ul{
 
-    
+                                            @media (min-width: 320px){
+                                                width: 78%;
+                                            }
+
+                                            @media (min-width: 768px){
+                                                width: 177px;    
+                                            }  
+
+                                            > ul{
                                                 li{
                                                     text-align: center;
                                                     width: 100%;
@@ -647,9 +699,8 @@ main{
                                                     }
                                                 }
                                             }
-                                        }
-                                        
-                                     }
+                                        } 
+                                    }
                                 }
                             }
                         }   
@@ -660,14 +711,12 @@ main{
                     @media (min-width: 320px){
                         @include imagePush("mainM","04");
                         height: 11.1111vh;
-                        
                     }
 
                     @media (min-width: 768px){
                         @include imagePush($number : "04");
                         height: 170px;
-                    }
-                   
+                    }  
 
                     .parkingbox-inner{
                         display:flex;
@@ -677,40 +726,40 @@ main{
                             position: relative;
 
                             @media (min-width: 320px){
-                                padding: 0 10px;
+                                padding: 0 3.125vw;
                             }
 
                             @media (min-width: 768px){
                                 padding-right: 100px;
-                            }
-                            
+                            }  
 
                             p{
                                 color: $white;
     
                                 &:first-child{
-                                    
-
                                     font : {
                                         style: italic;
                                         weight: 100;
                                     }
+
                                     @media (min-width: 320px){
                                         margin-bottom: 0.5vh;
                                         font-size: 2.7778vw;
                                     }
+
                                     @media (min-width: 768px){
                                         margin-bottom: 15px;
                                         font-size: 25px;
-                                    }
-                                    
+                                    } 
                                 }
+
                                 &:last-child{
                                     font-weight: 100;
 
                                     @media (min-width: 320px){
                                         font-size: 3.0556vw;
                                     }
+
                                     @media (min-width: 768px){
                                         font-size: 29px;
                                     }
@@ -720,6 +769,7 @@ main{
                                     color: $yellow;
                                 }
                             }
+
                             &:first-child,
                             &:nth-child(2){
                                 &:after{
@@ -728,11 +778,10 @@ main{
                                     position:absolute;
 
                                     @media (min-width: 320px){
-                                        background: url('') no-repeat;
-                                        top: 10px;
-                                        right: 0;
-                                        width: 13px;
-                                        height: 60px;
+                                        width: 5px; height: 23px;
+                                        background: url('../images/sprite/mainM-sprites.png') -190px -10px;
+                                        top: 0;
+                                        right: -12px;
                                     }
                                     @media (min-width: 768px){
                                         background: url('../images/icon/icon-line-pc.png') no-repeat;
@@ -741,11 +790,6 @@ main{
                                         width: 13px;
                                         height: 60px;
                                     }
-
-                                    // font : {
-                                    //     size: 70px;
-                                    //     weight: 100;
-                                    // };
                                 }
                             }
                         }
@@ -754,7 +798,9 @@ main{
 
                 &.parking-info{
                     @media (min-width: 320px){
-                        height: 112.5vh;;
+                        margin-top: 3.75vh;
+                        height: 113.5vh;
+                        overflow: hidden;
                     }
 
                     @media (min-width: 768px){
@@ -765,17 +811,20 @@ main{
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
+                        top: 50%;
 
-                        section{
-
+                        //여기부터
+                        section{        
                             background: $bgGray;
 
                             @media (min-width: 320px){
-                                margin-top: 50px;
-                                padding: 0;
                                 width: 100%;
-                                height: 50vh;
-                                overflow: hidden;
+                                height: 55vh;
+                                box-sizing: border-box;
+
+                                &:last-child{
+                                    margin-top: 3.75vh;
+                                }
                             }
 
                             @media (min-width: 768px){
@@ -783,6 +832,11 @@ main{
                                 padding: 0 60px;
                                 width: auto;
                                 height: 513px;
+
+                                
+                                &:last-child{
+                                    margin-top: 0;
+                                }
                             }
 
                             &:first-child{
@@ -792,10 +846,10 @@ main{
                                             @media (min-width: 320px){
                                                 content: "";
                                                 position: absolute;
-                                                background: url('') -272px -74px;
-                                                width: 50px; height: 50px;
-                                                left: -70px;
-                                                top: 23px;
+                                                background: url('../images/sprite/mainM-sprites.png') -140px -10px;
+                                                width: 30px; height: 30px;
+                                                left: -40px;
+                                                top: -7px;     
                                             }
 
                                             @media (min-width: 768px){
@@ -818,10 +872,11 @@ main{
                                             @media (min-width: 320px){
                                                 content: "";
                                                 position: absolute;
-                                                background: url('') -169px -153px;
+                                                background: url('../images/sprite/main-sprites.png') -169px -153px;
                                                 width: 50px; height: 50px;
-                                                left: -70px;
-                                                top: 23px;
+                                                left: -50px;
+                                                top: -17px;
+                                                transform: scale(.6);
                                             }
                                             @media (min-width: 768px){
                                                 content: "";
@@ -861,10 +916,14 @@ main{
                                     position:relative;
 
                                     @media (min-width: 320px){
-                                       left: 19.444vw; 
+                                       margin: 3.125vh 0;
+                                       top: 0;
+                                       left: 15vw;
+                                       width: 50%; 
                                     }
 
                                     @media (min-width: 768px){
+                                        margin: 0;
                                         left: 70px;
                                     }
                                     
@@ -897,11 +956,19 @@ main{
                                         content:"";
                                         position:absolute;
                                         display: block;
-                                        width: 50px; height: 50px;
-                                        background: url('../images/sprite/more-sprites.png') -10px -10px;
                                         top: 50%;
                                         left: -10px;
                                         transform: translateY(-50%);
+
+                                        @media (min-width: 320px){
+                                            width: 35px; height: 35px;
+                                            background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                                        }
+
+                                        @media (min-width: 768px){
+                                            width: 50px; height: 50px;
+                                            background: url('../images/sprite/more-sprites.png') -10px -10px;
+                                        }
                                     }
 
                                     &:hover{
@@ -911,8 +978,17 @@ main{
                                             content:"";
                                             position:absolute;
                                             display: block;
-                                            width: 50px; height: 50px;
-                                            background: url('../images/sprite/more-sprites.png') -10px -80px;
+
+                                            @media (min-width: 320px){
+                                                width: 35px; height: 35px;
+                                                background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                                transform: translateY(-50%) rotate(180deg);
+                                            }
+
+                                            @media (min-width: 768px){
+                                                width: 50px; height: 50px;
+                                                background: url('../images/sprite/more-sprites.png') -10px -80px;
+                                            }
                                             top: 50%;
                                             left: -10px;
                                             transform: translateY(-50%);

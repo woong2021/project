@@ -26,7 +26,7 @@
                 <div class="gnbTop-inner">
                     <h1 class="logo-header"><a href="../main/index.html"></a></h1>
                 </div>
-                <div>로그인</div>
+                <div class="icon-login-nor"></div>
             </article>
         </section>
         <section id="gnb">
@@ -399,6 +399,7 @@
         //accordion
         $(".menu-list").hide();
         $(document).on("click", "#menuList div a", function(){
+            $(this).css("color","0074c1");
             $(this).next().slideToggle(300);
             $("#menuList div a").not(this).next().slideUp(300);
             return false;
