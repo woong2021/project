@@ -12,7 +12,7 @@
 //	Image
 // ----------------------------*
 @mixin imagePush($directory : "main", $number : "01"){
-    background: url("../images/img-"+ $directory + "-" + $number + ".png") no-repeat;
+    background: url("../images/capture/img-"+ $directory + "-" + $number + ".png") no-repeat;
     background-size: cover;
 }
 
