@@ -25,7 +25,7 @@
   }
 </script>
 
-<{Header} />
+
 <main>
   <h1>Hello {name}!</h1>
   <p>{age}</p>

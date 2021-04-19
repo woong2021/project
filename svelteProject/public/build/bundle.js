@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -675,7 +675,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "No name!!";
-    			add_location(div, file, 45, 4, 769);
+    			add_location(div, file, 45, 4, 759);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -710,7 +710,7 @@ var app = (function () {
     			t0 = text("Hello ");
     			t1 = text(/*name*/ ctx[0]);
     			t2 = text("!");
-    			add_location(div, file, 43, 4, 730);
+    			add_location(div, file, 43, 4, 720);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -747,7 +747,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file, 49, 6, 839);
+    			add_location(li, file, 49, 6, 829);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -773,36 +773,33 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let header;
-    	let t0;
     	let main;
     	let h1;
+    	let t0;
     	let t1;
     	let t2;
     	let t3;
-    	let t4;
     	let p;
+    	let t4;
     	let t5;
-    	let t6;
     	let img;
     	let img_src_value;
-    	let t7;
+    	let t6;
     	let input;
-    	let t8;
+    	let t7;
     	let button0;
-    	let t10;
+    	let t9;
     	let button1;
+    	let t11;
     	let t12;
-    	let t13;
     	let ul;
-    	let t14;
+    	let t13;
     	let button2;
-    	let t16;
+    	let t15;
     	let footer;
     	let current;
     	let mounted;
     	let dispose;
-    	header = new Header({ $$inline: true });
 
     	function select_block_type(ctx, dirty) {
     		if (/*toggle*/ ctx[2]) return create_if_block;
@@ -823,91 +820,87 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			create_component(header.$$.fragment);
-    			t0 = space();
     			main = element("main");
     			h1 = element("h1");
-    			t1 = text("Hello ");
-    			t2 = text(/*name*/ ctx[0]);
-    			t3 = text("!");
-    			t4 = space();
+    			t0 = text("Hello ");
+    			t1 = text(/*name*/ ctx[0]);
+    			t2 = text("!");
+    			t3 = space();
     			p = element("p");
-    			t5 = text(/*age*/ ctx[1]);
-    			t6 = space();
+    			t4 = text(/*age*/ ctx[1]);
+    			t5 = space();
     			img = element("img");
-    			t7 = space();
+    			t6 = space();
     			input = element("input");
-    			t8 = space();
+    			t7 = space();
     			button0 = element("button");
     			button0.textContent = "Assign";
-    			t10 = space();
+    			t9 = space();
     			button1 = element("button");
     			button1.textContent = "Toggle";
-    			t12 = space();
+    			t11 = space();
     			if_block.c();
-    			t13 = space();
+    			t12 = space();
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t14 = space();
+    			t13 = space();
     			button2 = element("button");
     			button2.textContent = "Eat it!!";
-    			t16 = space();
+    			t15 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(h1, "class", "svelte-1hov68c");
-    			add_location(h1, file, 29, 2, 446);
+    			add_location(h1, file, 29, 2, 436);
     			attr_dev(p, "class", "svelte-1hov68c");
-    			add_location(p, file, 30, 2, 471);
+    			add_location(p, file, 30, 2, 461);
     			if (img.src !== (img_src_value = "")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*name*/ ctx[0]);
-    			add_location(img, file, 31, 2, 486);
+    			add_location(img, file, 31, 2, 476);
     			attr_dev(input, "type", "text");
-    			add_location(input, file, 33, 2, 535);
-    			add_location(button0, file, 34, 2, 577);
-    			add_location(button1, file, 35, 2, 623);
-    			add_location(ul, file, 47, 2, 800);
-    			add_location(button2, file, 52, 2, 878);
+    			add_location(input, file, 33, 2, 525);
+    			add_location(button0, file, 34, 2, 567);
+    			add_location(button1, file, 35, 2, 613);
+    			add_location(ul, file, 47, 2, 790);
+    			add_location(button2, file, 52, 2, 868);
     			attr_dev(main, "class", "svelte-1hov68c");
-    			add_location(main, file, 28, 0, 437);
+    			add_location(main, file, 28, 0, 427);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			mount_component(header, target, anchor);
-    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
+    			append_dev(h1, t0);
     			append_dev(h1, t1);
     			append_dev(h1, t2);
-    			append_dev(h1, t3);
-    			append_dev(main, t4);
+    			append_dev(main, t3);
     			append_dev(main, p);
-    			append_dev(p, t5);
-    			append_dev(main, t6);
+    			append_dev(p, t4);
+    			append_dev(main, t5);
     			append_dev(main, img);
-    			append_dev(main, t7);
+    			append_dev(main, t6);
     			append_dev(main, input);
     			set_input_value(input, /*name*/ ctx[0]);
-    			append_dev(main, t8);
+    			append_dev(main, t7);
     			append_dev(main, button0);
-    			append_dev(main, t10);
+    			append_dev(main, t9);
     			append_dev(main, button1);
-    			append_dev(main, t12);
+    			append_dev(main, t11);
     			if_block.m(main, null);
-    			append_dev(main, t13);
+    			append_dev(main, t12);
     			append_dev(main, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ul, null);
     			}
 
-    			append_dev(main, t14);
+    			append_dev(main, t13);
     			append_dev(main, button2);
-    			insert_dev(target, t16, anchor);
+    			insert_dev(target, t15, anchor);
     			mount_component(footer, target, anchor);
     			current = true;
 
@@ -923,8 +916,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*name*/ 1) set_data_dev(t2, /*name*/ ctx[0]);
-    			if (!current || dirty & /*age*/ 2) set_data_dev(t5, /*age*/ ctx[1]);
+    			if (!current || dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
+    			if (!current || dirty & /*age*/ 2) set_data_dev(t4, /*age*/ ctx[1]);
 
     			if (!current || dirty & /*name*/ 1) {
     				attr_dev(img, "alt", /*name*/ ctx[0]);
@@ -942,7 +935,7 @@ var app = (function () {
 
     				if (if_block) {
     					if_block.c();
-    					if_block.m(main, t13);
+    					if_block.m(main, t12);
     				}
     			}
 
@@ -972,22 +965,18 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(header.$$.fragment, local);
     			transition_in(footer.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(header.$$.fragment, local);
     			transition_out(footer.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(header, detaching);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			if_block.d();
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t16);
+    			if (detaching) detach_dev(t15);
     			destroy_component(footer, detaching);
     			mounted = false;
     			run_all(dispose);

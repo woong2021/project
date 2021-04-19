@@ -3,9 +3,11 @@
 // *----------------------------
 //	Color
 // ----------------------------*
-$white : #ffffff;
-$gray  : #cccccc;
-$black : #000000;
-$red   : #ff0000;
+$white    : #ffffff !default;
+$gray     : #cccccc !default;
+$black    : #000000 !default;
+$red      : #ff0000 !default;
 
-$h3    : #333333;
+$h3       : #333333 !default;
+$btnColor : #0075C1 !default;
+$bgBlue   : #0075C1 !default;

@@ -29,6 +29,10 @@ footer {
                 padding: 10px;
                 border: 1px solid;
                 width: 200px;
+
+                &:before{
+                    content:"";
+                }
             }
         }
 

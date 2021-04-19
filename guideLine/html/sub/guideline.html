@@ -38,6 +38,7 @@
             <p class="notice">해당 가이드는 개인적인 견해로 제작된 것으로 정답이 아닙니다. </p>
             <h3>HTML 표기법</h3>
             <table class="default-table">
+                <caption class="sr-only">HTML 표기법 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -58,6 +59,7 @@
             <h3>CSS 표기법</h3>
             <p class="notice">CSS는 직접 입력하지 않습니다. 입력은 SASS를 이용 </p>
             <table class="default-table">
+                <caption class="sr-only">CSS 표기법 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -67,7 +69,7 @@
                         <th scope="row">CSS 기본</th>
                         <td> 
                             <ul>
-                                <li>"인라인태그"로 작성은 자제</li>
+                                <li>"<span class="bold">인라인태그</span>"로 작성은 자제</li>
                                 <li>속성과 값 사이에 한칸 띄워서 작성(예: width: 0;)</li>
                             </ul>
                         </td>
@@ -86,7 +88,7 @@
                     </tr>
                     <tr>
                         <th scope="row">숫자 0</th>
-                        <td> top: 0;</td>
+                        <td> top: 0; (px등 단위를 입력하지 않음)</td>
                     </tr>
                 </tbody>
             </table>
@@ -94,6 +96,7 @@
         <section id="notationSass">
             <h3>SASS 표기법</h3>
             <table class="default-table">
+                <caption class="sr-only">SASS 표기법 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -110,6 +113,105 @@
 // *----------------------------
 //	Contents
 // ----------------------------*
+                            </xmp>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>버튼 가이드라인</h3>
+            <p class="notice"> 기준 : 평택주차포털 사이트 </p>
+            <article class="explanation-box">
+                <table class="default-table">
+                    <caption class="sr-only">Button 사용법 설명</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">기본</th>
+                            <td>
+                                <div class="button-01">
+
+                                </div>
+                                <ul>
+                                    <li>클래스명 "<span class="bold">btn-row</span>"로 버튼 영역을 확보</li>
+                                    <li>버튼영역 클래스는 상황에 따라 다를수 있음</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">버튼 1개</th>
+                            <td>
+                                <div class="button-02"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">one-btn</span>"</li>
+                                    <li>테이블이 아닌 일반적인 페이지 버튼에 사용 (200 * 50)</li>
+                                </ul>
+                                <div class="button-03"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">admin-btn</span>"</li>
+                                    <li>버튼 영역에 "<span class="bold">has-one</span>"을 추가하여 오른쪽 정렬</li>
+                                    <li>페이징이 있는 테이블에 사용하며 버튼 1개일때는 흰색 테두리 버튼(클래스명 <span class="bold">white</span> 추가)  (120 * 50)</li>
+                                </ul>
+                                <div class="button-04"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">search-btn</span>"</li>
+                                    <li>버튼 영역이 "btn-row"가 아닌 "<span class="bold">search-box</span>"이며 search box 안에 버튼을 넣어야 할 때 사용  (103 * 40)</li>
+                                </ul>
+                                <div class="button-05"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">lookup-btn</span>"</li>
+                                    <li>버튼 영역이 "btn-row"가 아닌 "<span class="bold">form-btn-box</span>"이며 테이블 내에 버튼을 넣어야 할 때 사용</li>
+                                    <li>버튼 사이즈는 103 * 40 이나 form-btn-box 클래스가 "<span class="bold">display: flex</span>"라 크기는 변동</li>
+                                </ul>
+                                <div class="button-06"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">popup-one-btn</span>"</li>
+                                    <li>팝업에 사용되는 버튼이 1개일때 사용 (103 * 40)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">버튼 2개</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+        </section>
+        <section id="">
+            <h3>테이블 표기법</h3>
+            <article class="explanation-box">
+                <table class="default-table">
+                <caption class="sr-only">TABLE 표기법 설명</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;caption&gt;</th>
+                        <td> 
+                            <ul>
+                                <li>웹접근성 고려하여 테이블 내에 &lt;caption&gt; 반드시 기재 </li>
+                                <li>기재는 하되 레이아웃 구성상 숨김처리 (클래스 "sr-only" 사용)</li>
+                                <li>"sr-only" 클래스가 지정 안되었을시 다음 코드 생성</li> 
+                            </ul>
+                            <xmp>
+.sr-only{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+}
                             </xmp>
                         </td>
                     </tr>

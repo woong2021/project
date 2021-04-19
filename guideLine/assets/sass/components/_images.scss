@@ -1,0 +1,30 @@
+
+// *----------------------------
+//	Images
+// ----------------------------*
+
+.button-01{
+    @include imagePush(guideline-button);
+}
+
+.button-02{
+    @include imagePush(guideline-button, "02");
+    background-size: cover;
+}
+
+.button-03{
+    @include imagePush(guideline-button, "03");
+    background-size: cover;
+}
+
+.button-04{
+    @include imagePush(guideline-button, "04");
+}
+
+.button-05{
+    @include imagePush(guideline-button, "05");
+}
+
+.button-06{
+    @include imagePush(guideline-button, "06");
+}

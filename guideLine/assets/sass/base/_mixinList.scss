@@ -13,7 +13,9 @@
 // ----------------------------*
 @mixin imagePush($directory : "git", $number : "01"){
     background: url("../images/img-"+ $directory + "-" + $number + ".png") no-repeat;
-    height: 400px;
+    background-size: contain;
+    height: 200px;
+    border: 1px solid orange;
 }
 
 @mixin captionPush($directory: "projectitem"){
@@ -58,4 +60,52 @@
     background-image: -ms-linear-gradient(to right, $from, $to);
     /*W3C*/
     background-image: linear-gradient(to right, $from, $to);
+}
+
+
+// *----------------------------
+//	Btn
+// ----------------------------*
+@mixin btnType2($color: $btnColor, $width: 100px, $height: 40px, $size: 14px){
+	display: block;
+    background:$color !important;
+	border: 0;
+	border-radius: 4px;
+	width: $width !important;
+	height: $height;
+	text-align: center;
+	color: $white !important;
+	
+	line-height: $height;
+	
+	@if ($size == 12px){
+		@media (min-width: 320px){font-size: 3.3333vw;}
+		@media (min-width: 768px){font-size: 12px;}
+	}@else if ($size == 14px){
+		@media (min-width: 320px){font-size: 3.8889vw;}
+		@media (min-width: 768px){font-size: 14px;}
+	}@else if ($size == 15px){
+		@media (min-width: 320px){font-size: 4.1667vw;}
+		@media (min-width: 768px){font-size: 15px;}
+	}@else{
+		font-size: $size;
+	}
+}
+
+@mixin btnType($color: $btnColor, $width: 100px, $height: 40px, $size: 14px){
+	display: block;
+    border: 1px solid $color;
+	border-radius: 4px;
+	background: $white !important;
+	width: $width;
+	height: $height;
+	text-align: center;
+	color: $color !important;
+	font-size: $size;
+	line-height: $height;
+}
+
+@mixin btnHover($color: $btnColor, $transparency : 5%){
+	background: darken($color, $transparency) !important;
+    color: #fff !important;
 }
