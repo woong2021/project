@@ -34,16 +34,41 @@
     <!-- Main Content -->
     <main id="container">
         <section id="">
-            <section>
-                <h2>SASS</h2>
-                <h3>For문</h3>
-                <article class="explanation-box">
-                    <ul>
-                        <li>@for $i from 1 through 9</li>
-                        <li>#{$i}</li>
-                    </ul>
-                </article>
-            </section>
+            <h2>SASS</h2>
+            <h3>이클립스 css 편집기와 연결</h3>
+            <table class="default-table">
+                <caption class="sr-only">scss 파일 유형을 기본 Eclipse css 편집기와 연결
+                </caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">Eclipse css 편집기와 연결</th>
+                        <td>
+                            <ol type="1">
+                                <li>"<span class="bold">window &gt; preferences</span>"로 이동</li>
+                                <li>"<span class="bold">General &gt; Editors &gt; File Associations</span>" 로 이동</li>
+                                <li>파일연결 창에서 오른쪽 상단의 "<span class="bold">add...</span>" 버튼을 클릭</li>
+                                <li>File Type 에 "<span class="bold">*.scss</span>"를 입력한 다음 ok 버튼을 클릭</li>
+                                <li>*.scss 목록에서 File Associations 항목을 찿아서 선택</li>
+                                <li>*.scss를 선택한 후 하단창 Associated editors에서 "<span class="bold">Add</span>"버튼을 클릭</li>
+                                <li>상단에 internal editors 가 선택되어 있는지 확인한 다음 "<span class="bold">CSS Editor</span>"를 찿아서 선택한 다음 ok 버튼 클릭</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="">
+            <h3>For문</h3>
+            <article class="explanation-box">
+                <ul>
+                    <li>@for $i from 1 through 9</li>
+                    <li>#{$i}</li>
+                </ul>
+            </article>
         </section>
     </main>
 

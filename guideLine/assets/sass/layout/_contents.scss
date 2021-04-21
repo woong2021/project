@@ -94,7 +94,14 @@ aside{
 
 #container{
     margin: 30px auto;
-    width: 1000px;
+    @media (min-width: 320px){
+        width: 100%;
+    }
+
+    @media (min-width: 768px){
+        width: 1000px;    
+    }
+    
 
     section{
         &.projectList{

@@ -48,11 +48,13 @@ body, table, div, p, ul li {
 
 ul {
     margin-bottom: 50px;
-
+    list-style-type: none;
+    
     li{
         position: relative;
         margin-top: 10px;
         left: 10px;
+
         &:before{
             content: "-";
             position: absolute;
@@ -60,6 +62,14 @@ ul {
         }
     }
 }
+
+ol{
+    li{
+        margin-bottom: 10px;
+        list-style-type: decimal;
+    }
+}
+
 /* H Tag */
 h1{
     font-size: 32px;

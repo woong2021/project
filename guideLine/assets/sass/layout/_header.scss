@@ -15,9 +15,18 @@ header {
 
     section{
         margin: 0 auto;
-        width: 1000px;
+        
         height: 100px;
         line-height: 100px;
+
+        @media (min-width: 320px){
+            width: 100%;
+        }
+
+        
+        @media (min-width: 768px){
+            width: 1000px;
+        }
 
         h1{
             display:inline-block;

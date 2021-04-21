@@ -23,3 +23,10 @@
 
 - [공통] header, footer include 작업
 - [svelte.html] "선언적랜더링" 컨텐츠 업데이트
+
+### 2021.04.19
+
+- [vue.html] 신규 페이지 추가
+- [guideline.html] 버튼 가이드라인 추가 (평택 주차포탈 기준)
+
+### 2021.04.20

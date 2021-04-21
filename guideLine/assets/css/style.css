@@ -1,6 +1,8 @@
 /* Header */
 header { position: -webkit-sticky; position: sticky; border-bottom: 2px solid; background: #ffffff; top: 0; height: 100px; z-index: 1; }
-header section { margin: 0 auto; width: 1000px; height: 100px; line-height: 100px; }
+header section { margin: 0 auto; height: 100px; line-height: 100px; }
+@media (min-width: 320px) { header section { width: 100%; } }
+@media (min-width: 768px) { header section { width: 1000px; } }
 header section h1 { display: inline-block; }
 header section nav#menuList { display: -webkit-box; display: -ms-flexbox; display: flex; width: 70%; float: right; }
 header section nav#menuList div { width: 120px; text-align: center; }
@@ -33,7 +35,9 @@ aside.Quick h2 { text-align: center; font-size: 18px; font-weight: 600; border-b
 aside.Quick ul { margin: 0 auto; border: 1px solid; background: #cccccc; width: 80%; }
 aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
-#container { margin: 30px auto; width: 1000px; }
+#container { margin: 30px auto; }
+@media (min-width: 320px) { #container { width: 100%; } }
+@media (min-width: 768px) { #container { width: 1000px; } }
 #container section.projectList { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 10px 0 20px; width: 100%; }
 #container section.projectList .project-item { margin-right: 10px; margin-bottom: 10px; border: 1px solid; height: 250px; }
 @media (min-width: 320px) { #container section.projectList .project-item { width: 100%; } }
@@ -83,9 +87,11 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
 body, table, div, p, ul li { margin-bottom: 10px; font-family: 'Nanum Gothic'; font-size: 16px; }
 
-ul { margin-bottom: 50px; }
+ul { margin-bottom: 50px; list-style-type: none; }
 ul li { position: relative; margin-top: 10px; left: 10px; }
 ul li:before { content: "-"; position: absolute; left: -10px; }
+
+ol li { margin-bottom: 10px; list-style-type: decimal; }
 
 /* H Tag */
 h1 { font-size: 32px; }
