@@ -1,4 +1,16 @@
-## 작업내용 (강의)
+## Vue.js 작업내용 (강의)
+
+============================================================================
+
+## 관련 내용
+
+```
+
+    - vue.js 공식문서 : https://vuejs.org
+    - cdn : <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    - axios : https://github.com/axios/axios
+
+```
 
 ### 2021.04.21
 
@@ -16,5 +28,4 @@
 
 ### 2021.04.23
 
-- axios : https://github.com/axios/axios
 - 템플릿 문법
