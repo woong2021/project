@@ -8,6 +8,8 @@
 - cdn : <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 - axios(비동기) : https://github.com/axios/axios
 - Vue CLI : https://cli.vuejs.org/
+- Vue CLI 설치 : npm install -g @vue/cli
+- Vue CLI 설치(에러시) : sudo npm install -g @vue/cli
 
 ### 2021.04.21
 
@@ -32,7 +34,6 @@
 ```
 - 템플릿 문법 (Computed 속성)
 - 템플릿 문법 (v-bind, v-if, v-show, v-on)
-- Vue CLI 설치 (npm install -g @vue/cli)
-    ---
-    ---
+- Vue CLI 설치
+- 싱글 파일 컴포넌트
 ```
