@@ -21,8 +21,8 @@
             Loading...
         </div>
         <!-- 인풋 박스에 내용을 p태그에 출력 -->
-        <input type="text">
-        <p></p>
+        <input type="text" v-model="message" placeholder="edit me">
+        <p>message is : {{message}}</p>
     </div>
 <script>
     new Vue({
@@ -31,7 +31,8 @@
             num: 10,
             numId : 'num',
             name : 'text-blue',
-            loading: true
+            loading: true,
+            message:''
         },
 
         computed:{
