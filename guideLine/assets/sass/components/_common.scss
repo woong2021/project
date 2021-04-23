@@ -47,7 +47,6 @@ body, table, div, p, ul li {
 }
 
 ul {
-    margin-bottom: 50px;
     list-style-type: none;
     
     li{
@@ -93,7 +92,23 @@ h3{
     color: $white;
 }
 h4{
-    font-size: 26px;
+    position: relative;
+    margin: 10px 0;
+    left: 15px;
+
+    font : {
+        size: 16px;
+        weight: 600;
+    }
+
+    &:before{
+        content:"";
+        position: absolute;
+        background: $h4;
+        left: -15px;
+        width: 5px;
+        height: 16px;
+    }
 }
 h5{
     font-size: 24px;
@@ -133,7 +148,7 @@ a{
 }
 
 .notice{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     padding:0 10px;
     border:1px solid #ff0000;
     background:rgb(248, 218, 222);
@@ -151,4 +166,30 @@ a{
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;	
+}
+
+.graph {
+    li{
+        position: relative;
+        margin:10px 0;
+        padding: 15px  20px;
+        border-radius: 50px;
+        background: linear-gradient(90deg, rgba(104,97,232,1) 0%, rgba(190,0,255,1) 100%);
+        left: 0;
+        color:white;
+        box-sizing:border-box;
+
+        &[data-score="100%"]{width:100%}
+        &[data-score="80%"]{width:80%}
+        &[data-score="50%"]{width:50%}
+        &[data-score="30%"]{width:30%}
+        &[data-score="10%"]{width:10%}
+
+        &:before {
+            position: absolute;
+            content: attr(data-score);
+            left: auto;
+            right: 20px;
+        }
+    }
 }

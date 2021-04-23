@@ -8,15 +8,18 @@
 .default-table{
     margin-top: 15px;
     margin-bottom: 20px;
-    border: 1px solid;
     width: 100%;
+    table-layout: fixed;
+    word-break: break-all;
 
     tr{
         th, td{
             padding: 10px;
             border: 1px solid;
             vertical-align: middle;
-            white-space: nowrap;
+            white-space: wrap;
+            word-break: keep-all;
+            line-height: 1.5;
         }
 
         th{

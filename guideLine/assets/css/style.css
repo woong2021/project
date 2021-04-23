@@ -63,8 +63,8 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
 /* Form */
 /* Table */
-.default-table { margin-top: 15px; margin-bottom: 20px; border: 1px solid; width: 100%; }
-.default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: nowrap; }
+.default-table { margin-top: 15px; margin-bottom: 20px; width: 100%; table-layout: fixed; word-break: break-all; }
+.default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: wrap; word-break: keep-all; line-height: 1.5; }
 .default-table tr th { background: #cccccc; font-weight: 400; }
 
 .button-01 { background: url("../images/img-guideline-button-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
@@ -87,7 +87,7 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
 body, table, div, p, ul li { margin-bottom: 10px; font-family: 'Nanum Gothic'; font-size: 16px; }
 
-ul { margin-bottom: 50px; list-style-type: none; }
+ul { list-style-type: none; }
 ul li { position: relative; margin-top: 10px; left: 10px; }
 ul li:before { content: "-"; position: absolute; left: -10px; }
 
@@ -100,7 +100,8 @@ h2 { margin-bottom: 15px; padding: 15px 0; border-bottom: 2px solid #000000; fon
 
 h3 { display: inline-block; margin: 5px 0; padding: 10px 20px; background: #333333; font-size: 18px; color: #ffffff; }
 
-h4 { font-size: 26px; }
+h4 { position: relative; margin: 10px 0; left: 15px; font-size: 16px; font-weight: 600; }
+h4:before { content: ""; position: absolute; background: #ffa500; left: -15px; width: 5px; height: 16px; }
 
 h5 { font-size: 24px; }
 
@@ -115,8 +116,16 @@ xmp, .explanation-box { margin: 15px 0; padding: 10px 20px; border: 1px solid; w
 a { text-decoration: none; color: #000000; }
 a:hover { font-weight: 700; }
 
-.notice { margin-bottom: 10px; padding: 0 10px; border: 1px solid #ff0000; background: #f8dade; height: 40px; line-height: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.notice { margin-bottom: 30px; padding: 0 10px; border: 1px solid #ff0000; background: #f8dade; height: 40px; line-height: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+.graph li { position: relative; margin: 10px 0; padding: 15px  20px; border-radius: 50px; background: -webkit-gradient(linear, left top, right top, from(#6861e8), to(#be00ff)); background: linear-gradient(90deg, #6861e8 0%, #be00ff 100%); left: 0; color: white; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.graph li[data-score="100%"] { width: 100%; }
+.graph li[data-score="80%"] { width: 80%; }
+.graph li[data-score="50%"] { width: 50%; }
+.graph li[data-score="30%"] { width: 30%; }
+.graph li[data-score="10%"] { width: 10%; }
+.graph li:before { position: absolute; content: attr(data-score); left: auto; right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

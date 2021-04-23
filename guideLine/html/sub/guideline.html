@@ -50,7 +50,7 @@
                     </tr>
                     <tr>
                         <th scope="row">class</th>
-                        <td>&lt;div class="default-table"&gt;(단어연결시 하이픈 사용)</td>
+                        <td>&lt;div class="default-table"&gt;(단어연결시 대쉬 사용)</td>
                     </tr>
                 </tbody>
             </table>
@@ -122,6 +122,7 @@
         <section>
             <h3>버튼 가이드라인</h3>
             <p class="notice"> 기준 : 평택주차포털 사이트 </p>
+            <h4>버튼 1개일때</h4>
             <article class="explanation-box">
                 <table class="default-table">
                     <caption class="sr-only">Button 사용법 설명</caption>
@@ -131,7 +132,7 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">기본</th>
+                            <th scope="row" rowspan="2">설명</th>
                             <td>
                                 <div class="button-01">
 
@@ -143,7 +144,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">버튼 1개</th>
                             <td>
                                 <div class="button-02"></div>
                                 <ul>
@@ -174,49 +174,32 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">버튼 2개</th>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
-            </article>
+                <h4>버튼 2개 이상</h4>
+                <article class="explanation-box">
+                    <table class="default-table">
+                        <caption class="sr-only">2개 이상 Button 사용법</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기본</th>
+                                <td>
+                                    <div class="">
 
-        </section>
-        <section id="">
-            <h3>테이블 표기법</h3>
-            <article class="explanation-box">
-                <table class="default-table">
-                <caption class="sr-only">TABLE 표기법 설명</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">&lt;caption&gt;</th>
-                        <td> 
-                            <ul>
-                                <li>웹접근성 고려하여 테이블 내에 &lt;caption&gt; 반드시 기재 </li>
-                                <li>기재는 하되 레이아웃 구성상 숨김처리 (클래스 "sr-only" 사용)</li>
-                                <li>"sr-only" 클래스가 지정 안되었을시 다음 코드 생성</li> 
-                            </ul>
-                            <xmp>
-.sr-only{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-}
-                            </xmp>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                                    </div>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </article>
         </section>
         <section id="">
             <h3>추가 준비중</h3>

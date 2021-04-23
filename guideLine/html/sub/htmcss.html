@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO -  HTML5 & CSS3</title>
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script defer src="../../assets/js/common.js"></script>
+</head>
+<body>
+    <!-- Header Area -->
+    <header id="header"></header>
+    
+    <!-- Quick Menu -->
+    <section>
+        <aside class="Quick">
+            <h2>QUICK</h2>
+            <ul>
+                <li><a href="#reset">Reset</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <!-- Main Content -->
+    <main id="container">
+        <section id="reset">
+            <h2>HTML5 & CSS3</h2>
+            <h3>Reset.css</h3>
+            <article class="explanation-box">
+                <a href="https://www.jsdelivr.com/package/npm/reset-css">사이트 바로가기</a>
+            </article>
+            <h3>기본</h3>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">height: 100%;</th>
+                        <td>
+                            <xmp>
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+                            </xmp>
+                         </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Table</h3>
+            <h4>Table 너비 고정</h4>
+            <article class="explanation-box">
+                table-layout: fixed;
+            </article>
+            <h4>테이블 표기법</h4>
+            <article class="explanation-box">
+                <table class="default-table">
+                <caption class="sr-only">TABLE 표기법 설명</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;caption&gt;</th>
+                        <td> 
+                            <ul>
+                                <li>웹접근성 고려하여 테이블 내에 &lt;caption&gt; 반드시 기재 </li>
+                                <li>기재는 하되 레이아웃 구성상 숨김처리 (클래스 "sr-only" 사용)</li>
+                                <li>"sr-only" 클래스가 지정 안되었을시 다음 코드 생성</li> 
+                            </ul>
+                            <xmp>
+    .sr-only{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+    }
+                            </xmp>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <h3>애니메이션</h3>
+        <table class="default-table">
+            <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 75%" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">마지막상태 유지</th>
+                    <td>animation-fill-mode: forwards;(축약형은 forwards;만 입력) </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Footer Area-->
+    <footer id="footer"></footer>
+</body>
+</html>
