@@ -1,12 +1,10 @@
-## Vue.js 작업내용 (강의)
-
-============================================================================
+## Vue.js 내용 (강의)
 
 ## 관련 내용
 
 ```
 
-    - vue.js 공식문서 : https://vuejs.org
+    [vue.js 공식문서](https://vuejs.org)
     - cdn : <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     - axios : https://github.com/axios/axios
 
