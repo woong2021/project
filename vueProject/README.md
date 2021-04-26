@@ -37,3 +37,11 @@
 - Vue CLI 설치
 - 싱글 파일 컴포넌트
 ```
+
+### 2021.04.26
+
+```
+- Vue.js 중급시작
+- Vue-todo 프로젝트 생성
+- TodoHeader.vue 와 TodoInput 초기 세팅 진행
+```
