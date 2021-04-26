@@ -13,6 +13,7 @@
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script defer src="../../assets/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <!-- Header Area -->
@@ -33,92 +34,201 @@
 
     <!-- Main Content -->
     <main id="container">
-        <section id="">
-            <h2>Vue.js</h2>
-            <p class="notice">해당 내용은 인프런 (장기효)님의 동영상 강의를 정리 한것입니다.</p>
-            <h3>초기설정</h3>
-            <h4>vue.js devtools 설치</h4>
-            <article class="explanation-box">
-                <ul>
-                    <li>크롬 개발자도구에서 vue.js를 확인할 수 있는 tools</li>
-                    <li><a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">바로가기</a></li>
-                </ul>
-            </article>
-        </section>
-        <section id="">
-            <h3>Vue CLI 이해하기</h3>
-            <table class="default-table">
-                <caption class="sr-only">Vue CLI 사용법</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">vue 파일 생성 </th>
-                        <td>
-                            <ul>
-                                <li>파일명은 두단어 이상 연결하여 사용</li>
-                                <li>파스칼표키법 사용 (PascalCase)</li>
-                                <li>MainHeader</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">기본태그 생성</th>
-                        <td>
-                            <ul>
-                                <li>"<span class="bold">vue</span>" 입력 후 탭키 클릭(4.x 버전)</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h3>node.js 명령어(터미널)</h3>
-            <table class="default-table">
-                <caption class="sr-only">node.js 명령어</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">ls </th>
-                        <td>파일목록 알아보기</td>
-                    </tr>
-                    <tr>
-                        <th>cd</th>
-                        <td>파일 선택</td>
-                    </tr>
-                    <tr>
-                        <th>프로젝트 생성</th>
-                        <td>
-                            <ul>
-                                <li>vue create [프로젝트 명]</li>
-                                <li>* powershell이 오류가 날 경우 "<span class="bold">bash</span>"를 이용하여 생성</li>
-                            </ul>
-                            <div>
+        <section id="app">
+            <section id="">
+                <h2>Vue.js</h2>
+                <p class="notice">해당 내용은 인프런 (장기효)님의 동영상 강의를 정리 한것입니다.</p>
+                <h3>초기설정</h3>
+                <h4>vue.js devtools 설치</h4>
+                <article class="explanation-box">
+                    <ul>
+                        <li>크롬 개발자도구에서 vue.js를 확인할 수 있는 tools</li>
+                        <li><a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">바로가기</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="">
+                <h3>Vue CLI 이해하기</h3>
+                <table class="default-table">
+                    <caption class="sr-only">Vue CLI 사용법</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">vue 파일 생성 </th>
+                            <td>
+                                <ul>
+                                    <li>파일명은 두단어 이상 연결하여 사용</li>
+                                    <li>파스칼표키법 사용 (PascalCase)</li>
+                                    <li>MainHeader</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기본태그 생성</th>
+                            <td>
+                                <ul>
+                                    <li>"<span class="bold">vue</span>" 입력 후 탭키 클릭(4.x 버전)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>node.js 명령어(터미널)</h3>
+                <table class="default-table">
+                    <caption class="sr-only">node.js 명령어</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ls </th>
+                            <td>파일목록 알아보기</td>
+                        </tr>
+                        <tr>
+                            <th>cd</th>
+                            <td>파일 선택</td>
+                        </tr>
+                        <tr>
+                            <th>프로젝트 생성</th>
+                            <td>
+                                <ul>
+                                    <li>vue create [프로젝트 명]</li>
+                                    <li>* powershell이 오류가 날 경우 "<span class="bold">bash</span>"를 이용하여 생성</li>
+                                </ul>
+                                <div>
 
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>server 실행</th>
-                        <td>"<span class="bold">npm run serve</span>" 명령어로 실행 (server가 아닌 serve가 맞음) </td>
-                    </tr>
-                    <tr>
-                        <th>axios 설치</th>
-                        <td>"<span class="bold">npm i axios</span>" 명령어를 실행 </td>
-                    </tr>
-                    <tr>
-                        <th>터미널 종료</th>
-                        <td> Ctrl + c</td>
-                    </tr>
-                </tbody>
-            </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>server 실행</th>
+                            <td>"<span class="bold">npm run serve</span>" 명령어로 실행 (server가 아닌 serve가 맞음) </td>
+                        </tr>
+                        <tr>
+                            <th>axios 설치</th>
+                            <td>"<span class="bold">npm i axios</span>" 명령어를 실행 </td>
+                        </tr>
+                        <tr>
+                            <th>터미널 종료</th>
+                            <td> Ctrl + c</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>템플릿 문법</h3>
+                <h4>v-model</h4>
+                <table class="default-table">
+                    <caption class="sr-only">템플릿 문법 (v-model)</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">v-model</th>
+                            <td>
+                                <p>input에 입력된 텍스트 값을 동적으로 바로 vue 인스턴스안에 매핑</p>
+                                
+                                
+                                    <input type="text" v-model="message" placeholder="edit me">
+                                    <p>{{message}}</p>
+                                </div>                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>v-on:click</h4>
+                <table class="default-table">
+                    <caption class="sr-only">템플릿 문법 (v-on:click)</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">v-on:click</th>
+                            <td>
+                                <p>onClick 이벤트</p>
+                                
+                                <input type="text" v-model="clickConfirm">
+                                <button v-on:click="addClick">add</button>                      
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <section>
+                <h3>속성</h3>
+                <h4>style 속성</h4>
+                <table class="default-table">
+                    <caption class="sr-only">style 속성</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">scoped </th>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/img-vue-02.png" alt="scoped">
+                                    <figcaption>해당 컴포넌트 안에서만 적용</figcaption>
+                                </figure>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>Method</h3>
+                <h4>localStorage.setItem()</h4>
+                <table class="default-table">
+                    <caption class="sr-only">localStorage.setItem()</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">localStorage.setItem()</th>
+                            <td>
+                                <ul>
+                                    <li>저장하는 로직</li>
+                                    <li>"<span class="bold">Application > storage > Local Storage > </span>" 안에서 확인 </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
+    <script>
+        new Vue({
+            el :'#app',
+            data:{
+                message: '',
+                clickConfirm: ''
+            },
+
+            methods: {
+                addClick: function(){
+                    console.log(this.clickConfirm);
+
+                    //저장하는 로직
+                    localStorage.setItem(this.clickConfirm, this.clickConfirm);
+                    //초기화 로직
+                    this.clickConfirm= '';
+                }
+            }
+        })
+    </script>
 </body>
 </html>
