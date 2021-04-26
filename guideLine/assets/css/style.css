@@ -128,4 +128,8 @@ a:hover { font-weight: 700; }
 .graph li[data-score="10%"] { width: 10%; }
 .graph li:before { position: absolute; content: attr(data-score); left: auto; right: 20px; }
 
+fugure { display: block; margin-bottom: 20px; padding: 10px; border: 1px solid; width: 33%; }
+fugure img { width: 100%; }
+fugure figcaption { text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

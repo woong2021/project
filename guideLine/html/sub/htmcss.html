@@ -35,11 +35,13 @@
     <main id="container">
         <section id="reset">
             <h2>HTML5 & CSS3</h2>
-            <h3>Reset.css</h3>
+            <p class="notice">해당 가이드는 업무하면서 개인적으로 많이 사용하는 것 위주로 작성되었습니다. </p>
+            <h3>기본</h3>
+            <h4>Reset.css</h4>
             <article class="explanation-box">
                 <a href="https://www.jsdelivr.com/package/npm/reset-css">사이트 바로가기</a>
             </article>
-            <h3>기본</h3>
+            <h4>div 한화면에 꽉차게 작업</h4>
             <table class="default-table">
                 <colgroup>
                     <col style="width: 25%" />
@@ -57,6 +59,44 @@ html, body {
 }
                             </xmp>
                          </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>display: flex</h3>
+            <h4>display: flex 이용</h4>
+            <article class="explanation-box">
+                2021년 현재 트랜드에 맞춰 레이아웃을 잡을때 display:inline-block를 자제하고 "<span class="bold">display: flex</span>"를 지향
+            </article>
+            <h4>display: flex 사용법</h4>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">세로정렬</th>
+                        <td>
+                            <ul>
+                                <li>"<span class="bold">align-items: center</span>"를 사용하여 세로 가운데 정렬 가능</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">가로정렬</th>
+                        <td>
+                            <ul>
+                                <li>"<span class="bold">justify-content: space-between</span>"를 사용하여 양끝 정렬 가능</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아이템 순서</th>
+                        <td>
+                            <ul>
+                                <li>"<span class="bold">order</span>"를 이용하여 아이템 순서를 지정</li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>

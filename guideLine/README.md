@@ -52,3 +52,12 @@
 - [sass.html] SASS 초기셋팅 추가
 - [Vue.html] 컨텐츠 업데이트
 ```
+
+### 2021.04.26
+
+```
+- [guideline.html] 버튼 1개일때 설명 추가
+- [htmlcss.html] "dispal:flex" 내용 추가 및 h태그 일부 수정
+- [sass.html] :"sass" 구조 추가
+
+```

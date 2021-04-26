@@ -16,26 +16,28 @@
          url('../fonts/NanumGothic-Regular.woff') format('woff'),
          url('../fonts/NanumGothic-Regular.ttf') format('truetype');
   }
-  @font-face {
-    font-family: 'Nanum Gothic';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/NanumGothic-Bold.eot');
-    src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/NanumGothic-Bold.woff2') format('woff2'),
-         url('../fonts/NanumGothic-Bold.woff') format('woff'),
-         url('../fonts/NanumGothic-Bold.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Nanum Gothic';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/NanumGothic-ExtraBold.eot');
-    src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
-         url('../fonts/NanumGothic-ExtraBold.woff') format('woff'),
-         url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
-  }
+
+@font-face {
+font-family: 'Nanum Gothic';
+font-style: normal;
+font-weight: 700;
+src: url('../fonts/NanumGothic-Bold.eot');
+src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NanumGothic-Bold.woff2') format('woff2'),
+        url('../fonts/NanumGothic-Bold.woff') format('woff'),
+        url('../fonts/NanumGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Nanum Gothic';
+font-style: normal;
+font-weight: 800;
+src: url('../fonts/NanumGothic-ExtraBold.eot');
+src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
+        url('../fonts/NanumGothic-ExtraBold.woff') format('woff'),
+        url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
+}
    
 body, table, div, p, ul li {
     margin-bottom: 10px;
@@ -191,5 +193,21 @@ a{
             left: auto;
             right: 20px;
         }
+    }
+}
+
+fugure{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid;
+    width: 33%;
+
+    img{
+        width: 100%;
+    }
+
+    figcaption{
+        text-align: center;
     }
 }
