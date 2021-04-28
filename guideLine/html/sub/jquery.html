@@ -37,17 +37,17 @@
             <h2>JQUERY</h2>
             <h3>기본태그(동적)</h3>
             <article>
-                <xmp>
+                <pre>
 $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 
 });
-                </xmp>
+                </pre>
             </article>
         </section>
         <section id="elementMove">
             <h3>클릭시 특정앨리먼트로 이동</h3>
             <article>
-                <xmp>
+                <pre>
 <span class="gallery">gallery</span>
 <section id="image">
     <article>
@@ -60,7 +60,7 @@ const move = $("#image").offset().top;
 
 $('html, body').animate({scrollTop : move}, 300);
 });
-                </xmp>   
+                </pre>   
             </article>
         </section>
     </main>

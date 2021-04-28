@@ -34,7 +34,7 @@
     <!-- Main Content -->
     <main id="container">
         <section id="notationHtml">
-            <h2>GuideLine</h2>
+            <h2>GuideLine (평택 Portal)</h2>
             <p class="notice">해당 가이드는 개인적인 견해로 제작된 것으로 정답이 아닙니다. </p>
             <h3>HTML 표기법</h3>
             <table class="default-table">
@@ -54,10 +54,11 @@
                     </tr>
                 </tbody>
             </table>
+            <p class="red">* 현재 사이트는 여러 사이트에서 가져오다보니 정형화 되어 있지 않음, 조금씩 변경할 예정</p>
         </section>
         <section id="notationCss">
             <h3>CSS 표기법</h3>
-            <p class="notice">CSS는 직접 입력하지 않습니다. 입력은 SASS를 이용 </p>
+            <p class="notice">CSS는 직접 입력하지 않고  "<span class="bold">SASS</span>를 이용하며 개발자분들께서 수정이 필요할 경우 "<span class="red">developer.css</span>"를 이용 </p>
             <table class="default-table">
                 <caption class="sr-only">CSS 표기법 설명</caption>
                 <colgroup>
@@ -77,9 +78,9 @@
                     <tr>
                         <th scope="row">CSS 주석</th>
                         <td>
-                            <xmp>
+                            <pre>
 /* Contents */
-                            </xmp>
+                            </pre>
                         </td>
                     </tr>
                     <tr>
@@ -109,15 +110,39 @@
                     <tr>
                         <th scope="row">SASS 주석</th>
                         <td> 
-                            <xmp>
+                            <pre>
 // *----------------------------
 //	Contents
 // ----------------------------*
-                            </xmp>
+                            </pre>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section>
+            <h3>제목 가이드라인</h3>
+            <p class="notice"> 제목은 H태그를 사용해야 하나 기존사이트 자체에서 구분짓지 않아 클래스로 구분</p>
+            <h4>h1 태그</h4>
+            <article class="explanation-box">
+                대부분 사이트와 동일하게 상단 로고에 지정 (h1은 페이지에 유일해야 함)
+            </article>
+            <h4>h2 태그</h4>
+            <article class="explanation-box">
+                class="<span class="bold">title"</span>   
+            </article>
+            <h4>h3 태그</h4>
+            <article class="explanation-box">
+                <ul>
+                    <li>고객페이지: class="<span class="bold">subheading"</span></li>
+                    <li>관리자페이지: class="<span class="bold">content-title"</span></li>
+                    <li class="red">해당 상황은 3곳에 사이트를 가져오다 보니 발생한 상황으로 차후 통일할 예정</li>
+                </ul>   
+            </article>
+        </section>
+        <section>
+            <h3>블릿 가이드라인</h3>
+            <p class="notice">H4태그 부터는 사용을 안하며 필요시 블릿으로 구분</p>
         </section>
         <section>
             <h3>버튼 가이드라인</h3>
@@ -203,9 +228,15 @@
             </article>
         </section>
         <section id="">
-            <h3>추가 준비중</h3>
+            <h3>테이블 가이드라인</h3>
             <article class="explanation-box">
             
+            </article>
+        </section>
+        <section id="">
+            <h3>추가 준비중</h3>
+            <article class="explanation-box">
+                
             </article>
         </section>
     </main>

@@ -62,3 +62,14 @@
 - [vue.html] : 컨텐츠 업데이트 및 Vue 세팅 (CLI 아님)
 
 ```
+
+### 2021.04.28
+
+```
+- [공통] 일부 모바일 화면 padding 및 display 작업
+- [guideline.html] 문구추가 및 UI 변경
+- [guideline.html] 제목 가이드라인 영역 추가
+- [guideline.html] 블릿 가이드라인 영역 추가
+- [guideline.html] 테이블 가이드라인 영역 추가
+
+```

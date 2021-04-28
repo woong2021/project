@@ -5,6 +5,15 @@
 // ----------------------------*
 
 /* Contents */
+main{
+    @media (min-width: 320px){
+        padding: 0 10px;
+    }
+
+    @media (min-width: 768px){
+        padding: 0;
+    }
+}
 #sliderContainer{
     border: 1px solid;
     width: 100%;
@@ -54,6 +63,14 @@
 
 aside{
     &.Quick{
+        @media (min-width: 320px){
+            display: none;
+        }
+
+        @media (min-width: 768px){
+            display: block;
+        }
+        
         position: fixed;
         padding-bottom: 20px;
         border: 1px solid;
@@ -146,3 +163,5 @@ aside{
         }
     }
 }
+
+
