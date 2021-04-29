@@ -73,3 +73,12 @@
 - [guideline.html] 테이블 가이드라인 영역 추가
 
 ```
+
+### 2021.04.29
+
+```
+- [index.html] SKILL 부분 조정
+- [guideline.html] 제목 가이드라인 이미지 추가
+- [guideline.html] 블릿 가이드라인 이미지 추가
+
+```

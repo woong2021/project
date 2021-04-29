@@ -74,6 +74,22 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 .default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: wrap; word-break: keep-all; line-height: 1.5; }
 .default-table tr th { background: #cccccc; font-weight: 400; }
 
+.font-01 { background: url("../images/img-guideline-font-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.font-02 { background: url("../images/img-guideline-font-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.font-03 { background: url("../images/img-guideline-font-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-01 { background: url("../images/img-guideline-bullet-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-02 { background: url("../images/img-guideline-bullet-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-03 { background: url("../images/img-guideline-bullet-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-04 { background: url("../images/img-guideline-bullet-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-05 { background: url("../images/img-guideline-bullet-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
 .button-01 { background: url("../images/img-guideline-button-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 .button-02 { background: url("../images/img-guideline-button-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; background-size: cover; }

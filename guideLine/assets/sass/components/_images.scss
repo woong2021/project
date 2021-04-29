@@ -2,6 +2,45 @@
 // *----------------------------
 //	Images
 // ----------------------------*
+.font-01{
+    @include imagePush(guideline-font);
+    height: 100px;
+}
+
+.font-02{
+    @include imagePush(guideline-font, "02");
+    height: 100px;
+}
+
+.font-03{
+    @include imagePush(guideline-font, "03");
+    height: 100px;
+}
+
+.bullet-01{
+    @include imagePush(guideline-bullet);
+    height: 100px;
+}
+
+.bullet-02{
+    @include imagePush(guideline-bullet, "02");
+    height: 100px;
+}
+
+.bullet-03{
+    @include imagePush(guideline-bullet, "03");
+    height: 100px;
+}
+
+.bullet-04{
+    @include imagePush(guideline-bullet, "04");
+    height: 100px;
+}
+
+.bullet-05{
+    @include imagePush(guideline-bullet, "05");
+    height: 100px;
+}
 
 .button-01{
     @include imagePush(guideline-button);
