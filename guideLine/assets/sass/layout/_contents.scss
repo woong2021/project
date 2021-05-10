@@ -12,6 +12,7 @@ main{
 
     @media (min-width: 768px){
         padding: 0;
+        min-height: 623px;
     }
 }
 #sliderContainer{
@@ -77,8 +78,8 @@ aside{
         background: $white;
         width: 130px;
         height: auto;
-        bottom: 10px;
-        right: 10px;
+        bottom: 80px;
+        right: 20px;
 
         h2{
             text-align: center;

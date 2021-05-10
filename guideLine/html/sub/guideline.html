@@ -26,15 +26,18 @@
                 <li><a href="#notationHtml">HTML 표기법</a></li>
                 <li><a href="#notationCss">CSS 표기법</a></li>
                 <li><a href="#notationSass">SASS 표기법</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#titleGuidline">제목 가이드</a></li>
+                <li><a href="#bulletGuidline">블릿 가이드</a></li>
+                <li><a href="#buttonGuidline">버튼 가이드</a></li>
+                <li><a href="#tableGuidline">테이블 가이드</a></li>
             </ul>
         </aside>
     </section>
 
     <!-- Main Content -->
     <main id="container">
+        <h2>GuideLine (평택 Portal)</h2>
         <section id="notationHtml">
-            <h2>GuideLine (평택 Portal)</h2>
             <p class="notice">해당 가이드는 개인적인 견해로 제작된 것으로 정답이 아닙니다. </p>
             <h3>HTML 표기법</h3>
             <table class="default-table">
@@ -51,6 +54,10 @@
                     <tr>
                         <th scope="row">class</th>
                         <td>&lt;div class="default-table"&gt;(단어연결시 대쉬 사용)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; br &gt;</th>
+                        <td>&lt;br&gt;태그는 사용을 자제 </td>
                     </tr>
                 </tbody>
             </table>
@@ -120,7 +127,7 @@
                 </tbody>
             </table>
         </section>
-        <section>
+        <section id="titleGuidline">
             <h3>제목 가이드라인</h3>
             <p class="notice"> 제목은 H태그를 사용해야 하나 기존사이트 자체에서 구분짓지 않아 클래스로 구분</p>
             <h4>h1 태그</h4>
@@ -143,7 +150,7 @@
                 </ul>   
             </article>
         </section>
-        <section>
+        <section id="bulletGuidline">
             <h3>블릿 가이드라인</h3>
             <p class="notice">H4태그 부터는 사용을 안하며 필요시 블릿으로 구분</p>
             <h4>Bullet 1</h4>
@@ -175,7 +182,7 @@
                 <p>class="<span class="bold">cont-bullet</span>" 의 before 속성</p>
             </article>
         </section>
-        <section>
+        <section id="buttonGuidline">
             <h3>버튼 가이드라인</h3>
             <p class="notice"> 기준 : 평택주차포털 사이트 </p>
             <h4>버튼 1개일때</h4>
@@ -188,11 +195,9 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row" rowspan="2">설명</th>
+                            <th scope="row" rowspan="7">설명</th>
                             <td>
-                                <div class="button-01">
-
-                                </div>
+                                <div class="button-01"></div>
                                 <ul>
                                     <li>클래스명 "<span class="bold">btn-row</span>"로 버튼 영역을 확보</li>
                                     <li>버튼영역 클래스는 상황에 따라 다를수 있음</li>
@@ -206,6 +211,10 @@
                                     <li>클래스명 : "<span class="bold">one-btn</span>"</li>
                                     <li>테이블이 아닌 일반적인 페이지 버튼에 사용 (200 * 50)</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="button-03"></div>
                                 <ul>
                                     <li>클래스명 : "<span class="bold">admin-btn</span>"</li>
@@ -213,17 +222,39 @@
                                     <li>페이징이 있는 테이블에 사용하며 버튼 1개일때는 흰색 테두리 버튼(클래스명 <span class="bold">white</span> 추가)  (120 * 50)</li>
                                     <li>일부 페이지는 아직 "<span class="bold">tpms-btn</span>"으로 되어 있음 (상황에 맞지 않아 변경할 예정) 현재 고객 페이지 버튼 한개짜리에서 일부 발견</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="button-04"></div>
                                 <ul>
                                     <li>클래스명 : "<span class="bold">search-btn</span>"</li>
                                     <li>버튼 영역이 "btn-row"가 아닌 "<span class="bold">search-box</span>"이며 search box 안에 버튼을 넣어야 할 때 사용  (103 * 40)</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="button-05"></div>
                                 <ul>
                                     <li>클래스명 : "<span class="bold">lookup-btn</span>"</li>
                                     <li>버튼 영역이 "btn-row"가 아닌 "<span class="bold">form-btn-box</span>"이며 테이블 내에 버튼을 넣어야 할 때 사용</li>
                                     <li>버튼 사이즈는 103 * 40 이나 form-btn-box 클래스가 "<span class="bold">display: flex</span>"라 크기는 변동</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="button-11"></div>
+                                <ul>
+                                    <li>클래스명 : "lookup-btn <span class="bold">green</span>"</li>
+                                    <li>버튼 영역이 "btn-row"가 아닌 "<span class="bold">form-btn-box</span>"이며 테이블 내에 버튼을 넣어야 할 때 사용</li>
+                                    <li>버튼 사이즈는 103 * 40 이나 form-btn-box 클래스가 "<span class="bold">display: flex</span>"라 크기는 변동</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="button-06"></div>
                                 <ul>
                                     <li>클래스명 : "<span class="bold">popup-one-btn</span>"</li>
@@ -243,14 +274,42 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">기본</th>
+                                <th scope="row" rowspan="5">관리자</th>
                                 <td>
-                                    <div class="">
-
-                                    </div>
+                                    <div class="button-07"></div>
                                     <ul>
-                                        <li></li>
-                                        <li></li>
+                                        <li>클래스명 "<span class="bold">btn-row</span>"를 사용하여 영역을 확보</li>
+                                        <li>button을 두개 삽입하여 클래스명 "<span class="bold">admin-btn</span>"을 사용</li>
+                                        <li>두번째 button 클래스명을 "admin-btn <span class="bold">white</span>"를 사용하여 버튼 색상을 변경</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="button-08"></div>
+                                    <ul>
+                                        <li>클래스명 "btn-row<span class="bold"> right</span>"를 사용하여 오른쪽 정렬</li>
+                                        <li>button 방식은 위와 동일</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="button-09"></div>
+                                    <ul>
+                                        <li>클래스명 버튼 영역에 "btn-row<span class="bold"> has-three</span>"를 사용하여 오른쪽 정렬</li>
+                                        <li>button을 세개 삽입하여 클래스명 "<span class="bold">admin-btn</span>"을 사용</li>
+                                        <li>첫번째 button 클래스명을 "admin-btn <span class="bold">blue</span>"를 사용하고</li>
+                                        <li>세번째 button 클래스명을 "admin-btn <span class="bold">white</span>"를 사용하여 버튼 색상을 변경</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="button-10"></div>
+                                    <ul>
+                                        <li>클래스명 버튼 영역에 "btn-row<span class="bold"> has-force</span>"를 사용하여 오른쪽 정렬</li>
+                                        <li>기존과 다르게 클래스명 없이 버튼 4개만 삽입하면 색상변경 </li>
                                     </ul>
                                 </td>
                             </tr>
@@ -258,10 +317,46 @@
                     </table>
             </article>
         </section>
-        <section id="">
+        <section id="tableGuidline">
             <h3>테이블 가이드라인</h3>
             <article class="explanation-box">
-            
+                <table class="default-table">
+                    <caption class="sr-only">테이블 가이드라인 설명</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="3">설명</th>
+                            <td>
+                                <div class="table-01"> </div>
+                                <ul>
+                                    <li>클래스명 이 없음 (default)</li>
+                                    <li>기본적인 게시판 테이블로 th가 파란색(<span class="bold">#0075C1</span>)인 것이 특징</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="table-02"></div>
+                                <ul>
+                                    <li>클래스명 : "<span class="bold">contable</span>"</li>
+                                    <li>게시판 뷰페이지로 th가 회색(<span class="bold">#8297B7</span>)빛이 있는 게 특징</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="table-03"></div>
+                                <ul>
+                                    <li>클래스명 : "contable <span class="bold">footer</span>"</li>
+                                    <li>게시판 뷰페이지 footer 전용으로 td부분에 배경색(<span class="bold">#f6f6f6</span>)이 있는것이 특정</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </article>
         </section>
         <section id="">

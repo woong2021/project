@@ -2,6 +2,8 @@
 // *----------------------------
 //	Images
 // ----------------------------*
+
+/* Font */
 .font-01{
     @include imagePush(guideline-font);
     height: 100px;
@@ -17,6 +19,7 @@
     height: 100px;
 }
 
+/* Bullet */
 .bullet-01{
     @include imagePush(guideline-bullet);
     height: 100px;
@@ -66,4 +69,37 @@
 
 .button-06{
     @include imagePush(guideline-button, "06");
+}
+
+.button-07{
+    @include imagePush(guideline-button, "07");
+}
+
+.button-08{
+    @include imagePush(guideline-button, "08");
+}
+
+.button-09{
+    @include imagePush(guideline-button, "09");
+}
+
+.button-10{
+    @include imagePush(guideline-button, "10");
+}
+
+.button-11{
+    @include imagePush(guideline-button, "11");
+}
+
+/* Table */
+.table-01{
+    @include imagePush(guideline-table, "01");
+}
+
+.table-02{
+    @include imagePush(guideline-table, "02");
+}
+
+.table-03{
+    @include imagePush(guideline-table, "03");
 }

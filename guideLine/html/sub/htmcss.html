@@ -23,18 +23,20 @@
         <aside class="Quick">
             <h2>QUICK</h2>
             <ul>
-                <li><a href="#reset">Reset</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#notice">기본</a></li>
+                <li><a href="#zIndex">z-index</a></li>
+                <li><a href="#unit">단위</a></li>
+                <li><a href="#flex">Flex</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#animation"></a>Animation</li>
             </ul>
         </aside>
     </section>
 
     <!-- Main Content -->
     <main id="container">
-        <section id="reset">
-            <h2>HTML5 & CSS3</h2>
+        <h2>HTML5 & CSS3</h2>
+        <section id="notice">
             <p class="notice">해당 가이드는 업무하면서 개인적으로 많이 사용하는 것 위주로 작성되었습니다. </p>
             <h3>기본</h3>
             <h4>Reset.css</h4>
@@ -66,6 +68,105 @@ html, body {
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section id="semantic">
+            <h3>시멘틱 태그</h3>
+            <p class="notice">다양한 시멘틱태그가 있으나 주로 사용하는 것만 기재</p>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt; header &gt;</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; nav &gt;</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; main &gt;</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; section &gt;</th>
+                        <td>최근 <span class="bold">&lt; section &gt; 태그는 </span> 사용안하는 추세이나 필자는 구분을 위해 사용</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; article &gt;</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt; footer &gt;</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="zIndex">
+            <h3>z-index 사용법</h3>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">z-index 사용법(html)</th>
+                        <td>
+                            <pre>
+&lt;section&gt;
+    &lt;article&gt;
+    &lt;article&gt;                                
+&lt;/section&gt;
+                            </pre>
+                         </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">z-index 사용법(SCSS)</th>
+                        <td>
+                            <pre>
+section{
+    z-index:1;
+
+    article{
+        &:first-child{
+            z-index:3;
+        }
+        &:last-child{
+            z-index: 2;
+        }
+    }
+}
+                            </pre>
+                         </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="unit">
+            <h3>단위</h3>
+            <p class="notice">단위에는 여러가지가 있으나 "두가지"만 사용하나 절때 정답은 아닙니다. </p>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">px</th>
+                        <td>기본적인 단위로써 웹에 사용할때 주로 사용(모바일 포함)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">vw</th>
+                        <td>모바일 버전에서 "<span class="bold">font-size</span>" 크기 지정할때만 사용</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="flex">
             <h3>display: flex</h3>
             <h4>display: flex 이용</h4>
             <article class="explanation-box">
@@ -104,6 +205,8 @@ html, body {
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section id="table">
             <h3>Table</h3>
             <h4>Table 너비 고정</h4>
             <article class="explanation-box">
@@ -119,6 +222,9 @@ html, body {
                 </colgroup>
                 <tbody>
                     <tr>
+                        <th>테이블 기본구조</th>
+                    </tr>
+                    <tr>
                         <th scope="row">&lt;caption&gt;</th>
                         <td> 
                             <ul>
@@ -127,35 +233,37 @@ html, body {
                                 <li>"sr-only" 클래스가 지정 안되었을시 다음 코드 생성</li> 
                             </ul>
                             <pre>
-    .sr-only{
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-    }
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
                             </pre>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
+        <section id="animation">
         <h3>애니메이션</h3>
-        <table class="default-table">
-            <colgroup>
-                <col style="width: 25%" />
-                <col style="width: 75%" />
-            </colgroup>
-            <tbody>
-                <tr>
-                    <th scope="row">마지막상태 유지</th>
-                    <td>animation-fill-mode: forwards;(축약형은 forwards;만 입력) </td>
-                </tr>
-            </tbody>
-        </table>
+            <table class="default-table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">마지막상태 유지</th>
+                        <td>animation-fill-mode: forwards;(축약형은 forwards;만 입력) </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <!-- Footer Area-->
