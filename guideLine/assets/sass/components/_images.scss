@@ -103,3 +103,8 @@
 .table-03{
     @include imagePush(guideline-table, "03");
 }
+
+.vue-01{
+    @include imagePush(vue,"03");
+    height: 400px;
+}

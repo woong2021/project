@@ -121,6 +121,8 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
 .table-03 { background: url("../images/img-guideline-table-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
+.vue-01 { background: url("../images/img-vue-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+
 /* Bullet */
 /* Common */
 /* Font-face */
@@ -157,6 +159,8 @@ h6 { font-size: 22px; }
 ol { position: relative; left: 30px; list-style: decimal-leading-zero; }
 
 pre, .explanation-box { margin: 15px 0; padding: 10px 20px; border: 1px solid; width: 100%; min-height: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+pre { background-color: #000000; color: #ffffff; font-family: 'NanumGothic', 'serif'; font-size: 15px; line-height: 1.5; }
 
 .bold { font-weight: 900; color: brown; }
 

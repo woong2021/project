@@ -144,6 +144,17 @@ pre,
     box-sizing: border-box;
 }
 
+pre{
+    background-color: $black;
+    color: $white;
+    font : {
+        family: 'NanumGothic', 'serif';
+        size : 15px;
+    }
+    line-height: 1.5;
+    
+}
+
 .bold{
     font-weight: 900;
     color: brown;

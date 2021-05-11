@@ -82,3 +82,13 @@
 - [guideline.html] 블릿 가이드라인 이미지 추가
 
 ```
+
+### 2021.05.11
+
+```
+- [공통] pre부분  CSS 개선
+- [guideline.html] 일부 문구 추가
+- [vue.html] Reactivity, 인스턴스, 컴포넌트 부분 추가
+- [jquery.html] h3문구 수정 및 생성자 함수 추가
+
+```

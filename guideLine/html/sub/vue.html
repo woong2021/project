@@ -39,13 +39,177 @@
                 <h2>Vue.js</h2>
                 <p class="notice">해당 내용은 인프런 (장기효)님의 동영상 강의를 정리 한것입니다.</p>
                 <h3>초기설정</h3>
-                <h4>vue.js devtools 설치</h4>
+                <h4>devtools 설치</h4>
                 <article class="explanation-box">
                     <ul>
                         <li>크롬 개발자도구에서 vue.js를 확인할 수 있는 tools</li>
                         <li><a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">바로가기</a></li>
                     </ul>
                 </article>
+                <h4>CDN</h4>
+                <article class="explanation-box">
+                    &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+                </article>
+            </section>
+            <section id="">
+                <h3>Vue 이해하기</h3>
+                <h4>기존 웹개발 방식</h4>
+<pre>&lt;div id="app"&gt;&lt;/div&gt;   
+
+&lt;script&gt;
+    var div = document.querySelector('#app');
+    var str = 'Hello world';
+    console.log(div);
+    div.innerHTML = str;
+
+    str = 'Hello world!!!';
+
+    div.innerHTML = str;  
+&lt;/script&gt;</pre> 
+            <table class="default-table">
+                <caption class="sr-only">기존 웹 개발 방식</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>기존 웹 개발 방식</th>
+                        <td>변수 값이 바뀌었을 경우 재정의 해야 함</td>
+                    </tr>
+                </tbody> 
+            </table>             
+                <h4>Reactivity(반응성) 구현</h4>
+<pre>&lt;div id="app"&gt;&lt;/div&gt;   
+
+&lt;script&gt;
+    var div = document.querySelector('#app');
+    var viewModel = {};
+
+    (function(){
+        function init(){
+            Object.defineProperty(viewModel, 'str', {
+                get: function(){
+                    console.log('접근');
+                },
+
+                set: function(newValue){
+                    console.log('할당', newValue);
+                    render(newValue);
+                }
+            });
+        }
+        
+        function render(value) {
+            div.innerHTML = value;
+        }
+
+        init();
+    })();
+&lt;/script&gt;</pre>
+            <table class="default-table">
+                <caption class="sr-only">Reactivity 구현</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>Reactivity</th>
+                        <td>라이브러리에서 감지 하여 알아서 재정의</td>
+                    </tr>
+                    <tr>
+                        <th>defineProperty()</th>
+                        <td>라이브러리를 재정의 하는 함수</td>
+                    </tr>
+                </tbody> 
+            </table>
+            </section>
+            <section>
+                <h3>인스턴스</h3>
+                <p class="notice">뷰로 개발할 때 필수로 생성해야 하는 코드</p>
+                <h4>인스턴스 생성</h4>
+                <pre>new Vue();</pre>
+                <h4>인스턴스 활용</h4>
+                <pre>
+                let vm = new Vue({
+                    el : "app",
+                    data: {
+                        message:'hello'
+                    }
+                });</pre>
+                <h4>인스턴스 API</h4>
+                <table class="default-table">
+                    <caption class="sr-only">인스턴스 API</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">인스턴스 API </th>
+                            <td>
+                                <p class="vue-01"></p>
+                                <p>구글 console창에 변수명을 입력하면 확인가능</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>기본적인 인스턴스 속성</h4>
+                <pre>
+&lt;div id="app"&gt;{{message}}&lt;/div&gt;
+&lt;script&gt;
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hi'
+        },
+        methods:{
+
+        },
+        created: function(){
+
+        }
+    });
+&lt;/script&gt;</pre>
+                
+                <table class="default-table">
+                    <caption class="sr-only">기본적인 인스턴스 속성</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">el </th>
+                            <td>인스턴스가 그려지는 화면의 시작점 (특정 HTML 태그)</td>
+                        </tr>
+                        <tr>
+                            <th>template</th>
+                            <td>화면에 표시할 요소 (HTML, CSS등)</td>
+                        </tr>
+                        <tr>
+                            <th>data</th>
+                            <td>뷰에 반응성 (Reactivity)가 반영된 데이터 속성</td>
+                        </tr>
+                        <tr>
+                            <th>methods</th>
+                            <td>화면의 동작과 이벤트 로직을 제어하는 메서드</td>
+                        </tr>
+                        <tr>
+                            <th>created</th>
+                            <td>뷰의 라이프 사이클과 관련된 속성</td>
+                        </tr>
+                        <tr>
+                            <th>watch</th>
+                            <td>data에서 정의한 속성이 변화했을 때 추가 동작을 수행할 수 있게 정의하는 속성</td>
+                        </tr>
+                    </tbody>
+                </table>               
+            </section>
+            <section>
+                <h3>뷰 컴포넌트</h3>
+                <p class="notice">화면의 영역을 구분하여 개발할 수 있는 뷰의 기능 (재사용성 용이)</p>
             </section>
             <section id="">
                 <h3>Vue CLI 이해하기</h3>
