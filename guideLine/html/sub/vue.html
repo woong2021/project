@@ -210,6 +210,79 @@
             <section>
                 <h3>뷰 컴포넌트</h3>
                 <p class="notice">화면의 영역을 구분하여 개발할 수 있는 뷰의 기능 (재사용성 용이)</p>
+                <h4>컴포넌트 기본문법</h4>
+                <article class="explanation-box">
+                    Vue.component("컴포넌트 이름", 컴포넌트 내용);
+                </article>
+                <h4>컴포넌트 활용(전역컴포넌트)</h4>
+                <pre>
+&lt;div id="app"&gt;
+    &lt;app-header&gt;&lt;/app-header&gt;
+    &lt;app-contents>&lt;/app-contents&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    <code class="blue">
+    Vue.component('app-header', {
+        template: '&lt;h1&gt;Header&lt;/h1&gt;'
+    });
+
+    Vue.component('app-contents', {
+        template: '&lt;div&gt;Content&lt;/div&gt;'
+    });
+    </code>
+    new Vue({
+        el : "#app"
+    });
+&lt;/script&gt;   
+                </pre>
+                <h4>컴포넌트 활용(지역컴포넌트)</h4>
+                <pre>
+&lt;div id="app"&gt;
+    &lt;app-footer&gt;&lt;/app-footer&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el : "#app",
+        <code class="blue">
+        components:{
+            'app-footer':{
+                template: '&lt;footer&gt;Footer&lt;/footer&gt;'
+            }
+        }
+        </code>
+    });
+&lt;/script&gt; 
+                </pre>
+                <h4>컴포넌트 활용결과</h4>
+                <pre>
+                    <div id="app">
+                        <app-header></app-header>
+                        <app-contents></app-contents>
+                        <app-footer></app-footer>
+                    </div>
+                    <script>
+                        // Vue.component('컴포넌트 이름', 컴포넌트 내용);
+                        Vue.component('app-header', {
+                            template: '<h1>Header</h1>'
+                        });
+                    
+                        Vue.component('app-contents', {
+                            template: '<div>Content</div>'
+                        });
+                        
+                        new Vue({
+                            el : "#app",
+                            components:{
+                                'app-footer':{
+                                    template: '<div>Footer</div>'
+                                }
+                            }
+                        });
+                    </script>   
+                </pre>
+            </section>
+            <section>
+                <h3>컴포넌트 통신</h3>
             </section>
             <section id="">
                 <h3>Vue CLI 이해하기</h3>

@@ -36,7 +36,8 @@
         <section id="">
             <h2>SASS</h2>
             <h3>SASS 초기 셋팅</h3>
-            <h4>css 편집기와 연결 (Eclipse)</h4>
+            <p class="notice">해당 내용은 이클립스로 sass를 작업할때 필요한 셋팅입니다. </p>
+            <h4>css 편집기와 연결</h4>
             <table class="default-table">
                 <caption class="sr-only">scss 파일 유형을 기본 Eclipse css 편집기와 연결</caption>
                 <colgroup>
@@ -86,6 +87,28 @@
             </table>
         </section>
         <section id="">
+            <h3>SASS 기타셋팅</h3>
+            <h4>구글 개발자도구 연결</h4>
+            <table class="default-table">
+                <caption class="sr-only">구글 개발자도구 연결</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>설명</th>
+                        <td>
+                            <fugure>
+                               <img src="../../assets/images/img-sass-04.png" alt="구글 개발자도구 셋팅">
+                               <figcaption>개발자 도구에서 "<span class="bold">F1</span>" 클릭 후 해당 부분 체크</figcaption> 
+                            </fugure>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="">
             <h3>SASS 구조</h3>
             <h4>SASS 트리구조</h4>
             <table class="default-table">
@@ -128,7 +151,7 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>부모요소/th>
+                        <th>부모요소</th>
                         <td>
                             <figure>
                                <img src="../../assets/images/img-sass-03.png" alt="sass 설명">
@@ -150,12 +173,41 @@
         </section>
         <section id="">
             <h3>For문</h3>
+            <h4>방법</h4>
             <article class="explanation-box">
                 <ul>
                     <li>@for $i from 1 through 9</li>
                     <li>#{$i}</li>
                 </ul>
             </article>
+            <h4>활용 예시</h4>
+            <table class="default-table">
+                <caption class="sr-only">for문 얘사</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>예시</th>
+                        <td>
+<pre>
+for $i from 1 through 20 {
+    &.realtime-#{$i}{
+        @if ($i &lt; 10){
+            @include imagePush("temp","0#{$i}");
+        }
+        
+        @else {
+            @include imagePush("temp","#{$i}");
+        }
+    }
+}
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 

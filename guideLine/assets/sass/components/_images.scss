@@ -3,6 +3,21 @@
 //	Images
 // ----------------------------*
 
+/* Basic */
+.basic-01{
+    @include imagePush(guideline-basic);
+    height: 100px;
+}
+.basic-02{
+    @include imagePush(guideline-basic, "02");
+    height: 100px;
+}
+
+.basic-03{
+    @include imagePush(guideline-basic, "03");
+    height: 100px;
+}
+
 /* Font */
 .font-01{
     @include imagePush(guideline-font);
@@ -45,6 +60,22 @@
     height: 100px;
 }
 
+.bullet-06{
+    @include imagePush(guideline-bullet, "06");
+    height: 100px;
+}
+
+.bullet-07{
+    @include imagePush(guideline-bullet, "07");
+    height: 100px;
+}
+
+.bullet-08{
+    @include imagePush(guideline-bullet, "08");
+    height: 100px;
+}
+
+/* Button */
 .button-01{
     @include imagePush(guideline-button);
 }
@@ -104,6 +135,7 @@
     @include imagePush(guideline-table, "03");
 }
 
+/* Vue */
 .vue-01{
     @include imagePush(vue,"03");
     height: 400px;

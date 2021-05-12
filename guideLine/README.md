@@ -92,3 +92,13 @@
 - [jquery.html] h3문구 수정 및 생성자 함수 추가
 
 ```
+
+### 2021.05.12
+
+```
+- [guideline.html] 기본 가이드라인 추가
+- [guideline.html] 블릿 가이드라인 내용추가
+- [sass.html] 구글개발자도구 연결 내용 추가
+- [sass.html] for문 관련 내용 추가
+
+```

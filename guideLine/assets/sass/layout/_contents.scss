@@ -153,6 +153,11 @@ aside{
                     figcaption{
                         margin-top: 20px;
                         text-align: center;
+
+                        span{
+                            display: block;
+                            line-height: 1.5;
+                        }
                     }
                 }
             }

@@ -65,7 +65,7 @@
         </section>
         <section id="notationCss">
             <h3>CSS 표기법</h3>
-            <p class="notice">CSS는 직접 입력하지 않고  "<span class="bold">SASS</span>를 이용하며 개발자분들께서 수정이 필요할 경우 "<span class="red">developer.css</span>"를 이용 </p>
+            <p class="notice">CSS는 직접 입력하지 않고  "<span class="bold">SASS</span>"를 이용하며 개발자분들께서 수정이 필요할 경우 "<span class="red">developer.css</span>"를 이용 </p>
             <table class="default-table">
                 <caption class="sr-only">CSS 표기법 설명</caption>
                 <colgroup>
@@ -127,6 +127,81 @@
                 </tbody>
             </table>
         </section>
+        <section id="">
+            <h3>기본 가이드라인</h3>
+            <h4>소스 비교</h4>
+            <article class="explanation-box">
+                <table class="default-table">
+                    <caption class="sr-only"></caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="2">구분</th>
+                            <td>
+                                <div class="basic-02"></div>
+                                <p>전임자가 사용한 소스 ( <span class="red">함부로 건들 수가 없음</span> )</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="basic-01"></div>
+                                <p>현재 사용되고 있는 소스</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <h4>기본셋팅</h4>
+            <article class="explanation-box">
+                <table class="default-table">
+                    <caption class="sr-only">기본셋팅 설명</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">폰트 단위</th>
+                            <td>단위는 <span class="bold">px(모바일은 vw)</span> 을 사용하나 가지고 온 일부 사이트(특히 부천)에서 em등을 사용</td>
+                        </tr>
+                        <tr>
+                            <th >폰트스타일</th>
+                            <td>
+                                <ul>
+                                    <li>Noto Sans KR (기본폰트)</li>
+                                    <li>Nanum Gothic</li>
+                                    <li>Apple SD Gothic Neo</li>
+                                    <li>돋옴</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>폰트사이즈</th>
+                            <td>16px (기본)</td>
+                        </tr>
+                        <tr>
+                            <th>폰트 두께</th>
+                            <td>400 (기본)</td>
+                        </tr>
+                        <tr>
+                            <th>폰트 색상</th>
+                            <td>#222222</td>
+                        </tr>
+                        <tr>
+                            <th>폰트 줄간격</th>
+                            <td>1.2</td>
+                        </tr>
+                        <tr>
+                            <th>바탕화면</th>
+                            <td>#FFFFFF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article> 
+        </section>
         <section id="titleGuidline">
             <h3>제목 가이드라인</h3>
             <p class="notice"> 제목은 H태그를 사용해야 하나 기존사이트 자체에서 구분짓지 않아 클래스로 구분</p>
@@ -152,7 +227,7 @@
         </section>
         <section id="bulletGuidline">
             <h3>블릿 가이드라인</h3>
-            <p class="notice">H4태그 부터는 사용을 안하며 필요시 블릿으로 구분</p>
+            <p class="notice">H4태그 부터는 사용을 안하며 필요시 블릿으로 구분 (<span class="red"> 여러사이트에서 가져오다보니 현재 다른 사이트에 비해 블릿이 많은 상황</span> )</p>
             <h4>Bullet 1</h4>
             <article class="explanation-box">
                 <div class="bullet-01"></div>
@@ -180,6 +255,21 @@
             <article class="explanation-box">
                 <div class="bullet-05"></div>
                 <p>class="<span class="bold">cont-bullet</span>" 의 before 속성</p>
+            </article>
+            <h4>Bullet 6</h4>
+            <article class="explanation-box">
+                <div class="bullet-06"></div>
+                <p>class="<span class="bold">middot-bullet</span>" 의 before 속성</p>
+            </article>
+            <h4>Bullet 7</h4>
+            <article class="explanation-box">
+                <div class="bullet-07"></div>
+                <p>class="<span class="bold">asterisk</span>" 의 before 속성 (<span class="red">기존 거 그대로 사용</span>)</p>
+            </article>
+            <h4>Bullet 8</h4>
+            <article class="explanation-box">
+                <div class="bullet-08"></div>
+                <p>class="<span class="bold">total-num</span> 혹은 <span class="bold">label</span>" 의 before 속성</p>
             </article>
         </section>
         <section id="buttonGuidline">

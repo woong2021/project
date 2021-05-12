@@ -39,11 +39,6 @@ src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'
         url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
 }
 
-/* font-color */
-.red{
-    color: $red;
-}
-
 body, table, div, p, ul li {
     margin-bottom: 10px;
 
@@ -240,4 +235,12 @@ figure{
         border: 0;
         width: 100%;
     }
+}
+
+/* font-color */
+.red{
+    color: $red;
+}
+.blue{
+    color: $bgBlue;
 }

@@ -52,6 +52,7 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 #container section.projectList .project-item:nth-child(4n) { margin-right: 0; }
 #container section.projectList .project-item figure img { width: 100%; height: 170px; }
 #container section.projectList .project-item figure figcaption { margin-top: 20px; text-align: center; }
+#container section.projectList .project-item figure figcaption span { display: block; line-height: 1.5; }
 #container #clone .clone { background: url("../images/img-git-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 /* Button */
@@ -74,6 +75,13 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 .default-table tr th, .default-table tr td { padding: 10px; border: 1px solid; vertical-align: middle; white-space: wrap; word-break: keep-all; line-height: 1.5; }
 .default-table tr th { background: #cccccc; font-weight: 400; }
 
+/* Basic */
+.basic-01 { background: url("../images/img-guideline-basic-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.basic-02 { background: url("../images/img-guideline-basic-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.basic-03 { background: url("../images/img-guideline-basic-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
 /* Font */
 .font-01 { background: url("../images/img-guideline-font-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
@@ -92,6 +100,13 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
 .bullet-05 { background: url("../images/img-guideline-bullet-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
+.bullet-06 { background: url("../images/img-guideline-bullet-06.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-07 { background: url("../images/img-guideline-bullet-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+.bullet-08 { background: url("../images/img-guideline-bullet-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+
+/* Button */
 .button-01 { background: url("../images/img-guideline-button-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 .button-02 { background: url("../images/img-guideline-button-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; background-size: cover; }
@@ -121,6 +136,7 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
 .table-03 { background: url("../images/img-guideline-table-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
+/* Vue */
 .vue-01 { background: url("../images/img-vue-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
 
 /* Bullet */
@@ -129,9 +145,6 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url("../fonts/NanumGothic-Regular.eot"); src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype"); }
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 700; src: url("../fonts/NanumGothic-Bold.eot"); src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype"); }
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
-/* font-color */
-.red { color: #ff0000; }
-
 body, table, div, p, ul li { margin-bottom: 10px; font-family: 'Nanum Gothic'; font-size: 16px; }
 
 body { margin-bottom: 0; }
@@ -186,5 +199,10 @@ figure img { width: 100%; }
 figure figcaption { text-align: center; }
 
 #index figure { padding: 0; border: 0; width: 100%; }
+
+/* font-color */
+.red { color: #ff0000; }
+
+.blue { color: #0075C1; }
 
 /*# sourceMappingURL=style.css.map */
