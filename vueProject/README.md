@@ -50,8 +50,16 @@
 
 ```
 - 이전 공부파일 백업폴더로 이동
-- [초급] web-dev.html 생성
-- [초급] vue-way.html 생성
-- [초급] instance.html 생성
-- [초급] component.html 생성
+- [초급] web-dev.html 신규생성
+- [초급] vue-way.html 신규생성
+- [초급] instance.html 신규생성
+- [초급] component.html 신규생성
+```
+
+### 2021.05.11
+
+```
+- [초급] props.html 신규생성
+- [초급] event-emit.html 신규생성
+
 ```
