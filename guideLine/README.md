@@ -100,5 +100,6 @@
 - [guideline.html] 블릿 가이드라인 내용추가
 - [sass.html] 구글개발자도구 연결 내용 추가
 - [sass.html] for문 관련 내용 추가
+- [vue].html] 컴포넌트 통신 관련 내용 추가
 
 ```

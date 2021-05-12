@@ -281,171 +281,341 @@
                     </script>   
                 </pre>
             </section>
-            <section>
-                <h3>컴포넌트 통신</h3>
-            </section>
-            <section id="">
-                <h3>Vue CLI 이해하기</h3>
-                <table class="default-table">
-                    <caption class="sr-only">Vue CLI 사용법</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">vue 파일 생성 </th>
-                            <td>
-                                <ul>
-                                    <li>파일명은 두단어 이상 연결하여 사용</li>
-                                    <li>파스칼표키법 사용 (PascalCase)</li>
-                                    <li>MainHeader</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">기본태그 생성</th>
-                            <td>
-                                <ul>
-                                    <li>"<span class="bold">vue</span>" 입력 후 탭키 클릭(4.x 버전)</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h3>node.js 명령어(터미널)</h3>
-                <table class="default-table">
-                    <caption class="sr-only">node.js 명령어</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">ls </th>
-                            <td>파일목록 알아보기</td>
-                        </tr>
-                        <tr>
-                            <th>cd</th>
-                            <td>파일 선택</td>
-                        </tr>
-                        <tr>
-                            <th>프로젝트 생성</th>
-                            <td>
-                                <ul>
-                                    <li>vue create [프로젝트 명]</li>
-                                    <li>* powershell이 오류가 날 경우 "<span class="bold">bash</span>"를 이용하여 생성</li>
-                                </ul>
-                                <div>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>server 실행</th>
-                            <td>"<span class="bold">npm run serve</span>" 명령어로 실행 (server가 아닌 serve가 맞음) </td>
-                        </tr>
-                        <tr>
-                            <th>axios 설치</th>
-                            <td>"<span class="bold">npm i axios</span>" 명령어를 실행 </td>
-                        </tr>
-                        <tr>
-                            <th>터미널 종료</th>
-                            <td> Ctrl + c</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h3>템플릿 문법</h3>
-                <h4>v-model</h4>
-                <table class="default-table">
-                    <caption class="sr-only">템플릿 문법 (v-model)</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">v-model</th>
-                            <td>
-                                <p>input에 입력된 텍스트 값을 동적으로 바로 vue 인스턴스안에 매핑</p>
-                                
-                                
-                                    <input type="text" v-model="message" placeholder="edit me">
-                                    <p>{{message}}</p>
-                                </div>                            
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h4>v-on:click</h4>
-                <table class="default-table">
-                    <caption class="sr-only">템플릿 문법 (v-on:click)</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">v-on:click</th>
-                            <td>
-                                <p>onClick 이벤트</p>
-                                
-                                <input type="text" v-model="clickConfirm">
-                                <button v-on:click="addClick">add</button>                      
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            <section>
-                <h3>속성</h3>
-                <h4>style 속성</h4>
-                <table class="default-table">
-                    <caption class="sr-only">style 속성</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">scoped </th>
-                            <td>
-                                <figure>
-                                    <img src="../../assets/images/img-vue-02.png" alt="scoped">
-                                    <figcaption>해당 컴포넌트 안에서만 적용</figcaption>
-                                </figure>
-                                
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h3>Method</h3>
-                <h4>localStorage.setItem()</h4>
-                <table class="default-table">
-                    <caption class="sr-only">localStorage.setItem()</caption>
-                    <colgroup>
-                        <col style="width: 25%" />
-                        <col style="width: 75%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">localStorage.setItem()</th>
-                            <td>
-                                <ul>
-                                    <li>저장하는 로직</li>
-                                    <li>"<span class="bold">Application > storage > Local Storage > </span>" 안에서 확인 </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
         </section>
+        <section>
+            <h3>컴포넌트간에 통신(props)</h3>
+            <p class="notice">상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달 </p>
+            <h4>Props 기본문법</h4>
+            <article class="explanation-box">
+                &lt;app-header v-bind: 프롭스 속성 이름="상위 컴포넌트의 데이터 이름"&gt; &lt;/app-header &gt; 
+            </article>
+            <h4>Props 활용</h4>
+            <pre>
+&lt;div id="app-props"&gt;
+    <code class="blue">
+    &lt; app-header v-bind:approps='message'&gt; &lt;/app-header&gt;
+    </code>
+&lt;/div &gt;
+&lt;script&gt;
+    let appHeader = {
+        template: "&lt;h1&gt;{{ approps }}&lt;/h1&gt;",
+        <code class="blue">props : ['approps']</code>
+    }
+
+    new Vue ({
+        el : "#app-props",
+        components:{
+            "app-header": appHeader
+        },
+        data:{
+            message : 'hi'
+        }
+    })
+&lt;/script&gt;   
+            </pre>
+            <h4>Props 결과</h4>
+            <pre>
+                <div id="appProps">
+                    <app-header v-bind:approps='message'></app-header>
+                </div>
+            </pre>
+            <script>
+                let appHeader = {
+                    template: "<h1>{{ approps }}</h1>",
+                    props : ['approps']
+                }
+
+                new Vue ({
+                    el : "#appProps",
+                    components:{
+                        "app-header": appHeader
+                    },
+                    data:{
+                        message : 'hi'
+                    }
+                })
+            </script> 
+        </section>
+        <section>
+            <h3>컴포넌트간에 통신(이벤트Emit)</h3>
+            <p class="notice">하위 컴포넌트에서 상위 컴포넌트로 이벤트를 발생 </p>
+            <h4>Emit 기본문법</h4>
+            <article class="explanation-box">
+                &lt;app-header v-on: 하위 컴포넌트에서 발생한 이벤트 이름 = "상위 컴포넌트의 메서드 이름"&gt;&lt;/app-header&gt;
+            </article>
+            <h4>Emit 활용</h4>
+            <pre>
+&lt;div id="appEmit"&gt;
+    &lt; emit-header v-on:pass="logText"&gt; &lt;/emit-header &gt;
+    &lt; emit-content v-on:increase="addNum"&gt; &lt;/emit-content &gt;
+    &lt; p&gt;{{ num }}&lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    let emitHeader = {
+        template: '&lt;button v-on:click="passEvent"&gt;click me&lt;/button&gt;',
+        methods:{
+            passEvent: function(){
+                this.$emit('pass');
+            }
+        }
+    }
+
+    let emitContent = {
+        template: '&lt;button v-on:click="passNum"&gt;add&lt;/button&gt;',
+        methods:{
+            passNum: function(){
+                this.$emit('increase');
+            }
+        }
+    }
+    new Vue({
+        el : "#appEmit",
+        components: {
+            'emit-header' : emitHeader,
+            'emit-content' : emitContent
+
+        },
+        methods:{
+            logText: function(){
+                console.log('hi');
+                
+            },
+            addNum: function(){
+                this.num = this.num +1;
+            }
+        },
+        data:{
+            num : 10
+        }
+    })
+&lt;/script&gt;  
+            </pre>
+            <h4>Emit 확인</h4>
+            <table class="default-table">
+                <caption class="sr-only">Emit 확인</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">개발자도구에서 확인 </th>
+                        <td>
+                            <p class="vue-04"></p>
+                            <p>개발자도구 " <span class="bold"> vue탭 -> 이벤트 </span> " 에서 확인</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>결과</h4>
+            <pre>
+                <div id="appEmit">
+                    <emit-header v-on:pass="logText"></emit-header>
+                    <emit-content v-on:increase="addNum"></emit-content>
+                    <p>{{ num }}</p>
+                </div>
+            </pre>
+            <script>
+                let emitHeader = {
+                    template: '<button v-on:click="passEvent">click me</button>',
+                    methods:{
+                        passEvent: function(){
+                            this.$emit('pass');
+                        }
+                    }
+                }
+            
+                let emitContent = {
+                    template: '<button v-on:click="passNum">add</button>',
+                    methods:{
+                        passNum: function(){
+                            this.$emit('increase');
+                        }
+                    }
+                }
+                new Vue({
+                    el : "#appEmit",
+                    components: {
+                        'emit-header' : emitHeader,
+                        'emit-content' : emitContent
+            
+                    },
+                    methods:{
+                        logText: function(){
+                            console.log('hi');
+                            
+                        },
+                        addNum: function(){
+                            this.num = this.num +1;
+                        }
+                    },
+                    data:{
+                        num : 10
+                    }
+                })
+            </script>
+        </section>
+        <!-- <section id="">
+            <h3>Vue CLI 이해하기</h3>
+            <table class="default-table">
+                <caption class="sr-only">Vue CLI 사용법</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">vue 파일 생성 </th>
+                        <td>
+                            <ul>
+                                <li>파일명은 두단어 이상 연결하여 사용</li>
+                                <li>파스칼표키법 사용 (PascalCase)</li>
+                                <li>MainHeader</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기본태그 생성</th>
+                        <td>
+                            <ul>
+                                <li>"<span class="bold">vue</span>" 입력 후 탭키 클릭(4.x 버전)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>node.js 명령어(터미널)</h3>
+            <table class="default-table">
+                <caption class="sr-only">node.js 명령어</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">ls </th>
+                        <td>파일목록 알아보기</td>
+                    </tr>
+                    <tr>
+                        <th>cd</th>
+                        <td>파일 선택</td>
+                    </tr>
+                    <tr>
+                        <th>프로젝트 생성</th>
+                        <td>
+                            <ul>
+                                <li>vue create [프로젝트 명]</li>
+                                <li>* powershell이 오류가 날 경우 "<span class="bold">bash</span>"를 이용하여 생성</li>
+                            </ul>
+                            <div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>server 실행</th>
+                        <td>"<span class="bold">npm run serve</span>" 명령어로 실행 (server가 아닌 serve가 맞음) </td>
+                    </tr>
+                    <tr>
+                        <th>axios 설치</th>
+                        <td>"<span class="bold">npm i axios</span>" 명령어를 실행 </td>
+                    </tr>
+                    <tr>
+                        <th>터미널 종료</th>
+                        <td> Ctrl + c</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>템플릿 문법</h3>
+            <h4>v-model</h4>
+            <table class="default-table">
+                <caption class="sr-only">템플릿 문법 (v-model)</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">v-model</th>
+                        <td>
+                            <p>input에 입력된 텍스트 값을 동적으로 바로 vue 인스턴스안에 매핑</p>
+                            
+                            
+                                <input type="text" v-model="message" placeholder="edit me">
+                                <p>{{ message }}</p>
+                            </div>                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>v-on:click</h4>
+            <table class="default-table">
+                <caption class="sr-only">템플릿 문법 (v-on:click)</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">v-on:click</th>
+                        <td>
+                            <p>onClick 이벤트</p>
+                            
+                            <input type="text" v-model="clickConfirm">
+                            <button v-on:click="addClick">add</button>                      
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <section>
+            <h3>속성</h3>
+            <h4>style 속성</h4>
+            <table class="default-table">
+                <caption class="sr-only">style 속성</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">scoped </th>
+                        <td>
+                            <figure>
+                                <img src="../../assets/images/img-vue-02.png" alt="scoped">
+                                <figcaption>해당 컴포넌트 안에서만 적용</figcaption>
+                            </figure>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>Method</h3>
+            <h4>localStorage.setItem()</h4>
+            <table class="default-table">
+                <caption class="sr-only">localStorage.setItem()</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">localStorage.setItem()</th>
+                        <td>
+                            <ul>
+                                <li>저장하는 로직</li>
+                                <li>"<span class="bold">Application > storage > Local Storage > </span>" 안에서 확인 </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section> -->
     </main>
     <script>
         new Vue({
