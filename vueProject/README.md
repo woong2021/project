@@ -6,6 +6,7 @@
 
 - vue.js 공식문서 : https://vuejs.org
 - cdn : <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+- router : <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 - axios(비동기) : https://github.com/axios/axios
 - Vue CLI : https://cli.vuejs.org/
 - Vue CLI 설치 : npm install -g @vue/cli
@@ -56,10 +57,18 @@
 - [초급] component.html 신규생성
 ```
 
-### 2021.05.11
+### 2021.05.12
 
 ```
 - [초급] props.html 신규생성
 - [초급] event-emit.html 신규생성
+
+```
+
+### 2021.05.20
+
+```
+- [초급] 같은 컴포넌트 레벨간의 통신방법
+- [초급] 뷰 라우터 설치 및 인스턴스 연결방법
 
 ```
