@@ -49,6 +49,7 @@
             </article>
             <h4>div 한화면에 꽉차게 작업</h4>
             <table class="default-table">
+                <caption>기본적인 html에 대한 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -73,6 +74,7 @@ html, body {
             <h3>시멘틱 태그</h3>
             <p class="notice">다양한 시멘틱태그가 있으나 주로 사용하는 것만 기재</p>
             <table class="default-table">
+                <caption class="sr-only">시멘틱 태그에 대한 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -80,27 +82,33 @@ html, body {
                 <tbody>
                     <tr>
                         <th scope="row">&lt; header &gt;</th>
-                        <td></td>
+                        <td>이름 그대로 헤더 영역을 의미</td>
                     </tr>
                     <tr>
                         <th scope="row">&lt; nav &gt;</th>
-                        <td></td>
+                        <td>네비게이션을 의미하며 보통 메뉴 작성때 사용</td>
                     </tr>
                     <tr>
                         <th scope="row">&lt; main &gt;</th>
-                        <td></td>
+                        <td>컨텐츠가 들어 갈 영역을 의미</td>
                     </tr>
                     <tr>
                         <th scope="row">&lt; section &gt;</th>
-                        <td>최근 <span class="bold">&lt; section &gt; 태그는 </span> 사용안하는 추세이나 필자는 구분을 위해 사용</td>
+                        <td>최근 <span class="bold">&lt; section &gt; 태그는 </span> 사용안하는 추세이나 개인적으로는 필요, 스포츠, 음악, 음식 등 대분류역할</td>
                     </tr>
                     <tr>
                         <th scope="row">&lt; article &gt;</th>
-                        <td></td>
+                        <td>
+                            <ul>
+                                <li>section 이 대분류라면 article 는 중분류나 소분류라 생각하면 됨 (예, 야구, 축구, 배구, 농구)</li>
+                                <li>어디까지나 의미론 적인것이며 article 안에 "<span class="bold">section</span>"이 들어갈 수 있음</li>
+                                <li>개인적으로 section(대분류) -> article (중분류) -> section이 아닌 "<span class="bold">div (소분류)</span>" 작업되었으면 함</li>
+                            </ul>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">&lt; footer &gt;</th>
-                        <td></td>
+                        <td>이름 그대로 풋터 영역을 의미 </td>
                     </tr>
                 </tbody>
             </table>
@@ -108,6 +116,7 @@ html, body {
         <section id="zIndex">
             <h3>z-index 사용법</h3>
             <table class="default-table">
+                <caption class="sr-only">z-index에 대한 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -150,6 +159,7 @@ section{
             <h3>단위</h3>
             <p class="notice">단위에는 여러가지가 있으나 "두가지"만 사용하나 절때 정답은 아닙니다. </p>
             <table class="default-table">
+                <caption class="sr-only">단위에 대한 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -166,6 +176,39 @@ section{
                 </tbody>
             </table>
         </section>
+        <section id="images">
+            <h3>image 테그</h3>
+            <h4>object-fit</h4>
+            <table class="default-table">
+                <caption class="sr-only">object-fit에 대한 설명</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">fill</th>
+                        <td>주어진 너비와 높이에 딱 맞도록 사이즈를 조절, 이미지 가로세로 비율 유지되지 않음 (default)</td>
+                    </tr>
+                    <tr>
+                        <th>contanin</th>
+                        <td>가로세로 비율을 유지한 채로 사이즈가 조절되지만, 이미지와 컨테이너 간의 비율이 맞지 않는 경우엔 자리가 생김</td>
+                    </tr>
+                    <tr>
+                        <th>cover</th>
+                        <td>가로세로 비율을 유지한 채로 사이즈가 조절되어 비율이 맞지 않더라도 이미지를 확대해 컨테이너를 완전히 채움</td>
+                    </tr>
+                    <tr>
+                        <th>none</th>
+                        <td>아무것도 하지않고 본래의 이미지 사이즈를 유지</td>
+                    </tr>
+                    <tr>
+                        <th>scale-down</th>
+                        <td>none 또는 contain 중에 더 적절한 방향으로 이미지 사이즈를 조절</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <section id="flex">
             <h3>display: flex</h3>
             <h4>display: flex 이용</h4>
@@ -174,6 +217,7 @@ section{
             </article>
             <h4>display: flex 사용법</h4>
             <table class="default-table">
+                <caption class="sr-only">flex 사용법에 대한 설명</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />
@@ -252,6 +296,7 @@ section{
         <section id="animation">
         <h3>애니메이션</h3>
             <table class="default-table">
+                <caption class="sr-only">애니메이션 활용법</caption>
                 <colgroup>
                     <col style="width: 25%" />
                     <col style="width: 75%" />

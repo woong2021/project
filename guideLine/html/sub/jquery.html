@@ -36,33 +36,27 @@
         <section id="basicTag">
             <h2>JQUERY(& javascript)</h2>
             <h3>기본태그(동적)</h3>
-            <pre>
-$(document).on("click", "[클래스 & 아이디 & 속성]", function(){
+<pre>$(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 
-});
-            </pre>
+});</pre>
         </section>
         <section>
             <h3>생성자 함수</h3>
             <h4>기본문법</h4>
             <p class="notice">생성자 함수는 함수 이름 첫 글자를 대문자로 작성 (암묵적인 룰)</p>
-            <pre>
-function Person(){
+<pre>function Person(){
 
-}
-            </pre>
+}</pre>
             <h4>생성자함수 활용</h4>
-            <pre>
-function Person(){
+<pre>function Person(){
     this.name = name;
     this.job = job;
 }
 
 let p = new Person('josh', 'developer');
-console.log(p);
-            </pre>
+console.log(p);</pre>
         </section>
-        <section id="elementMove">
+        <!-- <section id="elementMove">
             <h3>클릭시 특정앨리먼트로 이동</h3>
             <article>
                 <pre>
@@ -80,6 +74,51 @@ $('html, body').animate({scrollTop : move}, 300);
 });
                 </pre>   
             </article>
+        </section> -->
+        <section>
+            <h3>탭메뉴</h3>
+            <h4>data를 이용한 탭메뉴</h4>
+<pre>&lt;section id="tabList"&gt;
+    &lt;article data-tab="tab-1" class="current"&gt;
+    &lt;article data-tab="tab-2"&gt;
+    &lt;article data-tab="tab-3"&gt;
+&lt;/section&gt;
+&lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
+&lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
+&lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
+&lt;script&gt;
+    $('#tabList article').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('#tabList article').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    })
+&lt;/script&gt;</pre>
+            <h4>결과</h4>
+            <section id="tabList">
+                <article data-tab="tab-1" class="current">메뉴1</article>
+                <article data-tab="tab-2">메뉴2</article>
+                <article data-tab="tab-3">메뉴3</article>
+            </section>
+            <article class="explanation-box">
+                <section id="tab-1" class="tab-content current">내용1</section>
+                <section id="tab-2" class="tab-content">내용2</section>
+                <section id="tab-3" class="tab-content">내용3</section>
+            </article>
+            <script>
+                $('#tabList > article').click(function(){
+                    var tab_id = $(this).attr('data-tab');
+            
+                    $('#tabList > article').removeClass('current');
+                    $('.tab-content').removeClass('current');
+            
+                    $(this).addClass('current');
+                    $("#"+tab_id).addClass('current');
+                })
+            </script>
         </section>
     </main>
 

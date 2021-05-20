@@ -136,11 +136,15 @@
 }
 
 /* Vue */
-.vue-01{
+.vue-03{
     @include imagePush(vue,"03");
     height: 400px;
 }
 .vue-04{
     @include imagePush(vue,"04");
+    height: 400px;
+}
+.vue-05{
+    @include imagePush(vue,"05");
     height: 400px;
 }

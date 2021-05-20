@@ -103,3 +103,29 @@
 - [vue].html] 컴포넌트 통신 관련 내용 추가
 
 ```
+
+### 2021.05.13
+
+```
+- [공통] 모바일 레이아웃 개선
+- [sass.html] 시멘틱태그 설명 추가
+- [vue].html] footer 영역 추가
+```
+
+### 2021.05.18
+
+```
+- [index.html] 메인페이지 이미지 사이즈 수정 (object-fit)
+- [htmlcss.html] image 태그 설명 추가
+- [htmlcss.html] table caption 빠진 부분 추가
+
+```
+
+### 2021.05.20
+
+```
+- [vue.html] 초급, 중급, 고급, 응용 탭메뉴 분리
+- [vue.html] 같은 컴포넌트간에 통신방법 업데이트
+- [vue.html] 뷰 라우터 기본문법 업데이트
+- [jquery.html] 탭메뉴 업데이트 및 코드 정렬
+```

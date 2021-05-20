@@ -169,9 +169,16 @@ a{
     padding:0 10px;
     border:1px solid #ff0000;
     background:rgb(248, 218, 222);
-    height: 40px;
     line-height: 40px;
     box-sizing: border-box;
+
+    @media (min-width: 320px){
+        height: auto;
+    }
+
+    @media (min-width: 768px){
+        height: 40px; 
+    }
 }
 
 .sr-only{
@@ -218,7 +225,15 @@ figure{
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid;
-    width: 33%;
+
+    @media (min-width: 320px){
+        width: 100%;
+    }
+
+    @media (min-width: 768px){
+        width: 33%;
+    }
+    
 
     img{
         width: 100%;
@@ -243,4 +258,29 @@ figure{
 }
 .blue{
     color: $bgBlue;
+}
+
+/* Tab Menu */
+#tabList{
+    display: flex;
+    width: 100%;
+
+    article{
+        width: 25%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+
+        &.current{
+            background: $bgBlue;
+            color: $white;
+        }
+    }
+}
+.tab-content{
+    display: none;
+
+    &.current{
+        display: block;
+    }
 }
