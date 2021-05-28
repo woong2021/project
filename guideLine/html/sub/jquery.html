@@ -9,10 +9,14 @@
     <!-- Cascading Style Sheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
     <script defer src="../../assets/js/common.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
 </head>
 <body>
     <!-- Header Area -->
@@ -36,67 +40,57 @@
         <section id="basicTag">
             <h2>JQUERY(& javascript)</h2>
             <h3>기본태그(동적)</h3>
-<pre>$(document).on("click", "[클래스 & 아이디 & 속성]", function(){
+            <pre>
+                $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 
-});</pre>
+                });
+            </pre>
         </section>
         <section>
             <h3>생성자 함수</h3>
             <h4>기본문법</h4>
             <p class="notice">생성자 함수는 함수 이름 첫 글자를 대문자로 작성 (암묵적인 룰)</p>
-<pre>function Person(){
+            <pre>
+                function Person(){
 
-}</pre>
+                }
+            </pre>
             <h4>생성자함수 활용</h4>
-<pre>function Person(){
-    this.name = name;
-    this.job = job;
-}
+            <pre>
+                function Person(){
+                    this.name = name;
+                    this.job = job;
+                }
 
-let p = new Person('josh', 'developer');
-console.log(p);</pre>
+                let p = new Person('josh', 'developer');
+                console.log(p);
+            </pre>
         </section>
-        <!-- <section id="elementMove">
-            <h3>클릭시 특정앨리먼트로 이동</h3>
-            <article>
-                <pre>
-<span class="gallery">gallery</span>
-<section id="image">
-    <article>
-        <img src="" alt="일본여행">
-    </article>
-</section>
-
-$(document).on("click", ".gallery", function(){
-const move = $("#image").offset().top;
-
-$('html, body').animate({scrollTop : move}, 300);
-});
-                </pre>   
-            </article>
-        </section> -->
         <section>
             <h3>탭메뉴</h3>
             <h4>data를 이용한 탭메뉴</h4>
-<pre>&lt;section id="tabList"&gt;
-    &lt;article data-tab="tab-1" class="current"&gt;
-    &lt;article data-tab="tab-2"&gt;
-    &lt;article data-tab="tab-3"&gt;
-&lt;/section&gt;
-&lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
-&lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
-&lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
-&lt;script&gt;
-    $('#tabList article').click(function(){
-        var tab_id = $(this).attr('data-tab');
+            <pre>
+                &lt;section id="tabList"&gt;
+                    &lt;article data-tab="tab-1" class="current"&gt;
+                    &lt;article data-tab="tab-2"&gt;
+                    &lt;article data-tab="tab-3"&gt;
+                &lt;/section&gt;
+                &lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
+                &lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
+                &lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
 
-        $('#tabList article').removeClass('current');
-        $('.tab-content').removeClass('current');
+                &lt;script&gt;
+                    $('#tabList article').click(function(){
+                        var tab_id = $(this).attr('data-tab');
 
-        $(this).addClass('current');
-        $("#"+tab_id).addClass('current');
-    })
-&lt;/script&gt;</pre>
+                        $('#tabList article').removeClass('current');
+                        $('.tab-content').removeClass('current');
+
+                        $(this).addClass('current');
+                        $("#"+tab_id).addClass('current');
+                    })
+                &lt;/script&gt;
+            </pre>
             <h4>결과</h4>
             <section id="tabList">
                 <article data-tab="tab-1" class="current">메뉴1</article>
@@ -120,8 +114,60 @@ $('html, body').animate({scrollTop : move}, 300);
                 })
             </script>
         </section>
-    </main>
+        <section>
+            <h3>Jquery UI (datepicker)</h3>
+            <p class="notice">Jquery를 기반으로 하는 플러그인</p>
+            <article>
+                <h4>설치하기 (CDN)</h4>
+                <table class="default-table">
+                    <caption class="sr-only">Jquery UI 설치하기</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>jquery UI (CSS)</th>
+                            <td>&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"&gt;</td>
+                        </tr>
+                        <tr>
+                            <th>jquery UI (Jquery UI)</th>
+                            <td>
+                                <p>jquery 밑에 해당 CDN 추가</p>
+                                <p>&lt;script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"&gt;&lt;/script&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </article>
+            <article>
+                <h4>datepicker (기본사용법)</h4>
+                <div class="explanation-box">
+                    "&lt;script src="./jquery-ui-1.12.1/datepicker-ko.js"&gt;&lt;/script&gt;"를 추가
+                </div>
+                <pre>
+                    &lt;input type="text" name="date" id="date1"&gt;
 
+                    &lt;script&gt;
+                        $(function(){
+                            $("#date1").datepicker();
+                        });
+                    &lt;/script&gt;
+                </pre>
+            </article>
+            <article>
+                <h4>결과 확인</h4>
+                <div class="explanation-box">
+                    <input type="text" name="date" id="date1" size="12">
+                </div>
+            </article>
+        </section>
+    </main>
+    <script>
+        $(function(){
+            $("#date1").datepicker();
+        });
+    </script>
     <!-- Footer Area-->
     <footer id="footer"></footer>
 </body>

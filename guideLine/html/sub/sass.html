@@ -191,19 +191,19 @@
                     <tr>
                         <th>예시</th>
                         <td>
-<pre>
-for $i from 1 through 20 {
-    &.realtime-#{$i}{
-        @if ($i &lt; 10){
-            @include imagePush("temp","0#{$i}");
-        }
-        
-        @else {
-            @include imagePush("temp","#{$i}");
-        }
-    }
-}
-</pre>
+                            <pre>
+                                for $i from 1 through 20 {
+                                    &.realtime-#{$i}{
+                                        @if ($i &lt; 10){
+                                            @include imagePush("temp","0#{$i}");
+                                        }
+                                        
+                                        @else {
+                                            @include imagePush("temp","#{$i}");
+                                        }
+                                    }
+                                }
+                            </pre>
                         </td>
                     </tr>
                 </tbody>

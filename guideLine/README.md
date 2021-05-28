@@ -128,11 +128,21 @@
 - [vue.html] 같은 컴포넌트간에 통신방법 업데이트
 - [vue.html] 뷰 라우터 기본문법 업데이트
 - [jquery.html] 탭메뉴 업데이트 및 코드 정렬
+
 ```
 
 ### 2021.05.25
 
 ```
-- [vue.html] vue 단 통합 작업 진행
+- [vue.html] vue 통합 작업 진행
 - [vue.html] vue 오류 수정
+
+```
+
+### 2021.05.28
+
+```
+- [공통] 소스정리 및 불필요한 주석 제거
+- [jquery.html] jquery UI (datepicker) 업데이트
+
 ```

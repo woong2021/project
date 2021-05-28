@@ -25,10 +25,7 @@
         <aside class="Quick">
             <h2>QUICK</h2>
             <ul>
-                <li><a href="">준비중</a></li>
-                <li><a href="">준비중</a></li>
-                <li><a href="">준비중</a></li>
-                <li><a href="">준비중</a></li>
+                <li><a href="#">TOP</a></li>
             </ul>
         </aside>
     </section>
@@ -72,7 +69,8 @@
                         str = 'Hello world!!!';
 
                         div.innerHTML = str;  
-                    &lt;/script&gt;</pre> 
+                    &lt;/script&gt;
+                </pre> 
                 <table class="default-table">
                     <caption class="sr-only">기존 웹 개발 방식</caption>
                     <colgroup>
@@ -113,7 +111,8 @@
 
                             init();
                         })();
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
                 <table class="default-table">
                     <caption class="sr-only">Reactivity 구현</caption>
                     <colgroup>
@@ -144,7 +143,8 @@
                         data: {
                             message:'hello'
                         }
-                    });</pre>
+                    });
+                </pre>
                 <h4>인스턴스 API</h4>
                 <table class="default-table">
                     <caption class="sr-only">인스턴스 API</caption>
@@ -164,21 +164,22 @@
                 </table>
                 <h4>기본적인 인스턴스 속성</h4>
                 <pre>
-                &lt;div id="app"&gt;{{message}}&lt;/div&gt;
-                &lt;script&gt;
-                    var vm = new Vue({
-                        el: '#app',
-                        data: {
-                            message: 'hi'
-                        },
-                        methods:{
+                    &lt;div id="app"&gt;{{message}}&lt;/div&gt;
+                    &lt;script&gt;
+                        var vm = new Vue({
+                            el: '#app',
+                            data: {
+                                message: 'hi'
+                            },
+                            methods:{
 
-                        },
-                        created: function(){
+                            },
+                            created: function(){
 
-                        }
-                    });
-                &lt;/script&gt;</pre>   
+                            }
+                        });
+                    &lt;/script&gt;
+                </pre>   
                 <table class="default-table">
                     <caption class="sr-only">기본적인 인스턴스 속성</caption>
                     <colgroup>
@@ -239,7 +240,8 @@
                         new Vue({
                             el : "#app"
                         });
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
                 <h4>컴포넌트 활용(지역컴포넌트)</h4>
                 <pre>
                     &lt;div id="app"&gt;
@@ -256,42 +258,17 @@
                             }
                             </code>
                         });
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
                 <h4>컴포넌트 활용결과</h4>
                 <pre>
                     <div id="app">
-                        <app-header></app-header>
-                        <app-contents></app-contents>
-                        <app-footer></app-footer>
+                        <beginner-header></beginner-header>
+                        <beginner-contents></beginner-contents>
+                        <beginner-footer></beginner-footer>
                     </div>
                 </pre>
             </section>
-        </section>
-        <script>
-             // Vue.component('컴포넌트 이름', 컴포넌트 내용);
-            Vue.component('app-header', {
-                template: '<h1>Header</h1>'
-            });
-        
-            Vue.component('app-contents', {
-                template: '<div>Content</div>'
-            });
-
-            new Vue({
-                el :'#beginner',
-                data:{
-                    message: ''
-                },
-
-                components : {
-                    'app-footer' : {
-                        template: '<div>Footer</div>'
-                    }
-                }
-            })
-        </script>
-        
-        <section id="middleClass" class="tab-content">
             <section>
                 <h3>컴포넌트간에 통신(props)</h3>
                 <p class="notice">상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달 </p>
@@ -321,12 +298,13 @@
                                 message : 'hi'
                             }
                         })
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
                 <h4>Props 결과</h4>
                 <pre><div>
                         <app-header v-bind:approps='message'></app-header>
                 </div></pre>
-            </section> 
+            </section>
             <section>
                 <h3>컴포넌트간에 통신(이벤트Emit)</h3>
                 <p class="notice">하위 컴포넌트에서 상위 컴포넌트로 이벤트를 발생 </p>
@@ -379,7 +357,8 @@
                                 num : 10
                             }
                         })
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
                 <h4>Emit 확인</h4>
                 <table class="default-table">
                     <caption class="sr-only">Emit 확인</caption>
@@ -399,11 +378,11 @@
                 </table>
                 <h4>결과</h4>
                 <pre>
-<div id="appEmit">
-    <emit-header v-on:pass="logText"></emit-header>
-    <emit-content v-on:increase="addNum"></emit-content>
-    <p>{{ num }}</p>
-</div>
+                    <div id="appEmit">
+                        <emit-header v-on:pass="logText"></emit-header>
+                        <emit-content v-on:increase="addNum"></emit-content>
+                        <p>{{ num }}</p>
+                    </div>
                 </pre>
             </section>
             <section>
@@ -428,10 +407,12 @@
                     </tbody>
                 </table>
                 <h4>결과</h4>
-                <pre><div>Root : {{ samenum }}
+                <pre>
+                    <div>Root : {{ samenum }}
                         <same-header v-bind:sameprops="samenum"></same-header>  
                         <same-content v-on:pass="sameLevel"></same-content>
-                    </div></pre>
+                    </div>
+                </pre>
             </section>
             <section>
                 <h3>뷰 라우터 (Router)</h3>
@@ -473,14 +454,17 @@
                         el: "#routerApp",
                         router: router
                     });
-                    &lt;/script&gt;  </pre>
+                    &lt;/script&gt;
+                </pre>
                 <h4>라우터 결과확인</h4>
                 <p class="notice">
                     url 주소 마지막에 path값(main, login)을 넣어본다. 
                 </p>
-                <pre><div>
-                    <router-view></router-view>
-                </div></pre>
+                <pre>
+                    <div>
+                        <router-view></router-view>
+                    </div>
+                </pre>
                 <h4>라우터 링크 (router-link)</h4> 
                 <p class="notice">
                         사용자 입장에서 페이지 이동가능하게 a태그 기능
@@ -491,7 +475,8 @@
                             &lt;<span class="red">router-link</span> to="/login"&gt;Login&lt;/router-link&gt;
                             &lt;<span class="red">router-link</span> to="/main"&gt;Main&lt;/router-link&gt;
                         &lt;/div&gt;
-                    &lt;/div&gt;</pre> 
+                    &lt;/div&gt;
+                </pre> 
             </section>
             <section>
                 <h3>axops</h3>
@@ -504,7 +489,7 @@
                 <article class="explanation-box">
                     데이터 바인딩은 뷰 인스턴스에서 정의한 속성들을 화면에 표시하는 방법
                 </article>
-                    <pre>
+                <pre>
                     &lt;div&gt;<span class="red">{{ message }}</span>&lt;/div&gt;
                     &lt;script&gt;
                         new Vue ({
@@ -512,8 +497,8 @@
                                 'hello world'
                             }
                         })
-                    &lt;/script&gt;</pre>
-    
+                    &lt;/script&gt;
+                </pre>
                 <h4>디렉티브</h4>
                 <article class="explanation-box">
                     뷰로 화면의 요소를 더 쉽게 조작하기 위한 문법으로 화면조작에서 자주 사용되는 방식들을 모아 디렉티브 형태로 제공
@@ -528,11 +513,11 @@
                                 show: false
                             }    
                         })
-                    &lt;/script&gt;</pre>
+                    &lt;/script&gt;
+                </pre>
             </section>
             <section>
                 <h3>템플릿 속성</h3>
-                <p class="notice"></p>
                 <table class="default-table">
                     <caption class="sr-only">템플릿 속성 (v-model)</caption>
                     <colgroup>
@@ -544,8 +529,6 @@
                             <th scope="row">v-model</th>
                             <td>
                                 <p>input에 입력된 텍스트 값을 동적으로 바로 vue 인스턴스안에 매핑</p>
-                                
-                                
                                     <input type="text" v-model="message" placeholder="edit me">
                                     <p>{{ message }}</p>
                                 </div>                            
@@ -587,36 +570,38 @@
                         </tr>
                     </tbody>
                 </table>
-                <section>
-                    <h3>computed</h3>
-                    <p class="notice">computed 는 많이 사용되는 템플릿 문법이다. (watch는 지양)</p>
-                    <h4>computed 활용예시</h4>
-                    <pre>
-                        &lt;div id="computed"&gt;
-                            &lt;p v-bind:class="errorTextColor">Hello&lt;/p&gt;
-                        &lt;/div&gt;
-                        &lt;script&gt;
-                            new Vue({
-                                el : '#computed',
-                                data:{
-                                    cname: 'blue-text',
-                                    isError: false
-                                },
-                                computed: {
-                                    errorTextColor: function(){
-                                        return this.isError ? 'warning' : null;
-                                    }
-                                }
-                            });
-                        &lt;/script&gt;    
-                        </pre>
-                    <pre>
-                        <div>
-                            <p v-bind:class="errorTextColor">Hello</p>
-                        </div>
-                    </pre>
-                </section>
             </section>
+            <section>
+                <h3>computed</h3>
+                <p class="notice">computed 는 많이 사용되는 템플릿 문법이다. (watch는 지양)</p>
+                <h4>computed 활용예시</h4>
+                <pre>
+                    &lt;div id="computed"&gt;
+                        &lt;p v-bind:class="errorTextColor">Hello&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;script&gt;
+                        new Vue({
+                            el : '#computed',
+                            data:{
+                                cname: 'blue-text',
+                                isError: false
+                            },
+                            computed: {
+                                errorTextColor: function(){
+                                    return this.isError ? 'warning' : null;
+                                }
+                            }
+                        });
+                    &lt;/script&gt;    
+                </pre>
+                <pre>
+                    <div>
+                        <p v-bind:class="errorTextColor">Hello</p>
+                    </div>
+                </pre>
+            </section> 
+        </section>
+        <section id="middleClass" class="tab-content">
             <section id="">
                 <h3>Vue CLI 이해하기</h3>
                 <table class="default-table">
@@ -705,7 +690,6 @@
                                     <img src="../../assets/images/img-vue-02.png" alt="scoped">
                                     <figcaption>해당 컴포넌트 안에서만 적용</figcaption>
                                 </figure>
-                                
                             </td>
                         </tr>
                     </tbody>
@@ -734,136 +718,11 @@
                 </table>
             </section>
         </section>
-        <script>
-            let appHeader = {
-                template: "<h1>{{ approps }}</h1>",
-                props : ['approps']
-            }
-
-            let emitHeader = {
-                template: '<button v-on:click="passEvent">click me</button>',
-                methods:{
-                    passEvent: function(){
-                        this.$emit('pass');
-                    }
-                }
-            }
-        
-            let emitContent = {
-                template: '<button v-on:click="passNum">add</button>',
-                methods:{
-                    passNum: function(){
-                        this.$emit('increase');
-                    }
-                }
-            }
-
-            let sameLavelHeader = {
-                template : '<div>AppHeader :</div>',
-                props:['sameprops']
-            }
-
-            let sameLavelContent = {
-                template: '<div>Content<button v-on:click="sameNum">pass</button></div>',
-                methods:{
-                    sameNum: function(){
-                        this.$emit('pass', 10)
-                    }
-                }
-            }
-
-            let LoginComponent = {
-                template: '<div>login</div>'
-            }
-        
-            let MainComponent= {
-                template: '<div>Main</div>'
-            }
-
-            let router =  new VueRouter({
-                //mode: 'history', 
-
-                routes: [
-                    {
-                        path: '/login',
-                        component: LoginComponent
-                    },
-                    {
-                        path: '/main',
-                        component: MainComponent
-                    }
-                ]
-            });
-
-            new Vue({
-                el :'#middleClass',
-                data:{
-                    message: '',
-                    clickConfirm: ''
-                },
-
-                components:{
-                    "app-header": appHeader,
-                    'emit-header' : emitHeader,
-                    'emit-content' : emitContent,
-                    'same-header' : sameLavelHeader,
-                    'same-content' : sameLavelContent
-                },
-                
-                data:{
-                    message : 'hi',
-                    num : 10,
-                    samenum : 5,
-                    loading: true,
-                    uuid : 'number',
-                    name: 'text-blue',
-                    cname: 'blue-text',
-                    isError: false
-                },
-
-                methods: {
-                    addClick: function(){
-                        console.log(this.clickConfirm);
-
-                        //저장하는 로직
-                        localStorage.setItem(this.clickConfirm, this.clickConfirm);
-                        //초기화 로직
-                        this.clickConfirm= '';
-                    },
-
-                    logText: function(){
-                        console.log('hi');   
-                    },
-
-                    addNum: function(){
-                        this.num = this.num +1;
-                    },
-
-                    sameLevel: function(value){
-                        this.num = value;
-                    }
-                },
-
-                // 데이터의 값이 바뀔때 사용
-                computed:{
-                    doubleNum: function(){
-                        return this.num * 2;
-                    },
-
-                    errorTextColor: function(){
-                        return this.isError ? 'warning' : null;
-                    }
-                },
-                router: router
-            });
-        </script>
-
-        <section id="high-class" class="tab-content">
+        <section id="highClass" class="tab-content">
             <section id="">
                 <h3>준비중</h3>
             </section>
         </section>
-
         <section id="applications" class="tab-content">
             <section id="">
                 <h3>준비중</h3>
@@ -882,6 +741,140 @@
             $(this).addClass('current');
             $("#"+tab_id).addClass('current');
         })
+
+        // Vue.component('컴포넌트 이름', 컴포넌트 내용);
+        Vue.component('beginner-header', {
+            template: '<h1>Header</h1>'
+        });
+    
+        Vue.component('beginner-contents', {
+            template: '<div>Content</div>'
+        });
+
+        let appHeader = {
+            template: "<h1>{{ approps }}</h1>",
+            props : ['approps']
+        }
+
+        let emitHeader = {
+            template: '<button v-on:click="passEvent">click me</button>',
+            methods:{
+                passEvent: function(){
+                    this.$emit('pass');
+                }
+            }
+        }
+    
+        let emitContent = {
+            template: '<button v-on:click="passNum">add</button>',
+            methods:{
+                passNum: function(){
+                    this.$emit('increase');
+                }
+            }
+        }
+
+        let sameLavelHeader = {
+            template : '<div>AppHeader :</div>',
+            props:['sameprops']
+        }
+
+        let sameLavelContent = {
+            template: '<div>Content<button v-on:click="sameNum">pass</button></div>',
+            methods:{
+                sameNum: function(){
+                    this.$emit('pass', 10)
+                }
+            }
+        }
+
+        let LoginComponent = {
+            template: '<div>login</div>'
+        }
+    
+        let MainComponent= {
+            template: '<div>Main</div>'
+        }
+
+        let router =  new VueRouter({
+            //mode: 'history', 
+
+            routes: [
+                {
+                    path: '/login',
+                    component: LoginComponent
+                },
+                {
+                    path: '/main',
+                    component: MainComponent
+                }
+            ]
+        });
+
+        new Vue({
+            el :'#beginner',
+            data:{
+                message: 'hi',
+                num : 15,
+                samenum : 5,
+                clickConfirm: '',
+                loading: true,
+                uuid : 'number',
+                name: 'text-blue',
+                cname: 'blue-text',
+                isError: false
+            },
+
+            components : {
+                'beginner-footer' : {
+                    template: '<div>Footer</div>'
+                },
+                "app-header": appHeader,
+                'emit-header' : emitHeader,
+                'emit-content' : emitContent,
+                'same-header' : sameLavelHeader,
+                'same-content' : sameLavelContent
+            },
+
+            methods : {
+                logText: function(){
+                    console.log('hi');   
+                },
+
+                addNum: function(){
+                    this.num = this.num +1;
+                },
+
+                sameLevel: function(value){
+                    this.num = value;
+                },
+
+                addClick: function(){
+                    console.log(this.clickConfirm);
+
+                    //저장하는 로직
+                    localStorage.setItem(this.clickConfirm, this.clickConfirm);
+                    //초기화 로직
+                    this.clickConfirm= '';
+                }
+            },
+            
+            // 데이터의 값이 바뀔때 사용
+            computed:{
+                doubleNum: function(){
+                    return this.num * 2;
+                },
+
+                errorTextColor: function(){
+                    return this.isError ? 'warning' : null;
+                }
+            },
+            router: router
+        })
+
+        new Vue({
+            el :'#middleClass'
+        });
     </script>   
 </body>
 </html>

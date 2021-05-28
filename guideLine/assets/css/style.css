@@ -216,7 +216,7 @@ figure figcaption { text-align: center; }
 .blue { color: #0075C1; }
 
 /* Tab Menu */
-#tabList { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; }
+#tabList { display: -webkit-box; display: -ms-flexbox; display: flex; border: 1px solid; width: 100%; }
 #tabList article { width: 25%; height: 40px; text-align: center; line-height: 40px; }
 #tabList article.current { background: #0075C1; color: #ffffff; }
 
