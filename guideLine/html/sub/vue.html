@@ -479,10 +479,6 @@
                 </pre> 
             </section>
             <section>
-                <h3>axops</h3>
-                <p class="notice"> 뷰에서 권고하는 HTTP 통신 라이브러리 (api가 다양함)</p>
-            </section>
-            <section>
                 <h3>템플릿 문법</h3>
                 <p class="notice">뷰로 화면을 조작하는 방법을 의미 (데이터 바인딩과 디렉티브로 나눔)</p>
                 <h4>데이터 바인딩</h4>
@@ -674,6 +670,32 @@
                 </table>
             </section>
             <section>
+                <h3>axios</h3>
+                <p class="notice"> 뷰에서 권고하는 HTTP 통신 라이브러리 (api가 다양함)</p>
+                <h4>axios 설치방법</h4>
+                <table class="default-table">
+                    <caption class="sr-only">axios 설치방법</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">axios 설치방법 </th>
+                            <td>
+                                터미널에 "<span class='bold'> npm i axios</span> 입력"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>테스트 사이트</th>
+                            <td>
+                                <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
                 <h3>속성</h3>
                 <h4>style 속성</h4>
                 <table class="default-table">
@@ -706,12 +728,36 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">localStorage.setItem()</th>
+                            <th scope="row">localStorage.setItem() 이해</th>
                             <td>
                                 <ul>
                                     <li>저장하는 로직</li>
                                     <li>"<span class="bold">Application > storage > Local Storage > </span>" 안에서 확인 </li>
                                 </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>prevent</h4>
+                <table class="default-table">
+                    <caption class="sr-only">prevent의 이해</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">활용</th>
+                            <td>
+                                <ul>
+                                    <li>세로고침없이 작업</li>
+                                    <li>자바스크립트의 event.preventDefault() 같은기능</li>
+                                </ul>
+                                <pre>
+                                    &lt;form v-on:submit.<span class="red">prevent</span>="subitForm"&gt;
+                                        ...
+                                    &lt;/form&gt;
+                                </pre>
                             </td>
                         </tr>
                     </tbody>
@@ -724,8 +770,121 @@
             </section>
         </section>
         <section id="applications" class="tab-content">
-            <section id="">
-                <h3>준비중</h3>
+            <section>
+                <h3>사용자 입력폼 만들기</h3>
+                <article class="explanation-box">
+                    <form>
+                        <div>
+                          <label for="username">id: </label>
+                          <input type="text" id="username">
+                        </div>
+                        <div>
+                          <label for="password">PW : </label>
+                          <input type="password" id="password">
+                        </div>
+                        <button type="submit">Login</button>  
+                    </form>   
+                </article>
+                <h4>마크업 작업</h4>
+                <pre>
+                    &lt;form&gt;
+                        &lt;div&gt;
+                            &lt;label for="username"&gt;id: &lt;/label&gt;
+                            &lt;input type="text" id="username"&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for="password"&gt;PW : &lt;/label&gt;
+                            &lt;input type="password" id="password"&gt;
+                        &lt;/div&gt;
+                        &lt;button type="submit"&gt;Login&lt;/button&gt;  
+                    &lt;/form&gt;
+                </pre>
+                <h4>속성과 이벤트 처리</h4>
+                <pre>
+                    &lt;form <span class="red">v-on:submit.prevent="subitForm"</span>&gt;
+                        &lt;div&gt;
+                            &lt;label for="username"&gt;id: &lt;/label&gt;
+                            &lt;input type="text" id="username" <span class="red">v-model="username"</span>&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for="password"&gt;PW : &lt;/label&gt;
+                            &lt;input type="password" id="password" <span class="red">v-model="password"</span></span>&gt;
+                        &lt;/div&gt;
+                            &lt;button type="submit"&gt;Login&lt;/button&gt;  
+                    &lt;/form&gt;
+                </pre>
+                <pre>
+                    <span class="red">
+                    &lt;script&gt;
+                        export default {
+                          data: function(){
+                            return {
+                              username: '',
+                              password: '',
+                            }
+                          },
+                          methods: {
+                            subitForm: function(event) {
+                              console.log(this.username, this.password);
+
+                              var data = {
+                                username: this.username,
+                                password: this.password
+                              }
+                            }
+                          }
+                        }
+                    &lt;/script&gt;
+                    </span>
+                </pre>
+                <h4>axios를 이용한 데이터 전송 및 구현</h4>
+                <pre>
+                    &lt;form v-on:submit.prevent="subitForm"&gt;
+                        &lt;div&gt;
+                            &lt;label for="username"&gt;id: &lt;/label&gt;
+                            &lt;input type="text" id="username" v-model="username"&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for="password"&gt;PW : &lt;/label&gt;
+                            &lt;input type="password" id="password"v-model="password"&gt;
+                        &lt;/div&gt;
+                            &lt;button type="submit"&gt;Login&lt;/button&gt;  
+                    &lt;/form&gt;
+                </pre>
+                <pre>   
+                    &lt;script&gt;
+                        <span class="red">import axios from 'axios';</span>
+                        
+                        export default {
+                          data: function(){
+                            return {
+                              username: '',
+                              password: '',
+                            }
+                          },
+                          methods: {
+                            subitForm: function(event) {
+                              console.log(this.username, this.password);
+
+                              <span class="red">var url = 'https://jsonplaceholder.typicode.com/users';</span>
+                              var data = {
+                                username: this.username,
+                                password: this.password
+                              }
+                              <span class="red">
+                              axios.post(url, data)
+                              .then(function(response){
+                                console.log(response);
+                              })
+                              .then(function(error){
+                                console.log(error)
+                              });
+                            </span>
+                            }
+                          }
+                        }
+                    &lt;/script&gt;
+                </pre>
             </section>
         </section>
     </main>

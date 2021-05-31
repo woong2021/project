@@ -12,7 +12,14 @@
 //	Image
 // ----------------------------*
 @mixin imagePush($directory : "git", $number : "01"){
-    background: url("../images/img-"+ $directory + "-" + $number + ".png") no-repeat;
+    background: url("../images/sub/" + $directory + "/img-"+ $directory + "-" + $number + ".png") no-repeat;
+    background-size: contain;
+    height: 200px;
+    border: 1px solid orange;
+}
+
+@mixin imagePushGuide($directory : "git", $number : "01"){
+    background: url("../images/sub/guideline/img-"+ $directory + "-" + $number + ".png") no-repeat;
     background-size: contain;
     height: 200px;
     border: 1px solid orange;
