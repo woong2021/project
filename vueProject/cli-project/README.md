@@ -29,11 +29,3 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ---
-
-## CLI Project
-
-### 2021-05-26
-
-```
-- CLI 프로젝트 시작
-```
