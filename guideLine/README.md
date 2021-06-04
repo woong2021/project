@@ -154,5 +154,12 @@
 - [htmlcss.html] 테이블 내용 업데이트
 - [htmlcss.html] input 내용 업데이트
 - [vue.html] Method 의 prevent 내용 업데이트
-- [vue.html] 응용 컨텐츠에 "사용자입력폼만들기" 추가
+- [vue.html] 응용 컨텐츠에 "사용자입력폼만들기" 추가 (이미지 포함)
+```
+
+### 2021.06.04
+
+```
+- [공통] test.html 삭제
+- [vue.html] 오류 이미지링크 수정
 ```
