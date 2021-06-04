@@ -7,7 +7,7 @@
       <hr>
       <form v-on:submit.prevent="subitForm">
         <div>
-          <label for="username">id: </label>
+          <label for="username">ID : </label>
           <input type="text" id="username" v-model="username">
         </div>
         <div>
@@ -17,7 +17,6 @@
         <button type="submit">Login</button>  
     </form>
   </div>
-  
 </template>
 
 <script>
@@ -62,5 +61,7 @@ export default {
 </script>
 
 <style>
-
+  form div:first-child label{
+    margin-right: 10px;
+  }
 </style>
