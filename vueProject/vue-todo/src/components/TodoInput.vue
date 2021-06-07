@@ -45,6 +45,7 @@ export default {
     .inputBox input{
         border-style: none;
         font-size: 0.9rem;
+        
     }
 
     .addContainer{

@@ -11,6 +11,7 @@
 - Vue CLI : https://cli.vuejs.org/
 - Vue CLI 설치 : npm install -g @vue/cli
 - Vue CLI 설치(에러시) : sudo npm install -g @vue/cli
+- fontawesome : https://fontawesome.com/
 
 ### 2021.04.21
 
@@ -93,4 +94,12 @@
 - [중급] "TodoInput" 컴포넌트의 할 일 저장 기능 구현
 - [중급] "TodoList" 컴포넌트의 할 일 목록 표시 기능
 - [중급] "TodoList" 컴포넌트의 할 일 삭제 기능 구현
+```
+
+### 2021-06-07
+
+```
+- [중급] TodoList 컴포넌트의 할 일 완료 기능 구현
+- [중급] TodoFooter 캄포넌트의 삭제 기능 구현
+
 ```
