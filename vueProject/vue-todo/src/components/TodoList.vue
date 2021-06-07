@@ -1,39 +1,28 @@
 <template>
     <div>
-        <ul>
-            <li v-for="(todoItem, index) in todoItems" v-bind:key="todoItem" class="shadow">
-                {{ todoItem }}
+       <transition-group name="list" tag="ul"> 
+            <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem.item" class="shadow">
+                <i class="checkBtn fas fa-check" v-bind:class="{checkBtnCompleted: todoItem.completed}" v-on:click="toggleComplete(todoItem, index)"></i>
+                <span v-bind:class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
                 <span class="removeBtn" v-on:click="removeTodo(todoItem, index)">
                     <i class="fas fa-trash-alt"></i>
                 </span>
             </li>
-        </ul>
+       </transition-group>
     </div>
 </template>
 
 <script>
 export default {
-    data: function() {
-        return {
-            todoItems: []
-        }
-    },
+    props: ['propsdata'],
     methods: {
         removeTodo: function(todoItem, index){
-            console.log(todoItem, index);
-            localStorage.removeItem(todoItem); //저장소 삭제
-            this.todoItems.splice(index, 1); // 스크립트 삭제 (splice: 기존배열을 변경하여 새로운 배열은 반환, slice: 기존배열을 변경하지 않고 삭제)
-        }
-    },
+            //console.log(todoItem, index);
+            this.$emit('removeItem', todoItem, index);
+        },
 
-    created: function(){
-        if(localStorage.length > 0){
-            for (var i = 0; i < localStorage.length; i ++){
-                if(localStorage.key(i) !== 'loglevel:webpack-dev-server'){
-                    this.todoItems.push(localStorage.key(i));
-                    
-                }
-            }
+        toggleComplete: function(todoItem, index){
+            this.$emit('toggleItem', todoItem, index)
         }
     }
 }
@@ -76,5 +65,15 @@ export default {
     .removeBtn{
         margin-left: auto;
         color: #de4343;
+    }
+
+    /* list 트랜지션 효과 */
+    .list-enter-active, .list-leave-active{
+        transition : all 1s;
+    }
+
+    .list-enter, .list-leave-to{
+        opacity: 0;
+        transform: translateY(30px);
     }
 </style>
