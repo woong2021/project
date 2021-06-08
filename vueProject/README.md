@@ -110,4 +110,6 @@
 
 ```
 - [중급] "Enhanced Object Literals" 프로젝트에 적용
+- [중급] "Vuex" 프로젝트에 설치및 리팩토링
+
 ```
