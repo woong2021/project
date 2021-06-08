@@ -241,7 +241,47 @@
                     // ES6
                     arr.forEach(value => console.log(value));
                 </pre>
-            </article>      
+            </article> 
+            <article>
+                <h4>향상된 객체 리터럴 (Enhanced Object Literals) 1</h4>
+                <div class="explanation-box">
+                    객체의 속성을 메서드로 사용할 때 function 예약어를 생략하고 생성가능
+                </div>
+                <pre>
+                    var dictionary = {
+                        words: 100,
+
+                        // ES5
+                        lookup: function() {
+                            console.log(words);
+                        },
+
+                        // ES6
+                        lookup(){
+                            console.log(words);
+                        }
+                    };
+                </pre>
+            </article>
+            <article>
+                <h4>향상된 객체 리터럴 (Enhanced Object Literals) 2</h4>
+                <div class="explanation-box">
+                    객체의 속성명과 값 명이 동일할 때 축약가능
+                </div>
+                <pre>
+                    var figures = 10;
+                    var dictionary = {
+                        // figures : figures
+                        figures
+                    };
+                </pre>
+            </article>
+            <article>
+                <h4>자바스크립트 모듈화</h4>
+                <div class="explanation-box">
+                    호출되기 전까지 코드 실행과 동작을 하지 않는 특징이 있음
+                </div>
+            </article>             
         </section>
     </main>
     <script>
