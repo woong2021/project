@@ -130,7 +130,8 @@ ol{
 }
 
 pre,
-.explanation-box{
+.explanation-box,
+.explanation-box-pre{
     margin: 15px 0;
     padding: 10px 20px;
     border: 1px solid;
@@ -148,6 +149,10 @@ pre{
     }
     line-height: 1.5;
     
+}
+
+.explanation-box-pre{
+    padding: 0 15px;
 }
 
 .bold{

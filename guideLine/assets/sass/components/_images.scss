@@ -157,6 +157,11 @@
     height: 400px;
 }
 
+.vue-08{
+    @include imagePush(vue,"08");
+    height: 150px;
+}
+
 /* Jquery */
 .jquery-01{
     @include imagePush(jquery,"01");

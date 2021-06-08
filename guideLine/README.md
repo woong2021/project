@@ -170,4 +170,5 @@
 - [공통] 소스 전체 리뉴얼 (2차)
 - [jquery.html] ES6 내용 업데이트
 - [jquery.html] 탭메뉴 부분 수정
+- [vue.html] Vuex 설명 업데이트
 ```

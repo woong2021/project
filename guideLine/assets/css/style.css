@@ -149,6 +149,8 @@ aside.Quick ul li { margin: 5px; text-align: left; font-size: 14px; }
 
 .vue-07 { background: url("../images/sub/vue/img-vue-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
 
+.vue-08 { background: url("../images/sub/vue/img-vue-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+
 /* Jquery */
 .jquery-01 { background: url("../images/sub/jquery/img-jquery-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
 
@@ -184,9 +186,11 @@ h6 { font-size: 22px; }
 
 ol { position: relative; left: 30px; list-style: decimal-leading-zero; }
 
-pre, .explanation-box { margin: 15px 0; padding: 10px 20px; border: 1px solid; width: 100%; min-height: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+pre, .explanation-box, .explanation-box-pre { margin: 15px 0; padding: 10px 20px; border: 1px solid; width: 100%; min-height: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 pre { background-color: #000000; color: #ffffff; font-family: 'NanumGothic', 'serif'; font-size: 15px; line-height: 1.5; }
+
+.explanation-box-pre { padding: 0 15px; }
 
 .bold { font-weight: 900; color: brown; }
 

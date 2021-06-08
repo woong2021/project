@@ -40,62 +40,70 @@
         <section id="basicTag">
             <h2>JQUERY(& javascript)</h2>
             <h3>기본태그(동적)</h3>
-            <pre>
-                $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
+            <div class="explanation-box-pre">
+                <pre>
+                    $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
 
-                });
-            </pre>
+                    });
+                </pre>
+            </div>
         </section>
         <section>
             <h3>생성자 함수</h3>
             <article>
                 <h4>기본문법</h4>
                 <p class="notice">생성자 함수는 함수 이름 첫 글자를 대문자로 작성 (암묵적인 룰)</p>
-                <pre>
-                    function Person(){
+                <div class="explanation-box-pre">
+                    <pre>
+                        function Person(){
 
-                    }
-                </pre>
+                        }
+                    </pre>
+                </div>
             </article>
             <article>
                 <h4>생성자함수 활용</h4>
-                <pre>
-                    function Person(){
-                        this.name = name;
-                        this.job = job;
-                    }
+                <div class="explanation-box-pre">
+                    <pre>
+                        function Person(){
+                            this.name = name;
+                            this.job = job;
+                        }
 
-                    let p = new Person('josh', 'developer');
-                    console.log(p);
-                </pre>
+                        let p = new Person('josh', 'developer');
+                        console.log(p);
+                    </pre>
+                </div>
             </article>
         </section>
         <section>
             <h3>탭메뉴</h3>
             <article>
                 <h4>data를 이용한 탭메뉴</h4>
-                <pre>
-                    &lt;section id="tabList"&gt;
-                        &lt;article data-tab="tab-1" class="current"&gt;
-                        &lt;article data-tab="tab-2"&gt;
-                        &lt;article data-tab="tab-3"&gt;
-                    &lt;/section&gt;
-                    &lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
-                    &lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
-                    &lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
+                <div class="explanation-box-pre">
+                    <pre>
+                        &lt;section id="tabList"&gt;
+                            &lt;article data-tab="tab-1" class="current"&gt;
+                            &lt;article data-tab="tab-2"&gt;
+                            &lt;article data-tab="tab-3"&gt;
+                        &lt;/section&gt;
+                        &lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
+                        &lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
+                        &lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
 
-                    &lt;script&gt;
-                        $('#tabList article').click(function(){
-                            var tab_id = $(this).attr('data-tab');
+                        &lt;script&gt;
+                            $('#tabList article').click(function(){
+                                var tab_id = $(this).attr('data-tab');
 
-                            $('#tabList article').removeClass('current');
-                            $('.tab-content').removeClass('current');
+                                $('#tabList article').removeClass('current');
+                                $('.tab-content').removeClass('current');
 
-                            $(this).addClass('current');
-                            $("#"+tab_id).addClass('current');
-                        })
-                    &lt;/script&gt;
-                </pre>
+                                $(this).addClass('current');
+                                $("#"+tab_id).addClass('current');
+                            })
+                        &lt;/script&gt;
+                    </pre>
+                </div>
             </article>
             <article>
                 <h4>결과</h4>
@@ -155,15 +163,17 @@
                 <div class="explanation-box">
                     "&lt;script src="./jquery-ui-1.12.1/datepicker-ko.js"&gt;&lt;/script&gt;"를 추가
                 </div>
-                <pre>
-                    &lt;input type="text" name="date" id="date1"&gt;
+                <div class="explanation-box-pre">
+                    <pre>
+                        &lt;input type="text" name="date" id="date1"&gt;
 
-                    &lt;script&gt;
-                        $(function(){
-                            $("#date1").datepicker();
-                        });
-                    &lt;/script&gt;
-                </pre>
+                        &lt;script&gt;
+                            $(function(){
+                                $("#date1").datepicker();
+                            });
+                        &lt;/script&gt;
+                    </pre>
+                </div>
             </article>
             <article>
                 <h4>결과 확인</h4>
@@ -217,64 +227,72 @@
                         <li></li>
                     </ul>
                 </div>
-                <pre>
-                    // ES5 함수 정의 방식
-                    var sum = function(a, b){
-                        return a + b;
-                    }
+                <div class="explanation-box-pre">
+                    <pre>
+                        // ES5 함수 정의 방식
+                        var sum = function(a, b){
+                            return a + b;
+                        }
 
-                    // ES6 함수 정의 방식
-                    var sum = (a, b) => {
-                        return a + b;
-                    }
+                        // ES6 함수 정의 방식
+                        var sum = (a, b) => {
+                            return a + b;
+                        }
 
-                    sum (10, 20);
-                </pre> 
-                <pre>
-                    var arr = ["a", "b", "c"];
-                    
-                    // ES5
-                    arr.forEach(function(value){
-                        console.log(value);
-                    });
+                        sum (10, 20);
+                    </pre>
+                </div>
+                <div class="explanation-box-pre"> 
+                    <pre>
+                        var arr = ["a", "b", "c"];
+                        
+                        // ES5
+                        arr.forEach(function(value){
+                            console.log(value);
+                        });
 
-                    // ES6
-                    arr.forEach(value => console.log(value));
-                </pre>
+                        // ES6
+                        arr.forEach(value => console.log(value));
+                    </pre>
+                </div>
             </article> 
             <article>
                 <h4>향상된 객체 리터럴 (Enhanced Object Literals) 1</h4>
                 <div class="explanation-box">
                     객체의 속성을 메서드로 사용할 때 function 예약어를 생략하고 생성가능
                 </div>
-                <pre>
-                    var dictionary = {
-                        words: 100,
+                <div class="explanation-box-pre">
+                    <pre>
+                        var dictionary = {
+                            words: 100,
 
-                        // ES5
-                        lookup: function() {
-                            console.log(words);
-                        },
+                            // ES5
+                            lookup: function() {
+                                console.log(words);
+                            },
 
-                        // ES6
-                        lookup(){
-                            console.log(words);
-                        }
-                    };
-                </pre>
+                            // ES6
+                            lookup(){
+                                console.log(words);
+                            }
+                        };
+                    </pre>
+                </div>
             </article>
             <article>
                 <h4>향상된 객체 리터럴 (Enhanced Object Literals) 2</h4>
                 <div class="explanation-box">
                     객체의 속성명과 값 명이 동일할 때 축약가능
                 </div>
-                <pre>
-                    var figures = 10;
-                    var dictionary = {
-                        // figures : figures
-                        figures
-                    };
-                </pre>
+                <div class="explanation-box-pre">
+                    <pre>
+                        var figures = 10;
+                        var dictionary = {
+                            // figures : figures
+                            figures
+                        };
+                    </pre>
+                </div>
             </article>
             <article>
                 <h4>자바스크립트 모듈화</h4>
