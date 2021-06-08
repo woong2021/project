@@ -11,7 +11,7 @@
                 <i class="closeModalBtn fas fa-times" @click="showModal = false"></i>
             </h3>
             <main slot="body">
-                무언가를 입력하세요.
+                입력된 값이 없습니다.
             </main>
             <footer slot="footer">
                 copy right
@@ -24,14 +24,14 @@
 import Modal from './common/Modal.vue'
 
 export default {
-    data: function(){
+    data(){
         return {
             newTodoItem: "",
             showModal: false
         }
     },
     methods:{
-        addTodo: function(){
+        addTodo(){
             console.log(this.newTodoItem);
             if (this.newTodoItem !== ''){
                 //저장하는 로직
@@ -41,13 +41,13 @@ export default {
                 this.showModal = !this.showModal;
             }
         },
-        clearInput: function(){
+        clearInput(){
             // inputbox 초기화
             this.newTodoItem = '';
         }
     },
     components : {
-        Modal : Modal
+        Modal
     }
 }
 </script>
@@ -66,8 +66,9 @@ export default {
 
     .inputBox input{
         border-style: none;
+        width: 70%;
+        height: 100%;
         font-size: 0.9rem;
-        
     }
 
     .addContainer{

@@ -14,33 +14,33 @@
   import TodoFooter from './components/TodoFooter.vue'
   
   export default {
-    data: function(){
+    data(){
       return {
         todoItems: []
       }
     },
     methods: {
-        addOneItem: function(todoItem){
+        addOneItem(todoItem){
           const obj = {completed: false, item: todoItem};
           localStorage.setItem(todoItem, JSON.stringify(obj));
           this.todoItems.push(obj);
         },
-        removeOneItem: function(todoItem, index){
+        removeOneItem(todoItem, index){
             localStorage.removeItem(todoItem.item); //저장소 삭제
             this.todoItems.splice(index, 1); // 스크립트 삭제 (splice: 기존배열을 변경하여 새로운 배열은 반환, slice: 기존배열을 변경하지 않고 삭제)
         },
-        toggleOneItem: function(todoItem, index){
+        toggleOneItem(todoItem, index){
             this.todoItems[index].completed = !this.todoItems[index].completed;
             // localStorage 데이터 갱신
             localStorage.removeItem(todoItem.item, index);
             localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
         },
-        clearAllItem: function(){
+        clearAllItem(){
           localStorage.clear();
           this.todoItems = [];
         }
     },
-    created: function(){
+    created(){
         if(localStorage.length > 0){
             for (let i = 0; i < localStorage.length; i ++){
                 if(localStorage.key(i) !== 'loglevel:webpack-dev-server'){
@@ -50,10 +50,11 @@
         }
     },
     components: {
-      'TodoHeader': TodoHeader,
-      'TodoInput': TodoInput,
-      'TodoList': TodoList,
-      'TodoFooter': TodoFooter
+      // ES6 축약형 ('TodoHeader': TodoHeader)
+      TodoHeader,
+      TodoInput,
+      TodoList,
+      TodoFooter
     }
   }
 </script>
