@@ -168,7 +168,19 @@
 
 ```
 - [공통] 소스 전체 리뉴얼 (2차)
-- [jquery.html] ES6 내용 업데이트
+- [jquery.html] ES6 내용 업데이트 (BAbel, const & let, 화살표 함수)
 - [jquery.html] 탭메뉴 부분 수정
 - [vue.html] Vuex 설명 업데이트
+```
+
+### 2021.06.09
+
+```
+- [공통] "H4"의 mairgin 값 변경
+- [jquery.html] "비동기처리" 내용 추가 (Ajax, Promise)
+- [jquery.html] "Object Spread Operator" 내용 추가
+- [vue.html] actions 소개 내용 추가
+- [vue.html] 헬퍼 함수 관련 내용 업데이트
+- [sass.html] "SASS 문법" 추가 (ver.1 내용 통합)
+- [sass.html] "SASS를 활용한 기능 구현" 추가 (ver.1 내용 통합)
 ```

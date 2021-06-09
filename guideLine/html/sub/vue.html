@@ -855,8 +855,6 @@
                     </table>
                 </article>
             </section>
-        </section>
-        <section id="highClass" class="tab-content">
             <section id="">
                 <h3>Vuex</h3>
                 <article>
@@ -870,26 +868,57 @@
                 </article>
                 <article>
                     <h4>Flux 란?</h4>
-                    <div class="explanation-box">
-                        <p>MVC 패턴의 복잡한 데이터 흐름 문제를 해결하는 개발 패턴</p>
-                        <ul>
-                            <li>action: 화면에서 발생하는 이벤트 또는 사용자의 입력</li>
-                            <li>dispatcher: 데이터를 변경하는 방법 [method]</li>
-                            <li>model : 화면에 표시할 데이터</li>
-                            <li>view: 사용자에게 비춰지는 화면</li>
-                        </ul>
-                    </div>
+                    <p class="explanation-box">MVC 패턴의 복잡한 데이터 흐름 문제를 해결하는 개발 패턴</p>
+                    <table class="default-table">
+                        <caption class="sr-only">Vuex 컨셉</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">action</th>
+                                <td>화면에서 발생하는 이벤트 또는 사용자의 입력</td>
+                            </tr>
+                            <tr>
+                                <th>dispatcher</th>
+                                <td>데이터를 변경하는 방법 [method]</td>
+                            </tr>
+                            <tr>
+                                <th>model</th>
+                                <td>화면에 표시할 데이터</td>
+                            </tr>
+                            <tr>
+                                <th>view</th>
+                                <td>사용자에게 비춰지는 화면</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </article>
             </section>
             <section>
                 <h3>Vuex 컨셉</h3>
-                <div class="explanation-box">
-                    <ul>
-                        <li>State : 컴포넌트 간에 공유하는 데이터 [data()]</li>
-                        <li>View : 데이터를 표시하는 화면 [template]</li>
-                        <li>Action : 사용자의 입력에 따라 데이터를 변경 [methods]</li>
-                    </ul>
-                </div>
+                <table class="default-table">
+                    <caption class="sr-only">Vuex 컨셉</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">State</th>
+                            <td>컴포넌트 간에 공유하는 데이터 [data()]</td>
+                        </tr>
+                        <tr>
+                            <th>View</th>
+                            <td>데이터를 표시하는 화면 [template]</td>
+                        </tr>
+                        <tr>
+                            <th>Action</th>
+                            <td>사용자의 입력에 따라 데이터를 변경 [methods]</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
             <section>
                 <h3>Vuex 설치 및 등록</h3>
@@ -920,14 +949,31 @@
             </section>
             <section>
                 <h3>Vuex 기술 요소</h3>
-                <div class="explanation-box">
-                    <ul>
-                        <li>state :  여러 컴포넌트에 공유되는 데이터 [data]</li>
-                        <li>getters : 연산된 state 값을 접근하는 속성 [computed]</li>
-                        <li>mutations : state 값을 변경하는 이벤트 로직 &middot; 메서드 [methods]</li>
-                        <li>actions : 비동기 처리 로직을 선언하는 메서드 [aysnc]</li>
-                    </ul>
-                </div>
+                <table class="default-table">
+                    <caption class="sr-only">Vuex 기술 요소</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">state</th>
+                            <td>여러 컴포넌트에 공유되는 데이터 [data]</td>
+                        </tr>
+                        <tr>
+                            <th>getters</th>
+                            <td>연산된 state 값을 접근하는 속성 [computed]</td>
+                        </tr>
+                        <tr>
+                            <th>mutations</th>
+                            <td>state 값을 변경하는 이벤트 로직 &middot; 메서드 [methods]</td>
+                        </tr>
+                        <tr>
+                            <th>actions</th>
+                            <td>비동기 처리 로직을 선언하는 메서드 [aysnc]</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <article>
                     <h4>state</h4>
                     <div class="explanation-box-pre">
@@ -943,7 +989,145 @@
                             }
                         </pre>
                     </div>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            <!-- &lt;!-- Vue --&gt;
+                            &lt;p&gt;{{ message }}&lt;/p&gt;
+
+                            &lt;!-- Vuex --&gt;
+                            &lt;p&gt;{{ this.$store.state.message }}&lt;/p&gt; -->
+                        </pre>
+                    </div>
                 </article>
+                <article>
+                    <h4>getters</h4>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            state: {
+                                num: 10
+                            },
+                            getters:{
+                                getNumber(state){
+                                    return state.num;
+                                },
+                                doubleNumber(state){
+                                    return state.num * 2;
+                                }
+                            }
+                        </pre>
+                    </div>
+                    <div class="explanation-box-pre">
+                        <!-- <pre>
+                            &lt;!-- Vue --&gt;
+                            &lt;p&gt;{{ message }}&lt;/p&gt;
+
+                            &lt;!-- Vuex --&gt;
+                            &lt;p&gt;{{ this.$store.getters.getNumber }}&lt;/p&gt;
+                            &lt;p&gt;{{ this.$store.getters.doubleNumber }}&lt;/p&gt;
+                        </pre> -->
+                    </div>
+                </article>
+                <article>
+                    <h4>mutations</h4>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>state의 값을 변경할 수 있는 유일한 방법</li>
+                            <li>mutations는 "commit()" 로 동작</li>
+                        </ul>
+                    </div>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            //store.js
+                            state:{num:10},
+                            mutations:{
+                                printNumbers(state){
+                                    return state.num
+                                },
+                                sumNumbers(state, anotherNum){
+                                    return state.num + anotherNum;
+                                }
+                            }
+                        </pre>
+                    </div>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            //App.vue
+                            this.$store.commit('printNumbers');
+                            this.$store.commit('sumNumbers', 20);
+                        </pre>
+                    </div>
+                </article>
+                <article>
+                    <h4>actions</h4>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>비동기 처리 로직을 선언하는 메서드 (비동기 로직을 담당하는 mutations)</li>
+                            <li>데이터 요청, Promise, ES6 async가 같은 비동기 처리는 모두 actions에 선언</li>
+                        </ul>
+                    </div>
+                    <h4>actions 흐름도</h4>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            // store.js
+                            state: {
+                                num: 10
+                            },
+                            mutations: {
+                                doubleNumber(state){
+                                    state.num * 2;
+                                }
+                            },
+                            actions:{
+                                delayDoubleNumber(context){ // context: actions에서 mutations로 접근
+                                    context.commit('doubleNumber');
+                                }
+                            }
+
+                            // App.vue
+                            this.$store.dispatch('delayDoubleNumber');
+                        </pre>
+                    </div>
+            </section>
+            <section>
+                <h3>Helper 함수</h3>
+                <p class="notice">Store에 있는 속성들을 간편하게 코딩하는 방법</p>
+                <div class="explanation-box">
+                    <ul>
+                        <li>state -> mapState</li>
+                        <li>getters -> mapGetters</li>
+                        <li>mutations -> mapMutations</li>
+                        <li>actions -> mapActions</li>
+                    </ul>
+                </div>
+                <article>
+                    <h4>헬퍼의 사용법</h4>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            //App.vue
+                            import { mapState } from 'vuex'
+                            import { mapGetters } from 'vuex'
+                            import { mapMutations } from 'vuex'
+                            import { mapActions } from 'vuex'
+
+                            export default{
+                                computed(){
+                                    ...mapState(['num']),
+                                    ...mapGetters(['countedNum'])
+                                },
+                                methods: (
+                                    ...mapMutations(['clickBtn']),
+                                    ...mapActions(['asyncClickBtn'])
+                                }
+                            }
+                        </pre>
+                    </div>
+                    <p>헬퍼를 사용하고자 하는 vue 파일에서 아래와 같이 해당 헬퍼를 로딩</p>
+                </article>
+            </section>
+        </section>
+        <section id="highClass" class="tab-content">
+            <section>
+                <h3>준비중</h3>
             </section>
         </section>
         <section id="applications" class="tab-content">

@@ -182,7 +182,143 @@
                 </div>
             </article>
         </section>
-        <section id="basicTag">
+        <section>
+            <h3>비동기처리</h3>
+            <article>
+                <h4>Ajax 통신코드</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(callbackFunc) {
+                            $.get('url 주소/products/1', function(response){
+                                callbackFunc(response);
+                            });
+                        }
+
+                        getData(function(tableData){
+                            console.log(tableData);
+                        });
+                    </pre>
+                </div>
+                <p>비동기 처리를 위해 프로미스 대신 콜백 함수를 사용</p>
+            </article>
+            <article>
+                <h4>Promise</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(callback){
+                            // new Promise() 추가
+                            return new Promise(function(resolve, reject){
+                                $.get('url 주소/products/1', function(response){
+                                    //데이터를 받으면 resolve() 호출
+                                    resolve(response);
+                                });
+                            });
+                        }
+
+                        // getData()의 실행이 끝나면 호출되는 then()
+                        getData().then(function(tableData){
+                            //resolve() 의 결과 값이 여기로 전달
+                            console.log(tableData); //$.get()의 response 값이 tableData에 전달됨
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Promise의 3가지 상태</h4>
+                <table class="default-table">
+                    <caption class="sr-only">Promise의 3가지 상태</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>pending(대기)</th>
+                            <td>비동기 처리 로직이 아직 완료되지 않은 상태</td>
+                        </tr>
+                        <tr>
+                            <th>Fulfilled(이행)</th>
+                            <td>비동기 처리가 오나료되어 프로미스가 결과 값을 반환해 준 상태</td>
+                        </tr>
+                        <tr>
+                            <th>Rejected(실패)</th>
+                            <td>비동기 처리가 실패 하거나 오류가 발생한 상태</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>Pending(대기)</h4>
+                <p>"new Promise() 메서드를 호출하면 대기(Pending) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise();
+                    </pre>
+                </div>
+                <p>"new Promise()"메서드를 호출할 때 콜백함수를 선언할 수 있고, 콜백 함수의 인자는 resolve, reject 임</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            ...
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Fulfilled(이행)</h4>
+                <p>롤백 함수의 인자 resolve를 다음과 같이 실행하면 이행(Fulfilled) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            resolve();
+                        });
+                    </pre>
+                </div>
+                <p>"new Promise()"메서드를 호출할 때 콜백함수를 선언할 수 있고, 콜백 함수의 인자는 resolve, reject 임</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(){
+                            return  new Promise(function(resolve, reject){
+                                var data = 300;
+                                resolve(data);
+                            });
+                        }
+                       
+                        // resolve()의 결과 값 data를 resolvedData로 받음
+                        getData()(.then(function(resolvedData){
+                            console.log(resolvedData); //결과값 100
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Rejected(실패)</h4>
+                <p>롤백 함수의 인자 Reject 다음과 같이 실행하면 실패(Rejected) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            reject();
+                        });
+                    </pre>
+                </div>
+                <p>실패 상태가 되면 실패한 이유를 catch()로 받을 수 있음</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(){
+                            return  new Promise(function(resolve, reject){
+                                reject(new Error("Request is failed"));
+                            });
+                        }
+                       
+                        // reject()의 결과 값 Error를 err로 받음
+                        getData().then().catch(function(err){
+                            console.log(err); // Error : Request is failed
+                        });
+                    </pre>
+                </div>
+            </article>
+        </section>
+        <section id="">
             <h3>ES6</h3>
             <article>
                 <h4>BABEL</h4>
@@ -253,6 +389,34 @@
 
                         // ES6
                         arr.forEach(value => console.log(value));
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Object Spread Operator( ... )</h4>
+                <div class="explanation-box">
+                    사용하고자 하는 함수의 내용(객체)을 복사
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        let josh = {
+                            field: 'web',
+                            language: 'js'
+                        }
+
+                        
+                        let developer = {
+                            nation: 'korea',
+
+                            //ES5
+                            field: josh.field,
+                            language: josh.language
+
+                            //ES6
+                            ... josh
+                        };
+  
+                        console.log(developer);
                     </pre>
                 </div>
             </article> 

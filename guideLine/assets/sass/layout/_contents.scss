@@ -171,4 +171,60 @@ aside{
     }
 }
 
+ol{
+    &.number,
+    &.num-list{
+        left: 0 !important;
+    }
 
+    &.number{
+        counter-reset: num;
+
+        li{
+            position: relative;
+            margin-bottom: 15px;
+            left: 35px;
+            list-style: none;
+
+            &:before { 
+               content: counter(num);
+               position: absolute;
+               display: inline-block;
+               border: 1px solid $gray;
+               border-radius: 100%;
+               top: -2px;
+               left: -35px;
+               width:25px; 
+               height: 25px; 
+               text-align: center;
+               line-height: 25px;
+               transition: all .3s;
+               counter-increment: num 1; 
+               border: 1px solid $bgBlue;
+
+            }
+
+            &:hover{
+               &:before{
+                  background: $bgBlue;
+                  border-color: $black;
+                  color: $white;
+               }
+            }
+        }
+    }
+
+    &.num-list{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-gap: 5px;
+        margin: 10px 0;
+        padding: 10px 0;
+        
+        li{
+           padding: 10px;
+           border: 1px solid $black;
+           height: 50px;
+        }
+    }
+}
