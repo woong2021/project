@@ -21,14 +21,7 @@
     <header id="header"></header>
 
     <!-- Quick Menu -->
-    <section>
-        <aside class="Quick">
-            <h2>QUICK</h2>
-            <ul>
-                <li><a href="#">TOP</a></li>
-            </ul>
-        </aside>
-    </section>
+    <nav id="quick"></nav>
 
     <!-- Main Content -->
     <main id="container">
@@ -1122,6 +1115,82 @@
                         </pre>
                     </div>
                     <p>헬퍼를 사용하고자 하는 vue 파일에서 아래와 같이 해당 헬퍼를 로딩</p>
+                </article>
+                <article>
+                    <h4>헬퍼의 유연한 문법</h4>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            //배열 리터럴
+                            ...mapMutations([
+                                'clickBtn', //'clickBtn' : clickBtn
+                                'addNumber' // addNumber(인자)
+                            ])
+                        </pre>
+                    </div>
+                    <p>Vuex에 선언한 속성을 그대로 컴포넌트에 연결</p>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            //객체 리터럴
+                            ...mapMutations([
+                                popupMsg : 'clickBtn' //컴포넌트 메서드명 : Store의 Mutations 명
+                            ])
+                        </pre>
+                    </div>
+                    <p>Vuex에 선언한 속성을 컴포넌트의 특정 메서드에다가 연결하는 문법</p>
+                </article>
+                <article>
+                    <h4>헬퍼함수가 주는 간편함</h4>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            &lt;template&gt;
+                                &lt;div id="root"&gt;
+                                    &lt;p&gt;&#123; { originalPrice } &#125;&lt;/p&gt;
+                                    &lt;p&gt;&#123; { doublePrice } &#125;&lt;/p&gt;
+                                    &lt;p&gt;&#123; { triplePrice } &#125;&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/template&gt;
+                            
+                            &lt;script&gt;
+                            export default {
+                                computed: {
+                                    originalPrice(){
+                                        return this.$store.getters.originalPrice;
+                                    },
+                                    doublePrice(){
+                                        return this.$store.getters.doublePrice;
+                                    },
+                                    triplePrice(){
+                                        return this.$store.getters.triplePrice;
+                                    }
+                                }
+                            }
+                            &lt;/script&gt;
+                        </pre>
+                    </div>
+                    <p class="red">helper 함수를 사용하지 않으면 위와같이 코드가 길어질수록 소스가 복잡해짐</p>
+
+                    <div class="explanation-box-pre">
+                        <pre>
+                            &lt;template&gt;
+                                &lt;div id="root"&gt;
+                                    &lt;p&gt;&#123; { originalPrice } &#125;&lt;/p&gt;
+                                    &lt;p&gt;&#123; { doublePrice } &#125;&lt;/p&gt;
+                                    &lt;p&gt;&#123; { triplePrice } &#125;&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/template&gt;
+                            
+                            &lt;script&gt;
+                            import { mapGetters } from 'vuex';
+
+                            export default {
+                                computed: {
+                                    ...mapGetters(['originalPrice','doublePrice','triplePrice'])
+                                }
+                            }
+                            &lt;/script&gt;
+                        </pre>
+                    </div>
+                    <p class="blue">helper 함수를 사용하면 간결해짐</p>
                 </article>
             </section>
         </section>

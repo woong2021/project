@@ -1,4 +1,5 @@
 $("#header").load("../layout/header.html");
+$("#quick").load("../layout/quick.html");
 $("#footer").load("../layout/footer.html");
 
 $('#tabList article').click(function(){
