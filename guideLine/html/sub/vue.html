@@ -984,11 +984,11 @@
                     </div>
                     <div class="explanation-box-pre">
                         <pre>
-                            <!-- &lt;!-- Vue --&gt;
-                            &lt;p&gt;{{ message }}&lt;/p&gt;
+                            &lt;!-- Vue --&gt;
+                            &lt;p&gt;&#123; { message } &#125;&lt;/p&gt;
 
                             &lt;!-- Vuex --&gt;
-                            &lt;p&gt;{{ this.$store.state.message }}&lt;/p&gt; -->
+                            &lt;p&gt;&#123; { this.$store.state.message } &#125;&lt;/p&gt;
                         </pre>
                     </div>
                 </article>
@@ -1010,14 +1010,14 @@
                         </pre>
                     </div>
                     <div class="explanation-box-pre">
-                        <!-- <pre>
+                        <pre>
                             &lt;!-- Vue --&gt;
-                            &lt;p&gt;{{ message }}&lt;/p&gt;
+                            &lt;p&gt;&#123; { message } &#125;&lt;/p&gt;
 
                             &lt;!-- Vuex --&gt;
-                            &lt;p&gt;{{ this.$store.getters.getNumber }}&lt;/p&gt;
-                            &lt;p&gt;{{ this.$store.getters.doubleNumber }}&lt;/p&gt;
-                        </pre> -->
+                            &lt;p&gt;&#123; { this.$store.getters.getNumber } &#125;&lt;/p&gt;
+                            &lt;p&gt;&#123; { this.$store.getters.doubleNumber } &#125;&lt;/p&gt;
+                        </pre>
                     </div>
                 </article>
                 <article>
@@ -1191,6 +1191,53 @@
                         </pre>
                     </div>
                     <p class="blue">helper 함수를 사용하면 간결해짐</p>
+                </article>
+            </section>
+            <section>
+                <h3>프로젝트 구조화와 모듈화</h3>
+                <article>
+                    <h4>스토어 속성 모듈화 방법</h4>
+                    <p class="notice">
+                        ES6의 Import & Export를 이용하여 속성별로 모듈화
+                    </p>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>
+                                <div class="vue-10"></div>
+                                <p>각각의 속성들을 파일로 분리(getters, mutations, actions)</p>
+                            </li>
+                            <li>
+                                <div class="vue-11"></div>
+                                <p>분리된 파일안에 각 속성들에 내용을 입력하고 export</p>
+                            </li>
+                            <li>
+                                <div class="vue-09"></div>
+                                <p>import를 통해여 각 파일들을 store.js에 연결</p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <h4>스토어 모듈화 방법</h4>
+                    <p class="notice">
+                        앱이 비대해져서 1개의 store로는 관리가 힘들 때 modules 속성을 사용
+                    </p>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>
+                                <div class="vue-12"></div>
+                                <p>modules 폴더를 생성하고 그안에 새로운 js파일 생성 </p>
+                            </li>
+                            <li>
+                                <div class="vue-13"></div>
+                                <p>해당 파일안에 내용을 입력 하고 export (state, getters, mutations)</p>
+                            </li>
+                            <li>
+                                <div class="vue-14"></div>
+                                <p>"import todoApp from './modules/todoApp'" 다음과 같이 import 하고 modules속성(?)을 입력</p>
+                            </li>
+                        </ul>
+                    </div>
                 </article>
             </section>
         </section>

@@ -177,10 +177,17 @@
 
 ```
 - [공통] "H4"의 mairgin 값 변경
+- [공통] "quick"메뉴 분리
 - [jquery.html] "비동기처리" 내용 추가 (Ajax, Promise)
 - [jquery.html] "Object Spread Operator" 내용 추가
 - [vue.html] actions 소개 내용 추가
 - [vue.html] 헬퍼 함수 관련 내용 업데이트
 - [sass.html] "SASS 문법" 추가 (ver.1 내용 통합)
 - [sass.html] "SASS를 활용한 기능 구현" 추가 (ver.1 내용 통합)
+```
+
+### 2021.06.10
+
+```
+- [vue.html] 프로젝트 구조화와 모듈화
 ```

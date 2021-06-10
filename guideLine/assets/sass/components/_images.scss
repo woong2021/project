@@ -162,6 +162,33 @@
     height: 150px;
 }
 
+.vue-09{
+    @include imagePush(vue,"09");
+    height: 400px;
+}
+
+.vue-10{
+    @include imagePush(vue,"10");
+    height: 150px;
+}
+
+.vue-11{
+    @include imagePush(vue,"11");
+    height: 400px;
+}
+.vue-12{
+    @include imagePush(vue,"12");
+    height: 150px;
+}
+.vue-13{
+    @include imagePush(vue,"13");
+    height: 400px;
+}
+.vue-14{
+    @include imagePush(vue,"14");
+    height: 150px;
+}
+
 /* Jquery */
 .jquery-01{
     @include imagePush(jquery,"01");
