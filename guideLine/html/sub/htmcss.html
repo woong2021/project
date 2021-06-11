@@ -27,16 +27,39 @@
         <section id="notice">
             <p class="notice">해당 가이드는 업무하면서 개인적으로 많이 사용하는 것 위주로 작성되었습니다. </p>
             <section id="tabList">
-                <article data-tab="accessibility">웹접근성</article>
+                <article data-tab="uiux">UI/UX</article>
                 <article data-tab="myGuide">가이드라인</article>
                 <article data-tab="HTML" class="current">HTML5</article>
                 <article data-tab="CSS">CSS3</article>
             </section>
-            <section id="accessibility" class="tab-content">
+            <section id="uiux" class="tab-content">
                 준비중
             </section>
             <section id="myGuide" class="tab-content">
-                준비중
+                <section id="notationHtml">
+                    <h3>HTML 표기법</h3>
+                    <table class="default-table">
+                        <caption class="sr-only">HTML 표기법 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">id</th>
+                                <td>&lt;div id="defaultTable"&gt;(단어연결시 카멜케이스기법 사용)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">class</th>
+                                <td>&lt;div class="default-table"&gt;(단어연결시 대쉬 사용)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; br &gt;</th>
+                                <td>&lt;br&gt;태그는 사용을 자제 (<span class="red">반응형에 취약</span>) </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </section>
             <section id="HTML" class="tab-content current">
                 <section>
