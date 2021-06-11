@@ -13,4 +13,5 @@
 - [고급] router-view를 이용한 라우팅 컴포넌트 표시
 - [고급] redirect 속성과 router-link
 - [고급] ToolBar의 라우터 링크 스타일링
+- [고급] axios를 이용한 api 호출 및 구조화작업
 ```
