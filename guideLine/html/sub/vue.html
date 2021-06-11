@@ -755,34 +755,6 @@
                 </table>
             </section>
             <section>
-                <h3>axios</h3>
-                <p class="notice"> 뷰에서 권고하는 HTTP 통신 라이브러리 (api가 다양함)</p>
-                <article>
-                    <h4>axios 설치방법</h4>
-                    <table class="default-table">
-                        <caption class="sr-only">axios 설치방법</caption>
-                        <colgroup>
-                            <col style="width: 25%" />
-                            <col style="width: 75%" />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">axios 설치방법 </th>
-                                <td>
-                                    터미널에 "<span class='bold'> npm i axios</span> 입력"
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>테스트 사이트</th>
-                                <td>
-                                    <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </article>
-            </section>
-            <section>
                 <h3>속성</h3>
                 <article>
                     <h4>style 속성</h4>
@@ -1273,6 +1245,7 @@
                 </article>
                 <article>
                     <h4>라우터 구현</h4>
+                    <div class="notice">라우터 폴더에 있는 컴포넌트는 라우터에 관련된 정보만 입력 (권장)</div>
                     <div class="explanation-box">
                         <ul>
                             <li>
@@ -1326,6 +1299,69 @@
                                 <p>"app.vue"에 해당 vue를 import 한 후 comopnents 함</p>
                             </li>
                         </ul>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h3>axios</h3>
+                <p class="notice"> 뷰에서 권고하는 HTTP 통신 라이브러리 (api가 다양함)</p>
+                <article>
+                    <h4>axios 설치방법</h4>
+                    <table class="default-table">
+                        <caption class="sr-only">axios 설치방법</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">axios 설치방법 </th>
+                                <td>
+                                    터미널에 "<span class='bold'> npm i axios --save</span> 입력"
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>테스트 사이트</th>
+                                <td>
+                                    <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article>
+                    <h4>axios를 이용한 api 호출(방법)</h4>
+                    <div class="notice">"axios를 이용한 api 호출(방법)"은 컴포넌트가 많은 경우 권장하지 않음 </div>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            &lt;template&gt;
+                                &lt;div&gt;
+                                    &lt;div v-for='item in sample'&gt;&#123;{ item.title }&#125; &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/template&gt;
+                            &lt;script&gt;
+                                import axios from 'axios';
+
+                                export default {
+                                    data(){
+                                        return {
+                                            sample : []
+                                        }
+                                    },
+                                    create(){
+                                        axios.get('sample')
+                                        .then(response => this.sample = response.data)
+                                        .catch(error)
+                                    },
+                                }
+                            &lt;/script&gt;
+                        </pre>
+                    </div>
+                </article>
+                <article>
+                    <h4>api함수 구조화</h4>
+                    <div class="explanation-box">
+                        참조API : <a href="https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md">바로가기</a>
                     </div>
                 </article>
             </section>

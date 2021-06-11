@@ -201,4 +201,7 @@
 - [공통] "_images.scss" 수정 (@for, @if를 이용)
 - [htmlcss.html] img 관련 내용 추가
 - [vue.html] [고급] 탭 라우터 신규 내용 추가
+- [vue.html][고급] "axios" 내용 중급에서 고급으로 이동및 내용 수정
+- [vue.html][고급] "axios를 이용한 api호출(방법)" 추가
+
 ```
