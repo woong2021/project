@@ -93,35 +93,35 @@ ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
 .basic-03 { background: url("../images/sub/guideline/img-guideline-basic-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
 /* Font */
-.font-01 { background: url("../images/sub/guideline/img-guideline-font-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-01 { background: url("../images/sub/guideline/img-guideline-font-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
-.font-02 { background: url("../images/sub/guideline/img-guideline-font-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-02 { background: url("../images/sub/guideline/img-guideline-font-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
-.font-03 { background: url("../images/sub/guideline/img-guideline-font-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-03 { background: url("../images/sub/guideline/img-guideline-font-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
 
 /* Bullet */
-.bullet-01 { background: url("../images/sub/guideline/img-guideline-bullet-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-01 { background: url("../images/sub/guideline/img-guideline-bullet-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-02 { background: url("../images/sub/guideline/img-guideline-bullet-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-02 { background: url("../images/sub/guideline/img-guideline-bullet-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-03 { background: url("../images/sub/guideline/img-guideline-bullet-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-03 { background: url("../images/sub/guideline/img-guideline-bullet-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-04 { background: url("../images/sub/guideline/img-guideline-bullet-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-04 { background: url("../images/sub/guideline/img-guideline-bullet-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-05 { background: url("../images/sub/guideline/img-guideline-bullet-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-05 { background: url("../images/sub/guideline/img-guideline-bullet-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-06 { background: url("../images/sub/guideline/img-guideline-bullet-06.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-06 { background: url("../images/sub/guideline/img-guideline-bullet-06.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-07 { background: url("../images/sub/guideline/img-guideline-bullet-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-07 { background: url("../images/sub/guideline/img-guideline-bullet-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.bullet-08 { background: url("../images/sub/guideline/img-guideline-bullet-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 100px; }
+.bullet-08 { background: url("../images/sub/guideline/img-guideline-bullet-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 /* Button */
 .button-01 { background: url("../images/sub/guideline/img-guideline-button-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.button-02 { background: url("../images/sub/guideline/img-guideline-button-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; background-size: cover; }
+.button-02 { background: url("../images/sub/guideline/img-guideline-button-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
-.button-03 { background: url("../images/sub/guideline/img-guideline-button-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; background-size: cover; }
+.button-03 { background: url("../images/sub/guideline/img-guideline-button-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 .button-04 { background: url("../images/sub/guideline/img-guideline-button-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
@@ -147,33 +147,57 @@ ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
 .table-03 { background: url("../images/sub/guideline/img-guideline-table-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; }
 
 /* Vue */
-.vue-03 { background: url("../images/sub/vue/img-vue-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-01 { background: url("../images/sub/vue/img-vue-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-04 { background: url("../images/sub/vue/img-vue-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-02 { background: url("../images/sub/vue/img-vue-02.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-05 { background: url("../images/sub/vue/img-vue-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-03 { background: url("../images/sub/vue/img-vue-03.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-06 { background: url("../images/sub/vue/img-vue-06.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-04 { background: url("../images/sub/vue/img-vue-04.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-07 { background: url("../images/sub/vue/img-vue-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-05 { background: url("../images/sub/vue/img-vue-05.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-08 { background: url("../images/sub/vue/img-vue-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+.vue-06 { background: url("../images/sub/vue/img-vue-06.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-09 { background: url("../images/sub/vue/img-vue-09.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-07 { background: url("../images/sub/vue/img-vue-07.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-10 { background: url("../images/sub/vue/img-vue-10.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+.vue-08 { background: url("../images/sub/vue/img-vue-08.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-11 { background: url("../images/sub/vue/img-vue-11.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-09 { background: url("../images/sub/vue/img-vue-09.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-12 { background: url("../images/sub/vue/img-vue-12.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+.vue-10 { background: url("../images/sub/vue/img-vue-10.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-13 { background: url("../images/sub/vue/img-vue-13.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
+.vue-11 { background: url("../images/sub/vue/img-vue-11.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-14 { background: url("../images/sub/vue/img-vue-14.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+.vue-12 { background: url("../images/sub/vue/img-vue-12.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-15 { background: url("../images/sub/vue/img-vue-15.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 250px; }
+.vue-13 { background: url("../images/sub/vue/img-vue-13.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-16 { background: url("../images/sub/vue/img-vue-16.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 150px; }
+.vue-14 { background: url("../images/sub/vue/img-vue-14.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-15 { background: url("../images/sub/vue/img-vue-15.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-16 { background: url("../images/sub/vue/img-vue-16.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-17 { background: url("../images/sub/vue/img-vue-17.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-18 { background: url("../images/sub/vue/img-vue-18.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-19 { background: url("../images/sub/vue/img-vue-19.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-20 { background: url("../images/sub/vue/img-vue-20.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-21 { background: url("../images/sub/vue/img-vue-21.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-22 { background: url("../images/sub/vue/img-vue-22.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-23 { background: url("../images/sub/vue/img-vue-23.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-24 { background: url("../images/sub/vue/img-vue-24.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-25 { background: url("../images/sub/vue/img-vue-25.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-23 { height: 100px; }
 
 /* Jquery */
 .jquery-01 { background: url("../images/sub/jquery/img-jquery-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }

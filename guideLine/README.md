@@ -198,5 +198,7 @@
 
 ```
 - [공통] "explanation-box" 특정상황에서 UI 변경
+- [공통] "_images.scss" 수정 (@for, @if를 이용)
+- [htmlcss.html] img 관련 내용 추가
 - [vue.html] [고급] 탭 라우터 신규 내용 추가
 ```

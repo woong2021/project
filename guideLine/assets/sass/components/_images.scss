@@ -19,184 +19,85 @@
 }
 
 /* Font */
-.font-01{
-    @include imagePushGuide(guideline-font);
-    height: 100px;
+@for $i from 1 through 3{
+    @if($i < 10){
+        .bullet-0#{$i}{
+            @include imagePushGuide(guideline-font,"0#{$i}");
+            height: 100px;
+        }
+    }
+    
+    @else {
+        .bullet-#{$i}{
+            @include imagePushGuide(guideline-font,"#{$i}");
+            height: 100px;
+        }
+    }
 }
-
-.font-02{
-    @include imagePushGuide(guideline-font, "02");
-    height: 100px;
-}
-
-.font-03{
-    @include imagePushGuide(guideline-font, "03");
-    height: 100px;
-}
-
 /* Bullet */
-.bullet-01{
-    @include imagePushGuide(guideline-bullet);
-    height: 100px;
-}
-
-.bullet-02{
-    @include imagePushGuide(guideline-bullet, "02");
-    height: 100px;
-}
-
-.bullet-03{
-    @include imagePushGuide(guideline-bullet, "03");
-    height: 100px;
-}
-
-.bullet-04{
-    @include imagePushGuide(guideline-bullet, "04");
-    height: 100px;
-}
-
-.bullet-05{
-    @include imagePushGuide(guideline-bullet, "05");
-    height: 100px;
-}
-
-.bullet-06{
-    @include imagePushGuide(guideline-bullet, "06");
-    height: 100px;
-}
-
-.bullet-07{
-    @include imagePushGuide(guideline-bullet, "07");
-    height: 100px;
-}
-
-.bullet-08{
-    @include imagePushGuide(guideline-bullet, "08");
-    height: 100px;
+@for $i from 1 through 8{
+    @if($i < 10){
+        .bullet-0#{$i}{
+            @include imagePushGuide(guideline-bullet,"0#{$i}");
+        }
+    }
+    
+    @else {
+        .bullet-#{$i}{
+            @include imagePushGuide(guideline-bullet,"#{$i}");
+        }
+    }
 }
 
 /* Button */
-.button-01{
-    @include imagePushGuide(guideline-button);
-}
+@for $i from 1 through 11{
+    @if($i < 10){
+        .button-0#{$i}{
+            @include imagePushGuide(guideline-button,"0#{$i}");
+        }
+    }
 
-.button-02{
-    @include imagePushGuide(guideline-button, "02");
-    background-size: cover;
-}
-
-.button-03{
-    @include imagePushGuide(guideline-button, "03");
-    background-size: cover;
-}
-
-.button-04{
-    @include imagePushGuide(guideline-button, "04");
-}
-
-.button-05{
-    @include imagePushGuide(guideline-button, "05");
-}
-
-.button-06{
-    @include imagePushGuide(guideline-button, "06");
-}
-
-.button-07{
-    @include imagePushGuide(guideline-button, "07");
-}
-
-.button-08{
-    @include imagePushGuide(guideline-button, "08");
-}
-
-.button-09{
-    @include imagePushGuide(guideline-button, "09");
-}
-
-.button-10{
-    @include imagePushGuide(guideline-button, "10");
-}
-
-.button-11{
-    @include imagePushGuide(guideline-button, "11");
+    @else {
+        .button-#{$i}{
+            @include imagePushGuide(guideline-button,"#{$i}");
+        }
+    }
 }
 
 /* Table */
-.table-01{
-    @include imagePushGuide(guideline-table, "01");
-}
+@for $i from 1 through 3{
+    @if($i < 10){
+        .table-0#{$i}{
+            @include imagePushGuide(guideline-table, "0#{$i}");
+        }
+    }
 
-.table-02{
-    @include imagePushGuide(guideline-table, "02");
+    @else {
+        .table-#{$i}{
+            @include imagePushGuide(guideline-table, "#{$i}");
+        }
+    }
 }
-
-.table-03{
-    @include imagePushGuide(guideline-table, "03");
-}
-
 /* Vue */
-.vue-03{
-    @include imagePush(vue,"03");
-    height: 400px;
-}
-.vue-04{
-    @include imagePush(vue,"04");
-    height: 400px;
-}
-.vue-05{
-    @include imagePush(vue,"05");
-    height: 400px;
-}
-.vue-06{
-    @include imagePush(vue,"06");
-    height: 400px;
-}
-.vue-07{
-    @include imagePush(vue,"07");
-    height: 400px;
+@for $i from 1 through 25{
+    @if($i < 10){
+        .vue-0#{$i}{
+            @include imagePush(vue,"0#{$i}");
+            border: 0;
+        }
+    }
+
+    @else {
+        .vue-#{$i}{
+            @include imagePush(vue,"#{$i}");
+            border: 0;
+        }
+    }
 }
 
-.vue-08{
-    @include imagePush(vue,"08");
-    height: 150px;
+.vue-23{
+    height: 100px;
 }
-
-.vue-09{
-    @include imagePush(vue,"09");
-    height: 400px;
-}
-
-.vue-10{
-    @include imagePush(vue,"10");
-    height: 150px;
-}
-
-.vue-11{
-    @include imagePush(vue,"11");
-    height: 400px;
-}
-.vue-12{
-    @include imagePush(vue,"12");
-    height: 150px;
-}
-.vue-13{
-    @include imagePush(vue,"13");
-    height: 400px;
-}
-.vue-14{
-    @include imagePush(vue,"14");
-    height: 150px;
-}
-.vue-15{
-    @include imagePush(vue,"15");
-    height: 250px;
-}
-.vue-16{
-    @include imagePush(vue,"16");
-    height: 150px;
-}
-
 
 /* Jquery */
 .jquery-01{
