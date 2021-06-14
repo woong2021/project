@@ -1,3 +1,7 @@
+@-webkit-keyframes aniHover { 0% { height: 50px; }
+  100% { height: 200px; } }
+@keyframes aniHover { 0% { height: 50px; }
+  100% { height: 200px; } }
 /* Header */
 header { position: -webkit-sticky; position: sticky; border-bottom: 2px solid; background: #ffffff; top: 0; height: 100px; z-index: 1; }
 @media (min-width: 320px) { header { padding: 0 10px; } }
@@ -64,6 +68,12 @@ ol.number li:before { content: counter(num); position: absolute; display: inline
 ol.number li:hover:before { background: #0075C1; border-color: #000000; color: #ffffff; }
 ol.num-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); grid-gap: 5px; margin: 10px 0; padding: 10px 0; }
 ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
+
+.sample-list { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.sample-list article { position: relative; border: 1px solid; width: 20%; height: 200px; }
+.sample-list article div { display: block; margin-bottom: 0; width: 100%; height: 200px; text-align: center; line-height: 200px; }
+.sample-list article div:last-child { position: absolute; background: rgba(0, 0, 0, 0.5); height: 50px; bottom: 0; }
+.sample-list article div:last-child:hover { -webkit-animation: aniHover .5s forwards; animation: aniHover .5s forwards; }
 
 /* Button */
 .btn-row { margin: 50px auto 0; width: 100%; }
