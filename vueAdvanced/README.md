@@ -15,3 +15,13 @@
 - [고급] ToolBar의 라우터 링크 스타일링
 - [고급] axios를 이용한 api 호출 및 구조화작업
 ```
+
+### 2021.06.14
+
+```
+- [고급] Vuex 모듈화 및 state 적용
+- [고급] NewsView에 actions 와 mutations 적용
+- [고급] jobsView에 스토어 적용
+- [고급] map 헬퍼함수 (AskView)
+- [고급] 스토어 속성 모듈화
+```
