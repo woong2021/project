@@ -1365,6 +1365,38 @@
                     </div>
                 </article>
             </section>
+            <section>
+                <h3>라우터 실전</h3>
+                <article>
+                    <h4>동적 라우터 매칭</h4>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>1. 컴포넌트(ItemVoew) 셍성</li>
+                            <li>
+                                <p>2. 라우터에 "ItemView" 로 갈 수 있는 라우터 정보를 등록</p>
+                                <div class="explanation-box-pre">
+                                    <pre>
+                                        {
+                                            path:'',
+                                            component:,
+                                        }
+                                    </pre>
+                                </div>
+                            </li>
+                            <li>
+                                <p>3. 해당 페이지 컴포넌트로 이동했을 때 받아온 params(id)를 이용해서 페이지에 데이터를 표시</p>
+                                <div class="explanation-box-pre">
+                                    <pre>
+                                        created(){
+                                            this.$store.dispatch('');
+                                        }
+                                    </pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
         </section>
         <section id="applications" class="tab-content">
             <section>
