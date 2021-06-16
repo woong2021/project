@@ -1373,7 +1373,7 @@
                         <ul>
                             <li>1. 컴포넌트(ItemVoew) 셍성</li>
                             <li>
-                                <p>2. 라우터에 "ItemView" 로 갈 수 있는 라우터 정보를 등록</p>
+                                <p>2. 라우터에 "컴포넌트(ItemView)" 로 갈 수 있는 라우터 정보를 등록</p>
                                 <div class="explanation-box-pre">
                                     <pre>
                                         {
@@ -1381,6 +1381,9 @@
                                             component:,
                                         }
                                     </pre>
+                                </div>
+                                <div class="explanation-box">
+                                    <div class="vue-26"></div>
                                 </div>
                             </li>
                             <li>
@@ -1391,6 +1394,47 @@
                                             this.$store.dispatch('');
                                         }
                                     </pre>
+                                </div>
+                                <div class="explanation-box">
+                                    <div class="vue-27"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>4. "actions.js" 에 "FETCH_ITEM" 생성 후 import 함</p>
+                                <div class="explanation-box">
+                                    <div class="vue-28"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>5.  "FETCH_ITEM" 이라는 함수를 호출하기 위한 API 생성</p>
+                                <div class="explanation-box">
+                                    <div class="vue-29"></div>
+                                    <div class="vue-30"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>6. "컴포넌트(ItemView)"에서 created() 로 받아와서 "FETCH_ITEM"을 displatch 함 </p>
+                                <div class="explanation-box">
+                                    <div class="vue-31"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>7."SET_ITEM"를 "mutations.js" 에 정의 </p>
+                                <div class="explanation-box">
+                                    <div class="vue-33"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>8."SET_ITEM"안에 있는 item을  정의하기 위해 "store > index.js" 에 state 등록</p>
+                                <div class="explanation-box">
+                                    <div class="vue-34"></div>
+                                    <div class="vue-35"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>9."computed"를 통하여 소스 간결화 작업</p>
+                                <div class="explanation-box">
+                                    <div class="vue-32"></div>
                                 </div>
                             </li>
                         </ul>

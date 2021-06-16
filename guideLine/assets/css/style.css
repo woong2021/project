@@ -207,7 +207,35 @@ ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
 
 .vue-25 { background: url("../images/sub/vue/img-vue-25.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
+.vue-26 { background: url("../images/sub/vue/img-vue-26.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-27 { background: url("../images/sub/vue/img-vue-27.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-28 { background: url("../images/sub/vue/img-vue-28.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-29 { background: url("../images/sub/vue/img-vue-29.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-30 { background: url("../images/sub/vue/img-vue-30.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-31 { background: url("../images/sub/vue/img-vue-31.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-32 { background: url("../images/sub/vue/img-vue-32.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-33 { background: url("../images/sub/vue/img-vue-33.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-34 { background: url("../images/sub/vue/img-vue-34.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-35 { background: url("../images/sub/vue/img-vue-35.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
 .vue-23 { height: 100px; }
+
+.vue-16, .vue-27 { height: 150px; }
+
+.vue-31 { height: 200px; }
+
+.vue-18, .vue-19, .vue-20, .vue-22, .vue-24, .vue-25, .vue-30, .vue-32, .vue-33, .vue-34 { height: 300px; }
+
+.vue-26, .vue-35 { height: 400px; }
 
 /* Jquery */
 .jquery-01 { background: url("../images/sub/jquery/img-jquery-01.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; height: 400px; }
