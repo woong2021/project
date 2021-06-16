@@ -1,10 +1,5 @@
 <template>
     <div>
-        <!--
-         <div v-for="item in fetchedAsk">
-            {{ item.title }}
-        </div>
-         -->
         <p v-for="item in fetchedAsk">
             <router-link v-bind:to="`item/${item.id}`">
                 {{ item.title }}

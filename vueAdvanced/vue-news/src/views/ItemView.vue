@@ -2,16 +2,22 @@
     <div>
         <!-- {{ this.$store.state.item}} -->
         <p>
-            {{ this.$store.state.item.title }}
+            {{ itemInfo.title }}
         </p>
         <div>
-            {{ this.$store.state.item.content }}
+            {{ itemInfo.content }}
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    computed:{
+        itemInfo(){
+            return this.$store.state.item;
+        }
+    },
+
     created(){
         const itemId = this.$route.params.id;
         console.log(itemId);
