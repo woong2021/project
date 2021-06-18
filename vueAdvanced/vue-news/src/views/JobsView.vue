@@ -1,32 +1,29 @@
 <template>
     <div>
-        <!--
-         <div v-for="job in this.$store.state.jobs">
-            {{ job.title }} 
-        </div> 
-        -->
-        <p v-for="job in fetchedJobs">
-            <a :href="job.url">{{job.title }}</a>
-            <small>{{job.time_ago}}.{{ job.domain }}</small>
-        </p>
+       <list-item></list-item>  
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import ListItem from '../components/ListItem.vue';
+import bus from '../utils/bus.js';
 
 export default {
-    computed: {
-        ...mapGetters([
-            'fetchedJobs'
-        ]),
+    components: {
+        ListItem
     },
-    created(){
-        this.$store.dispatch('FETCH_JOBS');
+    created() {
+        bus.$emit('start:spinner');
+        setTimeout(() => {
+            this.$store.dispatch('FETCH_JOBS')
+                .then(() => {
+                    console.log('fetched');
+                    bus.$emit('end:spinner');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
     }
 }
 </script>
-
-<style>
-
-</style>

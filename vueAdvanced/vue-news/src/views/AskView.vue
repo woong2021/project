@@ -1,30 +1,29 @@
 <template>
     <div>
-        <p v-for="item in fetchedAsk">
-            <router-link v-bind:to="`item/${item.id}`">
-                {{ item.title }}
-            </router-link>
-            <small>{{ item.time_ago }} by {{ item.user }}</small>
-        </p>
+        <list-item></list-item>
     </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import ListItem from '../components/ListItem.vue';
+import bus from '../utils/bus.js';
 
 export default {
-    computed: {
-        ...mapGetters([
-            'fetchedAsk'
-        ]),
+    components: {
+        ListItem,
     },
-
-    created(){
-        this.$store.dispatch('FETCH_ASK');
+    created() {
+        bus.$emit('start:spinner');
+        setTimeout(() => {
+            this.$store.dispatch('FETCH_ASK')
+                .then(() => {
+                    console.log('fetched');
+                    bus.$emit('end:spinner');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
     }
 }
 </script>
-
-<style>
-
-</style>
