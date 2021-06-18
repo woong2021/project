@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue router</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <router-link to="/login">Login</router-link>
+        <router-link to="/main">Main</router-link>
+    </div>
+    <router-view></router-view>
+</div>
+<script>
+    let LoginComponent = {
+        template: '<div>Login</div>'
+    }
+
+    let MainComponent = {
+        template: '<div>Main</div>'
+    }
+
+    let Router = new VueRouter({
+        // 링크에 해쉬태그(#) 삭제 하고 싶을때
+        mode: 'history',
+        // 페이지의 라우팅 정보
+        routes: [
+            {
+                // 페이지의 url 이름
+                path: '/login',
+                //해당 url에서 표시될 컴포넌트
+                component: LoginComponent
+            },
+            {
+                path: '/main',
+                component: MainComponent
+            }
+        ]
+    });
+
+    new Vue({
+        el: '#app',
+        router: Router
+    });
+</script>    
+</body>
+</html>

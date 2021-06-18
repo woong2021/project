@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+// *----------------------------
+//	Header
+// ----------------------------*
+
+/* Header */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    background: white;
+
+    section{
+        @media (min-width: 320px){
+            &#gnb-m{
+                display:block;
+            }
+
+            &#gnb{
+                display: none;
+            }
+        }
+        @media (min-width: 768px){
+            &#gnb-m{
+                display:none;
+            }
+            &#gnb{
+                display: block;
+            }
+        }
+
+        &#gnb-m{
+            article{
+                &#gnbTop-m{
+                    display:flex;
+                    padding: 1.25vh 4.5625vw;
+                    justify-content: space-between;
+
+                    .gnbTop-inner{
+                        position: relative; 
+                        top: 0.5vh;
+                        left: -1.5625vw;   
+                    }
+
+                    .icon-login-nor{
+                        margin-top: 1.3vh;
+                    }
+                }
+            }
+        }
+
+        #gnbTop{
+            border-bottom: 1px solid $gray;
+            height: 80px;
+            box-sizing: border-box;
+
+            .gnbTop-inner{
+                margin: 0 auto;
+            
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+                @media (min-width: 768px){
+                    position: relative;
+                    width: 1200px;
+                    height: 80px;
+                }
+
+                h1{
+                    position: absolute;
+                    display: inline-block;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    a{
+                        display: block;
+                        width: 130px;
+                        height: 50px;
+                    }
+                }
+
+                nav{
+                    display: flex;
+                    align-items: center;
+                    height: 80px;
+                    float: right;
+
+                    div{
+                        position: relative;
+                        display: block;
+                        margin-right: 15px;
+                        width: 55px;
+                        height: 10px;
+                        border-right: 1px solid;
+                        left: 15px;
+
+                        &:nth-child(1){
+                            a{   
+                                &:before{
+                                    content:url("../images/icon-login.png");
+                                    position: absolute;
+                                    left: -20px;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2){
+                            margin-right: 20px;
+                            width: 65px;
+                        }
+
+                        &:last-child{
+                            border-right: 0;
+                        }
+
+                        a{
+                            position: absolute;
+                            top: -2.5px;
+
+                            font : {
+                                size: 14px;
+                                weight: 400;
+                            }
+                            color: $black;
+                        }
+
+                        select{
+                            position: absolute;
+                            top: -3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #gnbNav{
+            height: 52px;
+
+            .gnbNav-inner{
+                margin: 0 auto;
+
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+
+                @media (min-width: 768px){
+                    width: 1200px;
+                }
+
+                nav{
+                    &#menuList{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 52px;
+    
+                        a{
+                            color: $black;
+                            font : {
+                                size: 17px;
+                                weight: 600;
+                            }
+                            
+
+                            &:hover{
+                                color: $fontHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

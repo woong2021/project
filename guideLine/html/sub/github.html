@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - github</title>
+    
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script defer src="../../assets/js/common.js"></script>
+</head>
+<body>
+    <!-- Header Area -->
+    <header id="header"></header>
+
+    <!-- Quick Menu -->
+    <nav id="quick"></nav>
+
+    <!-- Main Content -->
+    <main id="container">
+        <section id="gitCli">
+            <h2>GIT (CLI)</h2>
+            <h3>기본문법</h3>
+            <p class="notice">- gitBash에서 작업 진행</p>
+            <table class="default-table">
+                <caption class="sr-only">gitBash에서 작업 진행</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$pwd</th>
+                        <td>현재 나의 위치 확인</td>
+                    </tr>
+                    <tr>
+                        <th>$ls</th>
+                        <td>현재 위치에 디렉토리및 파일 확인</td>
+                    </tr>
+                    <tr>
+                        <th>$cd</th>
+                        <td>디렉토리 선택</td>
+                    </tr>
+                    <tr>
+                        <th>$cd ..</th>
+                        <td>상위 디렉토리 선택</td>
+                    </tr>
+                    <tr>
+                        <th>$git init</th>
+                        <td>git으로 버전관리 할 프로젝트 선택(git 초기화)</td>
+                    </tr>
+                    <tr>
+                        <th>$ls -al</th>
+                        <td>현재 위치에 디렉토리및 파일 확인(숨은 디렉토리까지)</td>
+                    </tr>
+                    <tr>
+                        <th>$git add [파일명]</th>
+                        <td>"commit" 할 파일 선택</td>
+                    </tr>
+                    <tr>
+                        <th>$ git add .</th>
+                        <td>"commit" 할 파일 전체 선택</td>
+                    </tr>
+                    <tr>
+                        <th>$git commit -m "[메모]"</th>
+                        <td>선택한 파일들을 한 묶음으로 만들고 메모 입력</td>
+                    </tr>
+                    <tr>
+                        <th>$git log</th>
+                        <td>생성한 커밋 보기</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="remote">
+            <h3>원격 저장소에 올리기</h3>
+            <table class="default-table">
+                <caption class="sr-only">원격 저장소에 올리기</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$git remote add [저장할 주소]</th>
+                        <td>$git remote add origin https://github.com/woong2021/project.git</td>
+                    </tr>
+                    <tr>
+                        <th>git remote -v</th>
+                        <td>원격저장소 연결상태 확인</td>
+                    </tr>
+                    <tr>
+                        <th>$git push origin master</th>
+                        <td>gitHub 사이트에 commit 하기</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="clone">
+            <h3>원격 저장소에 받아오기</h3>
+            <table class="default-table">
+                <caption class="sr-only">원격 저장소에 받아오기</caption>
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">$git clone [받아올 주소]</th>
+                        <td>
+                            <p class="clone"></p>
+                            <p>$git clone https://github.com/woong2021/project.git .</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>$rm -rf [디렉토리명]</th>
+                        <td>디렉토리 삭제</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="Error">
+            <h3>Error</h3>
+            <article>
+                <h4>LF will be replaced by CRLF</h4>
+                <table class="default-table">
+                    <caption class="sr-only">오류 해결방법</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">해결방법</th>
+                            <td>
+                                <div class="explanation-box-pre">
+                                    <pre>git config --global core.autocrlf true</pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>Vue-Cli-Service 에러 - 외부 명령, 실행할 수 있는 프로그램 ...</h4>
+                <table class="default-table">
+                    <caption class="sr-only">오류 해결방법</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">해결방법</th>
+                            <td>
+                                <div class="explanation-box-pre">
+                                    <pre>
+                                        // 설치하기 이전에 기존 vue-cli 삭제
+                                        npm uninstall vue-cil -g
+
+                                        // 그리고 재설치
+                                        npm install -g @vue/cli
+                                    </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    
+    <!-- Footer Area-->
+    <footer id="footer"></footer>
+</body>
+</html>

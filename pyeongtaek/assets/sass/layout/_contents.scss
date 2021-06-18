@@ -1,0 +1,1124 @@
+@charset "UTF-8";
+
+// *----------------------------
+//	Contents
+// ----------------------------*
+
+/* Contents */
+main{
+    .gnbNav-inner{
+        @media (min-width: 320px){
+            display: none;
+
+            &.on{
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px){
+            display: none;
+        }
+        
+        position:fixed;
+        background: $white;
+        top: 7.1vh;
+        width: 71.1111vw;
+        height: 100%;
+        z-index: 1;
+
+        nav{
+            &#menuList{
+                display: flex;
+                flex-wrap: wrap;
+
+                div{
+                    border-bottom: 1px solid $fontGray9;
+                    width: 100%;
+                    line-height: 5vh;
+
+                    a,
+                    ul > li{
+                        padding: 0 5.5556vw;
+                    }
+
+                    a{
+                        color: $black;
+                        font-size: 4vw;
+                    }
+                    
+                    ul{
+                        background: #EFEFEF;
+                        
+                        li{
+                            font-size: 3.8889vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+        article{
+            &:first-child{
+                background: $fontGray9;
+                padding: 0 5.5556vw;
+                height: 6vh;
+                color: $white;
+                
+                font : {
+                    size: 3.8889vw;
+                    weight: 100;
+                }
+
+                line-height: 6vh;
+            }
+
+            &:last-child{
+                position: absolute;
+                display: flex;
+                bottom: 6.8vh;     
+                flex-wrap: nowrap;
+                width: 100%;
+    
+                div{
+                    width: 50%;
+                    height: 5.625vh;
+                    text-align: center;
+                    line-height: 5.625vh;
+    
+                    &:first-child{
+                        background: $fontHover;
+                    }
+    
+                    &:last-child{
+                        background: $black;
+                    }
+    
+                    a{
+                        display: block;
+                        font-size: 3.6111vw;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    section{
+        &#mainSlider{    
+            @media (min-width: 320px){
+                height: 50vh;
+            }
+
+            @media (min-width: 768px){
+                height: 700px;
+            }
+            #slider{
+                .slider-item{  
+                    position: relative;
+
+                    @media (min-width: 320px){
+                        width: 100%;
+                        height: 50vh;
+                    }
+
+                    @media (min-width: 768px){
+                        width: 1920px;
+                        height: 700px;                        
+                    }
+
+                    &:nth-child(2){
+                        @media (min-width: 320px){
+                            @include imagePush("mainM","01");
+                            
+
+                            .icon-mainbanner{
+                                display: none;
+                            }
+
+                        }
+
+                        @media (min-width: 786px){
+                            @include imagePush($number : "01");
+                            
+
+                            .icon-mainbanner{
+                                display: block;
+                            }
+                        }
+                        
+
+                        div{
+                            position:absolute;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            @media (min-width: 320px){
+                                top: 40%;
+                                width: 100%;
+                            }
+
+                            @media (min-width: 768px){
+                                top: 50%;
+                                width: 30%;
+                            }
+                
+                            text-align: center;
+
+                            &.icon-mainbanner{
+                                @media (min-width: 320px){
+
+                                }
+
+                                @media (min-width: 768px){
+                                    top: 30%;
+                                }
+                                
+                            }
+
+                            h2{
+                                margin-bottom: 20px;
+
+                                @media (min-width: 320px){
+                                    font: {
+                                        size: 6.9444vw;
+                                        weight: 700;
+                                    }
+                                }
+
+                                @media (min-width: 768px){
+                                    font: {
+                                        size: 45px;
+                                        weight: 700;
+                                    }
+                                }
+
+                                color: $blue;
+                            }
+
+                            p{
+                                margin-top: 10px;
+                                @media (min-width: 320px){
+                                    font-size: 3.3333vw;
+                                }
+
+                                @media (min-width: 780px){
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        @media (min-width: 320px){
+                            @include imagePush("mainM","02");
+                            
+                            .icon-mainbanner{
+                                display: none;
+                            }
+                        }
+
+                        @media (min-width: 768px){
+                            @include imagePush($number : "02");   
+
+                            .icon-mainbanner{
+                                display: block;
+                            }
+                        }
+                        
+
+                        div{
+                            position: absolute;
+                            text-align: left;
+                            transform: translate(-50%, -50%);
+
+                            @media (min-width: 320px){
+                                top: 85%;
+                                left: 64%;
+                                width: 100%;
+                            }
+
+                            @media (min-width: 768px){
+                                top: 55%;
+                                left: 30%;
+                                width: 30%;    
+                            }                          
+
+                            &.icon-mainbanner{
+                                top: 30%;
+                                left: 20%;
+                            }
+
+                            h2{
+                                font: {
+                                    weight: 700;
+                                }
+                                color: $white;
+
+                                @media (min-width: 320px){
+                                    margin-bottom:  1.25vh;
+                                    font-size: 6.9444vw
+                                }
+
+                                @media (min-width: 768px){
+                                    margin-bottom: 20px;
+                                    font-size: 40px;
+                                }                               
+                            }
+
+                            p{
+                                margin-top: 10px;
+                                color: $white;
+
+                                @media (min-width: 320px){
+                                    font-size: 3.3333vw;
+                                }
+
+                                @media (min-width: 768px){
+                                    font-size: 23px;    
+                                }                              
+                            }
+                        }
+                    }
+
+                    &:nth-child(4){
+                        @media (min-width:320px){
+                            @include imagePush("mainM","03");         
+                        }
+
+                        @media (min-width:768px){
+                            @include imagePush($number : "03");
+                        }
+
+                        div{
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+
+                            @media (min-width: 320px){
+                                width: 100%;
+                            }
+
+                            @media (min-width: 768px){
+                                width: 30%;
+                            }
+
+                            &:nth-child(1){
+                                @media (min-width: 320px){
+                                    top: 23%;
+                                    left: 50%;
+                                }
+
+                                @media (min-width: 768px){
+                                    top: 30%;
+                                    left: 65%;
+                                }
+
+                                h2{
+                                    margin-bottom: 15px;
+                                    color: $sliderFont;
+
+                                    @media (min-width: 320px){
+                                        font : {
+                                            size: 6.3889vw;
+                                            weight: 600;
+                                        }
+                                    }
+
+                                    @media (min-width: 768px){
+                                        font : {
+                                            size: 40px;
+                                        }
+                                    }                                   
+                                }
+
+                                p{
+                                    color: $fontGray6;
+
+                                    @media (min-width: 320px){
+                                        font-size: 3.6111vw;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        font-size: 20px;
+                                    }
+                                }                      
+                            }
+
+                            &:nth-child(2){
+                                @media (min-width: 320px){
+                                    top: 37%;
+                                    left: 50%;
+                                }
+
+                                @media (min-width: 768px){
+                                    top: 70%;
+                                    left: 65%;
+                                }
+
+                                p{
+                                    margin-top: 10px;
+                                    font-weight: 100;
+
+                                    @media (min-width: 320px){
+                                        font-size: 3.0556vw;
+                                        color: $fontGray9;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        font-size: 18px;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#container{
+            p, h2, article{
+                text-align: center;
+            }
+
+            p{
+                &.subheading{  
+                    color: $fontGray9;
+
+                    @media (min-width: 320px){
+                        font-size: 3.3333vw;
+                    }
+
+                    @media (min-width: 768px){
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            h2{
+                margin: 10px 0 55px;
+
+                font : {
+                    family: "Noto Sans CJK KR";
+                    weight: 600;
+                }
+
+                @media(min-width: 320px){
+                    font-size: 6.3889vw;
+                }
+
+                @media(min-width: 768px){
+                    font-size: 48px;
+                }
+            }
+
+            article{
+                position: relative;
+
+                &.parking-service{
+                    @media (min-width: 320px){
+                        padding: 2vh 0;
+                        height: 56.3vh;
+                    }
+
+                    @media (min-width: 768px){
+                        padding: 0;
+                        height: 700px; 
+                    }
+                    
+                    .parkingbox-inner{
+                        @media (min-width: 320px){
+                            top: 45%;
+                        }
+                        
+                        @media (min-width: 768px){
+                            top: 50%;
+                        }
+
+                        .service-list{
+                            display:flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            height: 236px;
+                            
+                            @media (min-width: 320px){
+                                margin: 0 auto;
+                                width: 80%;
+                            }
+
+                            @media (min-width: 768px){
+                                
+                            }
+
+                            .service-item{
+                                @media (min-width: 320px){
+                                    width: 50%;
+    
+                                    p{
+                                        margin: 1.25vh auto 5.5556vw;
+                                        font-size: 3.6111vw;
+                                        width: 43%;
+                                    }
+                                }
+    
+                                @media (min-width: 768px){
+                                    width: 168px;
+    
+                                    p{
+                                       font-size: 18px; 
+                                       width: 100%;
+                                    }
+                                }
+    
+                                .circle{
+                                    
+                                    position: relative;
+                                    margin-bottom: 20px;
+                                    background: $gradient;
+                                    
+                                    @media (min-width:320px){
+                                        @include circle(27.225vw, 12.25vh);
+                                        margin: 0 auto;
+                                    }
+    
+                                    @media (min-width:768px){
+                                        @include circle;
+                                        margin: 20px auto;
+                                    }
+                                    &:hover{
+                                        background: $gradientHover;
+                                    }
+    
+                                    div{
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        @media (min-width: 320px){
+                                            transform: translate(-50%, -50%) scale(0.7);
+                                        }
+
+                                        @media (min-width: 768px){
+                                            transform: translate(-50%, -50%) scale(1);
+                                        }
+                                        
+                                    }
+                                }
+    
+                                img{
+                                    @media (min-width: 320px){
+                                        width: 100%;
+                                        height: 50vh;
+                                    }
+                                    @media (min-width: 768px){
+                                        width: 162px;
+                                        height: 162px;
+                                    }
+                                }     
+                            }
+                        }
+                    }
+                }
+
+                &.parking-realtime{
+                    background: $bgGray;
+                    
+
+                    @media (min-width: 320px){
+                        height:56.3vh;
+                    }
+
+                    @media (min-width: 768px){
+                        height: 664px;
+                    }
+
+                    div#realtimeSlider{
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-flow: wrap;
+                             
+                        @media (min-width: 320px){
+                            left: 20.4375vw;
+                            width: 55%;
+
+                            .slick-list{
+                                width: 100%;
+                                height: 33.75vh;
+                                left: 3.1250vw;
+                            }
+                        }
+
+                        @media(min-width: 768px){
+                            left: 80px;
+                            width: 1040px;
+
+                            .slick-list{
+                                height: inherit;
+                                left: 0;
+                            }   
+                        }
+
+                        .slick-prev,
+                        .slick-next{
+                            position: absolute; 
+                            border: 0;  
+                            top: 50%; 
+                            z-index: 10;
+                            transform: translateY(-50%);
+
+                            &:hover, &:focus{
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                        .slick-prev{
+                            @media (min-width: 320px){
+                                width: 35px; height: 35px;
+                                background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                                left: -15.1875vw;
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+
+                            @media (min-width: 768px){
+                                width: 50px; height: 50px;
+                                background: url('../images/sprite/more-sprites.png') -10px -10px; 
+                                left: -70px;    
+                            }
+
+                            &:hover{
+                                @media (min-width: 320px){
+                                    width: 35px; height: 35px;
+                                    background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                    transform: translateY(-50%) rotate(0deg);
+                                }
+
+                                @media (min-width: 768px){
+                                    width: 50px; height: 50px;
+                                    background: url('../images/sprite/more-sprites.png') -10px -80px;
+                                    transform: translateY(-50%) rotate(180deg); 
+                                }
+                                 
+                            }
+                        }
+                        .slick-next{
+                            right: -70px;
+                            @media (min-width: 320px){
+                                width: 35px; height: 35px;
+                                background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                            }
+                            @media (min-width: 768px){
+                                width: 50px; height: 50px;
+                                background: url('../images/sprite/more-sprites.png') -10px -10px; 
+                                
+                            }
+                            &:hover{
+                                @media (min-width: 320px){
+                                    width: 35px; height: 35px;
+                                    background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                    transform: translateY(-50%) rotate(180deg);
+                                }
+
+                                @media (min-width: 768px){
+                                    width: 50px; height: 50px;
+                                    background: url('../images/sprite/more-sprites.png') -10px -80px; 
+                                    transform: translateY(-50%) rotate(0deg);   
+                                }   
+                            }
+                        }
+
+                        div {
+                            &.realtimeslider-item{
+                                @media (min-width: 320px){
+                                    width: 55.1875vw !important;
+                                }
+
+                                
+                                @media (min-width: 768px){
+                                    width: 230px !important;
+                                    margin: 0 15px;
+                                }
+
+                                &:hover{
+                                    div{
+                                        &.realtime{ 
+                                            > div{
+                                                animation: hoverAni .5s forwards;
+                                                
+                                                ul{
+                                                    margin-top: 70%;
+                                                    transform: translateY(-50%);
+                                                    
+                                                    li{
+                                                        animation: hoverColor .5s forwards;    
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                 }
+
+                                div{
+                                    &.realtime{    
+                                        position: relative;    
+                                        z-index: -1;
+
+                                        @media (min-width: 320px){
+                                            width: 100%;
+                                            height: 34vh;
+                                        }
+            
+                                        @media (min-width: 768px){
+                                            width: 228px;
+                                            height: 269px;
+                                        }
+
+                                       > div{
+                                            position: absolute;
+                                            background: rgba(0,0,0,0.5);
+                                            padding: 10px 25px;
+                                            bottom: 0;
+
+                                            @media (min-width: 320px){
+                                                width: 78%;
+                                            }
+
+                                            @media (min-width: 768px){
+                                                width: 177px;    
+                                            }  
+
+                                            > ul{
+                                                li{
+                                                    text-align: center;
+                                                    width: 100%;
+                
+                                                    &:first-child{
+                                                        color: $white;
+                                                        font-size: 14px;
+                                                    }
+                                                    &:last-child{
+                                                        margin-top: 5px;
+                                                        color: $yellow;
+                                                        font-size: 17px;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }
+                                }
+                            }
+                        }   
+                    }
+                }
+
+                &.parking-appeal{
+                    @media (min-width: 320px){
+                        @include imagePush("mainM","04");
+                        height: 11.1111vh;
+                    }
+
+                    @media (min-width: 768px){
+                        @include imagePush($number : "04");
+                        height: 170px;
+                    }  
+
+                    .parkingbox-inner{
+                        display:flex;
+                        justify-content: space-between;
+
+                        > div{
+                            position: relative;
+
+                            @media (min-width: 320px){
+                                padding: 0 3.125vw;
+                            }
+
+                            @media (min-width: 768px){
+                                padding-right: 100px;
+                            }  
+
+                            p{
+                                color: $white;
+    
+                                &:first-child{
+                                    font : {
+                                        style: italic;
+                                        weight: 100;
+                                    }
+
+                                    @media (min-width: 320px){
+                                        margin-bottom: 0.5vh;
+                                        font-size: 2.7778vw;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        margin-bottom: 15px;
+                                        font-size: 25px;
+                                    } 
+                                }
+
+                                &:last-child{
+                                    font-weight: 100;
+
+                                    @media (min-width: 320px){
+                                        font-size: 3.0556vw;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        font-size: 29px;
+                                    }
+                                }
+                                
+                                span{
+                                    color: $yellow;
+                                }
+                            }
+
+                            &:first-child,
+                            &:nth-child(2){
+                                &:after{
+                                    content:"";
+                                    color: $white;
+                                    position:absolute;
+
+                                    @media (min-width: 320px){
+                                        width: 5px; height: 23px;
+                                        background: url('../images/sprite/mainM-sprites.png') -190px -10px;
+                                        top: 0;
+                                        right: -12px;
+                                    }
+                                    @media (min-width: 768px){
+                                        background: url('../images/icon/icon-line-pc.png') no-repeat;
+                                        top: 10px;
+                                        right: 0;
+                                        width: 13px;
+                                        height: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.parking-info{
+                    @media (min-width: 320px){
+                        margin-top: 3.75vh;
+                        height: 113.5vh;
+                        overflow: hidden;
+                    }
+
+                    @media (min-width: 768px){
+                        height: 700px;
+                    }
+
+                    .parkingbox-inner{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        top: 50%;
+
+                        //여기부터
+                        section{        
+                            background: $bgGray;
+
+                            @media (min-width: 320px){
+                                width: 100%;
+                                height: 55vh;
+                                box-sizing: border-box;
+
+                                &:last-child{
+                                    margin-top: 3.75vh;
+                                }
+                            }
+
+                            @media (min-width: 768px){
+                                margin-top: 0;
+                                padding: 0 60px;
+                                width: auto;
+                                height: 513px;
+
+                                
+                                &:last-child{
+                                    margin-top: 0;
+                                }
+                            }
+
+                            &:first-child{
+                                >p{
+                                    &:first-child{
+                                        &:before{
+                                            @media (min-width: 320px){
+                                                content: "";
+                                                position: absolute;
+                                                background: url('../images/sprite/mainM-sprites.png') -140px -10px;
+                                                width: 30px; height: 30px;
+                                                left: -40px;
+                                                top: -7px;     
+                                            }
+
+                                            @media (min-width: 768px){
+                                                content: "";
+                                                position: absolute;
+                                                background: url('../images/sprite/main-sprites.png') -272px -74px;
+                                                width: 50px; height: 50px;
+                                                left: -70px;
+                                                top: 23px;
+                                            }
+                                        }  
+                                    }
+                                }      
+                            }
+
+                            &:last-child{
+                                >p{
+                                    &:first-child{
+                                        &:before{
+                                            @media (min-width: 320px){
+                                                content: "";
+                                                position: absolute;
+                                                background: url('../images/sprite/main-sprites.png') -169px -153px;
+                                                width: 50px; height: 50px;
+                                                left: -50px;
+                                                top: -17px;
+                                                transform: scale(.6);
+                                            }
+                                            @media (min-width: 768px){
+                                                content: "";
+                                                position: absolute;
+                                                background: url('../images/sprite/main-sprites.png') -169px -153px;
+                                                width: 50px; height: 50px;
+                                                left: -70px;
+                                                top: 23px;
+                                            }
+                                        }  
+                                    }
+                                }      
+                            }
+                            > p{
+                               
+                                text-align: left;
+
+                                @media (min-width:320px){
+                                    padding: 0;
+                                    font : {
+                                        size: 4.1667vw;
+                                        weight: 600;
+                                    }
+                                }
+
+                                @media (min-width:768px){
+                                    padding: 30px 0;
+                                    font : {
+                                        size: 30px;
+                                        weight: 600;
+                                    }
+                                }
+
+                                color: $blue;  
+                                
+                                &:first-child{
+                                    position:relative;
+
+                                    @media (min-width: 320px){
+                                       margin: 3.125vh 0;
+                                       top: 0;
+                                       left: 15vw;
+                                       width: 50%; 
+                                    }
+
+                                    @media (min-width: 768px){
+                                        margin: 0;
+                                        left: 70px;
+                                    }
+                                    
+                                }
+                                &:last-child{
+                                    position: relative;
+
+                                    @media (min-width: 320px){
+                                        margin: 25px auto;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        margin: 0 auto;
+                                    }
+                                    
+
+                                    font : {
+                                        size: 16px;
+                                        weight: 300;
+                                    }
+
+                                    color: $fontGray9;
+                                    text-align: center;
+                                    top: 20px;
+                                    left: 30px;
+                                    width: 200px;
+                                    cursor: pointer;
+
+                                    &:before{
+                                        content:"";
+                                        position:absolute;
+                                        display: block;
+                                        top: 50%;
+                                        left: -10px;
+                                        transform: translateY(-50%);
+
+                                        @media (min-width: 320px){
+                                            width: 35px; height: 35px;
+                                            background: url('../images/sprite/mainM-sprites.png') -65px -56px;
+                                        }
+
+                                        @media (min-width: 768px){
+                                            width: 50px; height: 50px;
+                                            background: url('../images/sprite/more-sprites.png') -10px -10px;
+                                        }
+                                    }
+
+                                    &:hover{
+                                        color: $blue;
+
+                                        &:before{
+                                            content:"";
+                                            position:absolute;
+                                            display: block;
+
+                                            @media (min-width: 320px){
+                                                width: 35px; height: 35px;
+                                                background: url('../images/sprite/mainM-sprites.png') -10px -56px;
+                                                transform: translateY(-50%) rotate(180deg);
+                                            }
+
+                                            @media (min-width: 768px){
+                                                width: 50px; height: 50px;
+                                                background: url('../images/sprite/more-sprites.png') -10px -80px;
+                                            }
+                                            top: 50%;
+                                            left: -10px;
+                                            transform: translateY(-50%);
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                            ul{
+                                
+                                border-top: 1px solid #dddddd;
+                                
+                                
+                                @media (min-width: 320px){
+                                    margin: 0 4%; 
+                                    padding-top: 0.7778vh;
+                                    width: 92%;
+                                }
+
+                                @media (min-width: 768px){
+                                    margin: 0;
+                                    padding-top: 20px;
+                                    width: 450px;
+                                }
+
+                                li{
+                                    background: $white;
+                                    text-align:left; 
+                                    box-sizing: border-box;
+                                    box-shadow: 3px 5px 2px #E2E2E2;
+
+                                    @media (min-width: 320px){
+                                        height: auto;
+                                    }
+
+                                    @media (min-width: 768px){
+                                        height: 130px;    
+                                    }
+
+                                    &:first-child{
+                                        margin-bottom: 20px;
+                                    }
+                                    a{
+                                        display: block;
+                                        color: black;
+
+                                        @media (min-width: 320px){
+                                            padding: 30px 50px 20px 45px;
+                                        }
+
+                                        @media (min-width: 768px){
+                                            padding: 15px 25px 10px 20px;  
+                                        }
+                                        h3{
+
+                                            color: $fontHover;
+
+                                            @media (min-width: 320px){
+                                                margin-bottom: 1.3889vh;
+                                                font-size: 3.3333vw;
+                                            }
+
+                                            @media (min-width: 768px){
+                                                margin-bottom: 10px;
+                                                font-size: 18px; 
+                                            }
+                                        }
+                                        p{
+                                            text-align:left; 
+                                            @media (min-width: 320px){
+                                                margin-bottom: 1.3889vh;
+                                            }
+
+                                            @media (min-width: 768px){
+                                                margin-bottom: 10px;
+                                            }
+                                            &:first-child{
+                                                @media (min-width: 320px){
+                                                    font-size: 3.3333vw;
+                                                }
+    
+                                                @media (min-width: 768px){
+                                                    font-size: 18px; 
+                                                }
+                                            }
+                                            &:last-child{
+                                                color: $fontGray6;
+
+                                                @media (min-width: 320px){
+                                                    font-size: 2.7778vw;
+                                                }
+
+                                                @media (min-width: 768px){
+                                                    font-size: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .parkingbox-inner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (min-width: 320px){
+                    width: 100%;
+                }
+    
+                @media (min-width: 768px){
+                    width: 1200px;    
+                }
+
+                div{
+                    &.realtime{
+                        @include imagePush("temp","01");
+                        background-size: contain;
+                    }
+                }
+            }
+            
+        }
+    }
+}

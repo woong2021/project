@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - Jquery</title>
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <script defer src="../../assets/js/common.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
+</head>
+<body>
+    <!-- Header Area -->
+    <header id="header"></header>
+
+    <!-- Quick Menu -->
+    <nav id="quick"></nav>
+
+    <!-- Main Content -->
+    <main id="container">
+        <section id="basicTag">
+            <h2>JQUERY(& javascript)</h2>
+            <h3>기본태그(동적)</h3>
+            <div class="explanation-box-pre">
+                <pre>
+                    $(document).on("click", "[클래스 & 아이디 & 속성]", function(){
+
+                    });
+                </pre>
+            </div>
+        </section>
+        <section>
+            <h3>생성자 함수</h3>
+            <article>
+                <h4>기본문법</h4>
+                <p class="notice">생성자 함수는 함수 이름 첫 글자를 대문자로 작성 (암묵적인 룰)</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function Person(){
+
+                        }
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>생성자함수 활용</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function Person(){
+                            this.name = name;
+                            this.job = job;
+                        }
+
+                        let p = new Person('josh', 'developer');
+                        console.log(p);
+                    </pre>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h3>탭메뉴</h3>
+            <article>
+                <h4>data를 이용한 탭메뉴</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        &lt;section id="tabList"&gt;
+                            &lt;article data-tab="tab-1" class="current"&gt;
+                            &lt;article data-tab="tab-2"&gt;
+                            &lt;article data-tab="tab-3"&gt;
+                        &lt;/section&gt;
+                        &lt;section id="tab-1" class="tab-content current">&gt;내용1&lt;/section&gt;
+                        &lt;section id="tab-2"class="tab-content"&gt;내용2&lt;/section&gt;
+                        &lt;section id="tab-3"class="tab-content"&gt;내용3&lt;/section&gt;
+
+                        &lt;script&gt;
+                            $('#tabList article').click(function(){
+                                var tab_id = $(this).attr('data-tab');
+
+                                $('#tabList article').removeClass('current');
+                                $('.tab-content').removeClass('current');
+
+                                $(this).addClass('current');
+                                $("#"+tab_id).addClass('current');
+                            })
+                        &lt;/script&gt;
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>결과</h4>
+                <section id="tabList">
+                    <article data-tab="tab-1" class="current">메뉴1</article>
+                    <article data-tab="tab-2">메뉴2</article>
+                    <article data-tab="tab-3">메뉴3</article>
+                    <article data-tab="tab-4">메뉴4</article>
+                </section>
+                <article class="explanation-box">
+                    <section id="tab-1" class="tab-content current">내용1</section>
+                    <section id="tab-2" class="tab-content">내용2</section>
+                    <section id="tab-3" class="tab-content">내용3</section>
+                    <section id="tab-4" class="tab-content">내용4</section>
+                </article>
+                <script>
+                    $('#tabList > article').click(function(){
+                        var tab_id = $(this).attr('data-tab');
+                
+                        $('#tabList > article').removeClass('current');
+                        $('.tab-content').removeClass('current');
+                
+                        $(this).addClass('current');
+                        $("#"+tab_id).addClass('current');
+                    })
+                </script>
+            </article>
+        </section>
+        <section>
+            <h3>Jquery UI (datepicker)</h3>
+            <p class="notice">Jquery를 기반으로 하는 플러그인</p>
+            <article>
+                <h4>설치하기 (CDN)</h4>
+                <table class="default-table">
+                    <caption class="sr-only">Jquery UI 설치하기</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>jquery UI (CSS)</th>
+                            <td>&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"&gt;</td>
+                        </tr>
+                        <tr>
+                            <th>jquery UI (Jquery UI)</th>
+                            <td>
+                                <p>jquery 밑에 해당 CDN 추가</p>
+                                <p>&lt;script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"&gt;&lt;/script&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </article>
+            <article>
+                <h4>datepicker (기본사용법)</h4>
+                <div class="explanation-box">
+                    "&lt;script src="./jquery-ui-1.12.1/datepicker-ko.js"&gt;&lt;/script&gt;"를 추가
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        &lt;input type="text" name="date" id="date1"&gt;
+
+                        &lt;script&gt;
+                            $(function(){
+                                $("#date1").datepicker();
+                            });
+                        &lt;/script&gt;
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>결과 확인</h4>
+                <div class="explanation-box">
+                    <input type="text" name="date" id="date1" size="12">
+                </div>
+            </article>
+        </section>
+        <section>
+            <h3>비동기처리</h3>
+            <article>
+                <h4>Ajax 통신코드</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(callbackFunc) {
+                            $.get('url 주소/products/1', function(response){
+                                callbackFunc(response);
+                            });
+                        }
+
+                        getData(function(tableData){
+                            console.log(tableData);
+                        });
+                    </pre>
+                </div>
+                <p>비동기 처리를 위해 프로미스 대신 콜백 함수를 사용</p>
+            </article>
+            <article>
+                <h4>Promise</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(callback){
+                            // new Promise() 추가
+                            return new Promise(function(resolve, reject){
+                                $.get('url 주소/products/1', function(response){
+                                    //데이터를 받으면 resolve() 호출
+                                    resolve(response);
+                                });
+                            });
+                        }
+
+                        // getData()의 실행이 끝나면 호출되는 then()
+                        getData().then(function(tableData){
+                            //resolve() 의 결과 값이 여기로 전달
+                            console.log(tableData); //$.get()의 response 값이 tableData에 전달됨
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Promise의 3가지 상태</h4>
+                <table class="default-table">
+                    <caption class="sr-only">Promise의 3가지 상태</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>pending(대기)</th>
+                            <td>비동기 처리 로직이 아직 완료되지 않은 상태</td>
+                        </tr>
+                        <tr>
+                            <th>Fulfilled(이행)</th>
+                            <td>비동기 처리가 오나료되어 프로미스가 결과 값을 반환해 준 상태</td>
+                        </tr>
+                        <tr>
+                            <th>Rejected(실패)</th>
+                            <td>비동기 처리가 실패 하거나 오류가 발생한 상태</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>Pending(대기)</h4>
+                <p>"new Promise() 메서드를 호출하면 대기(Pending) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise();
+                    </pre>
+                </div>
+                <p>"new Promise()"메서드를 호출할 때 콜백함수를 선언할 수 있고, 콜백 함수의 인자는 resolve, reject 임</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            ...
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Fulfilled(이행)</h4>
+                <p>롤백 함수의 인자 resolve를 다음과 같이 실행하면 이행(Fulfilled) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            resolve();
+                        });
+                    </pre>
+                </div>
+                <p>"new Promise()"메서드를 호출할 때 콜백함수를 선언할 수 있고, 콜백 함수의 인자는 resolve, reject 임</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(){
+                            return  new Promise(function(resolve, reject){
+                                var data = 300;
+                                resolve(data);
+                            });
+                        }
+                       
+                        // resolve()의 결과 값 data를 resolvedData로 받음
+                        getData()(.then(function(resolvedData){
+                            console.log(resolvedData); //결과값 100
+                        });
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Rejected(실패)</h4>
+                <p>롤백 함수의 인자 Reject 다음과 같이 실행하면 실패(Rejected) 상태가 됨</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        new Promise(function(resolve, reject){
+                            reject();
+                        });
+                    </pre>
+                </div>
+                <p>실패 상태가 되면 실패한 이유를 catch()로 받을 수 있음</p>
+                <div class="explanation-box-pre">
+                    <pre>
+                        function getData(){
+                            return  new Promise(function(resolve, reject){
+                                reject(new Error("Request is failed"));
+                            });
+                        }
+                       
+                        // reject()의 결과 값 Error를 err로 받음
+                        getData().then().catch(function(err){
+                            console.log(err); // Error : Request is failed
+                        });
+                    </pre>
+                </div>
+            </article>
+        </section>
+        <section id="">
+            <h3>ES6</h3>
+            <article>
+                <h4>BABEL</h4>
+                <div class="explanation-box">
+                    <ul>
+                        <li>ES6는 문법을 각 브라우저의 호환 가능한  ES5를 변경해 주는 사이트</li>
+                        <li><a href="https://babeljs.io/">바로가기</a></li>
+                    </ul>
+                </div>
+                <table class="default-table">
+                    <caption class="sr-only">BABEL 셋팅</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>BABEL 셋팅</th>
+                            <td>
+                                <div class="jquery-01"></div>
+                                <p>es5로 변환이 되지않을때 셋팅방법</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>const & let</h4>
+                <div class="explanation-box">
+                    <ul>
+                        <li>새로운 변수 선언방식으로 블록 단위 {} 로 변수의 범위가 제한됨</li>
+                        <li>const : 한번 선언한 값에 대해서 변경할 수 없음 (상수개념)</li>
+                        <li>let : 한번 선언한 값에 대해서 다시 선언할 수 없음</li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h4>화살표 함수</h4>
+                <div class="explanation-box">
+                    <ul>
+                        <li>함수를 정의할 때 function 이라는 키워드를 => 대체 (코드 간결화)</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        // ES5 함수 정의 방식
+                        var sum = function(a, b){
+                            return a + b;
+                        }
+
+                        // ES6 함수 정의 방식
+                        var sum = (a, b) => {
+                            return a + b;
+                        }
+
+                        sum (10, 20);
+                    </pre>
+                </div>
+                <div class="explanation-box-pre"> 
+                    <pre>
+                        var arr = ["a", "b", "c"];
+                        
+                        // ES5
+                        arr.forEach(function(value){
+                            console.log(value);
+                        });
+
+                        // ES6
+                        arr.forEach(value => console.log(value));
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>Object Spread Operator( ... )</h4>
+                <div class="explanation-box">
+                    사용하고자 하는 함수의 내용(객체)을 복사
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        let josh = {
+                            field: 'web',
+                            language: 'js'
+                        }
+
+                        
+                        let developer = {
+                            nation: 'korea',
+
+                            //ES5
+                            field: josh.field,
+                            language: josh.language
+
+                            //ES6
+                            ... josh
+                        };
+  
+                        console.log(developer);
+                    </pre>
+                </div>
+            </article> 
+            <article>
+                <h4>향상된 객체 리터럴 (Enhanced Object Literals) 1</h4>
+                <div class="explanation-box">
+                    객체의 속성을 메서드로 사용할 때 function 예약어를 생략하고 생성가능
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        var dictionary = {
+                            words: 100,
+
+                            // ES5
+                            lookup: function() {
+                                console.log(words);
+                            },
+
+                            // ES6
+                            lookup(){
+                                console.log(words);
+                            }
+                        };
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>향상된 객체 리터럴 (Enhanced Object Literals) 2</h4>
+                <div class="explanation-box">
+                    객체의 속성명과 값 명이 동일할 때 축약가능
+                </div>
+                <div class="explanation-box-pre">
+                    <pre>
+                        var figures = 10;
+                        var dictionary = {
+                            // figures : figures
+                            figures
+                        };
+                    </pre>
+                </div>
+            </article>
+            <article>
+                <h4>자바스크립트 모듈화</h4>
+                <div class="explanation-box">
+                    호출되기 전까지 코드 실행과 동작을 하지 않는 특징이 있음
+                </div>
+            </article>             
+        </section>
+    </main>
+    <script>
+        $(function(){
+            $("#date1").datepicker();
+        });
+    </script>
+    <!-- Footer Area-->
+    <footer id="footer"></footer>
+</body>
+</html>

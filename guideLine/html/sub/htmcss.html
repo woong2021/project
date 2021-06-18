@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO -  HTML5 & CSS3</title>
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script defer src="../../assets/js/common.js"></script>
+</head>
+<body>
+    <!-- Header Area -->
+    <header id="header"></header>
+    
+    <!-- Quick Menu -->
+    <nav id="quick"></nav>
+
+    <!-- Main Content -->
+    <main id="container">
+        <h2>HTML5 & CSS3</h2>
+        <section id="notice">
+            <p class="notice">해당 가이드는 업무하면서 개인적으로 많이 사용하는 것 위주로 작성되었습니다. </p>
+            <section id="tabList">
+                <article data-tab="uiux">UI/UX</article>
+                <article data-tab="myGuide">가이드라인</article>
+                <article data-tab="HTML" class="current">HTML5</article>
+                <article data-tab="CSS">CSS3</article>
+            </section>
+            <section id="uiux" class="tab-content">
+                <section id="">
+                    <h3>준비중</h3>
+                </section>
+            </section>
+            <section id="myGuide" class="tab-content">
+                <section id="notationHtml">
+                    <h3>HTML 표기법</h3>
+                    <table class="default-table">
+                        <caption class="sr-only">HTML 표기법 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">id</th>
+                                <td>&lt;div id="defaultTable"&gt;(단어연결시 카멜케이스기법 사용)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">class</th>
+                                <td>&lt;div class="default-table"&gt;(단어연결시 대쉬 사용)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; br &gt;</th>
+                                <td>&lt;br&gt;태그는 사용을 자제 (<span class="red">반응형에 취약</span>) </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>IMAGE</h3>
+                    <article>
+                        <div class="explanation-box">
+                            <ul>
+                                <li>sass를 이용함으로 파일명은 통일성있게 작업진행</li>
+                                <li>img-[directory]-[number] (예시: img-table-01.png)</li>
+                            </ul>
+                             
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <section id="HTML" class="tab-content current">
+                <section>
+                    <h3>기본</h3>
+                    <article>
+                        <h4>파비콘(favicon)</h4>
+                        <div class="explanation-box">
+                            <a href="https://www.favicon-generator.org/">생성 사이트 바로가기</a>
+                        </div>
+                    </article>
+                </section>
+                <section id="semantic">
+                    <h3>시멘틱 태그</h3>
+                    <p class="notice">다양한 시멘틱태그가 있으나 주로 사용하는 것만 기재</p>
+                    <table class="default-table">
+                        <caption class="sr-only">시멘틱 태그에 대한 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">&lt; header &gt;</th>
+                                <td>이름 그대로 헤더 영역을 의미</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; nav &gt;</th>
+                                <td>네비게이션을 의미하며 보통 메뉴 작성때 사용</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; main &gt;</th>
+                                <td>컨텐츠가 들어 갈 영역을 의미</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; section &gt;</th>
+                                <td>최근 <span class="bold">&lt; section &gt; 태그는 </span> 사용안하는 추세이나 개인적으로는 필요, 스포츠, 음악, 음식 등 대분류역할</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; article &gt;</th>
+                                <td>
+                                    <ul>
+                                        <li>section 이 대분류라면 article 는 중분류나 소분류라 생각하면 됨 (예, 야구, 축구, 배구, 농구)</li>
+                                        <li>어디까지나 의미론 적인것이며 article 안에 "<span class="bold">section</span>"이 들어갈 수 있음</li>
+                                        <li>개인적으로 section(대분류) -> article (중분류) -> section이 아닌 "<span class="bold">div (소분류)</span>" 작업되었으면 함</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt; footer &gt;</th>
+                                <td>이름 그대로 풋터 영역을 의미 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="images">
+                    <h3>image 테그</h3>
+                    <article>
+                        <h4>object-fit</h4>
+                        <table class="default-table">
+                            <caption class="sr-only">object-fit에 대한 설명</caption>
+                            <colgroup>
+                                <col style="width: 25%" />
+                                <col style="width: 75%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">fill</th>
+                                    <td>주어진 너비와 높이에 딱 맞도록 사이즈를 조절, 이미지 가로세로 비율 유지되지 않음 (default)</td>
+                                </tr>
+                                <tr>
+                                    <th>contanin</th>
+                                    <td>가로세로 비율을 유지한 채로 사이즈가 조절되지만, 이미지와 컨테이너 간의 비율이 맞지 않는 경우엔 자리가 생김</td>
+                                </tr>
+                                <tr>
+                                    <th>cover</th>
+                                    <td>가로세로 비율을 유지한 채로 사이즈가 조절되어 비율이 맞지 않더라도 이미지를 확대해 컨테이너를 완전히 채움</td>
+                                </tr>
+                                <tr>
+                                    <th>none</th>
+                                    <td>아무것도 하지않고 본래의 이미지 사이즈를 유지</td>
+                                </tr>
+                                <tr>
+                                    <th>scale-down</th>
+                                    <td>none 또는 contain 중에 더 적절한 방향으로 이미지 사이즈를 조절</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <section id="table">
+                    <h3>Table</h3>
+                    <article>
+                        <h4>Table 너비 고정</h4>
+                        <div class="explanation-box">
+                            table-layout: fixed;
+                        </div>
+                    </article>
+                    <article>
+                        <h4>테이블 표기법</h4>
+                        <div class="explanation-box">
+                            <table class="default-table">
+                                <caption class="sr-only">TABLE 표기법 설명</caption>
+                                <colgroup>
+                                    <col style="width: 25%" />
+                                    <col style="width: 75%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th  scope="row">테이블 기본구조</th>
+                                        <td>
+                                            <p>가로 테이블</p>
+                                            <pre>
+                                                &lt;table&gt;
+                                                    &lt;caption class="sr-only"&gt;가로 테이블&lt;/caption&gt;
+                                                    &lt;colgroup&gt;
+                                                        &lt;col style="width: 25%" /&gt;
+                                                        &lt;col style="width: 75%" /&gt;
+                                                    &lt;/colgroup&gt;
+                                                    &lt;thead&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;th scope="col"&gt;제목&lt;/th&gt;
+                                                            &lt;th>설명&lt;/th&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/thead&gt;
+                                                    &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td scope="row"&gt;내용1&lt;/td&gt;
+                                                            &lt;td>내용2&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td&gt;내용3&lt;/td&gt;
+                                                            &lt;td&gt;내용4&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                            </pre>
+                                            <pre>
+                                                <table>
+                                                    <caption class="sr-only">세로 테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 25%" />
+                                                        <col style="width: 75%" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">제목</th>
+                                                            <th>설명</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td scope="row">내용1</td>
+                                                            <td>내용2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>내용3</td>
+                                                            <td>내용4</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </pre>
+                                            <p>세로 테이블</p>
+                                            <pre>
+                                                &lt;table&gt;
+                                                    &lt;caption class="sr-only"&gt;세로 테이블&lt;/caption&gt;
+                                                    &lt;colgroup&gt;
+                                                        &lt;col style="width: 25%" /&gt;
+                                                        &lt;col style="width: 75%" /&gt;
+                                                    &lt;/colgroup&gt;
+                                                    &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;th  scope="row"&gt;제목&lt;/th&gt;
+                                                            &lt;td&gt;내용1&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;th&gt;설명&lt;/th&gt;
+                                                            &lt;td&gt;내용2&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                            </pre>
+                                            <pre>
+                                                <table>
+                                                    <caption class="sr-only">세로 테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 25%" />
+                                                        <col style="width: 75%" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th  scope="row">제목</th>
+                                                            <td>내용1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>설명</th>
+                                                            <td>내용2</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </pre>
+                                            <p>합계 테이블</p>
+                                            <pre>
+                                                &lt;table&gt;
+                                                    &lt;caption class="sr-only"&gt;합계 테이블&lt;/caption&gt;
+                                                    &lt;colgroup&gt;
+                                                        &lt;col style="width: 25%" /&gt;
+                                                        &lt;col style="width: 75%" /&gt;
+                                                    &lt;/colgroup&gt;
+                                                    &lt;thead&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;th scope="col"&gt;제목&lt;/th&gt;
+                                                            &lt;th>설명&lt;/th&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/thead&gt;
+                                                    &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td scope="row"&gt;내용1&lt;/td&gt;
+                                                            &lt;td>내용2&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td&gt;내용3&lt;/td&gt;
+                                                            &lt;td&gt;내용4&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                    &lt;tfoot&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td colspan=2&gt;합계&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tfoot&gt;
+                                                &lt;/table&gt;
+                                            </pre>
+                                            <pre>
+                                                <table>
+                                                    <caption class="sr-only">합계 테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 25%" />
+                                                        <col style="width: 75%" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">제목</th>
+                                                            <th>설명</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td scope="row">내용1</td>
+                                                            <td>내용2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>내용3</td>
+                                                            <td>내용4</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan=2>합계</td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>&lt;caption&gt;</th>
+                                        <td> 
+                                            <ul>
+                                                <li>웹접근성 고려하여 테이블 내에 &lt;caption&gt; 반드시 기재 </li>
+                                                <li>기재는 하되 레이아웃 구성상 숨김처리 (클래스 "sr-only" 사용)</li>
+                                                <li>"sr-only" 클래스가 지정 안되었을시 다음 코드 생성</li> 
+                                            </ul>
+                                            <pre>
+                                                .sr-only{
+                                                    position: absolute;
+                                                    width: 1px;
+                                                    height: 1px;
+                                                    padding: 0;
+                                                    margin: -1px;
+                                                    overflow: hidden;
+                                                    clip: rect(0, 0, 0, 0);
+                                                    border: 0;
+                                                }
+                                            </pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>IE 에서 border 값 오류 해결</th>
+                                        <td>
+                                            <pre>
+                                                <!-- th td 부분에 -->
+                                                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+                                                    background-clip: padding-box;
+                                                }
+                                            </pre>   
+                                        </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+                <section>
+                    <h3>INPUT</h3>
+                    <article>
+                        <h4>input[type="file"] 속성</h4>
+                        <table class="default-table">
+                            <caption class="sr-only">input[type="file"] 속성</caption>
+                            <colgroup>
+                                <col style="width: 25%" />
+                                <col style="width: 75%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th  scope="row">accept</th>
+                                    <td>허용하는 파일 유형을 나타내는 하나 이상의 고유 파일 유형 지정자</td>
+                                </tr>
+                                <tr>
+                                    <th>capture</th>
+                                    <td>이미지 또는 비디오 데이터를 캡처할 때 사용할 방법</td>
+                                </tr>
+                                <tr>
+                                    <th>files</th>
+                                    <td>선택한 파일을 나열</td>
+                                </tr>
+                                <tr>
+                                    <th>multiple</th>
+                                    <td>지정할 경우 사용자가 여러 개의 파일을 선택할 수 있음</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+            </section>
+            <section id="CSS" class="tab-content">
+                <section>
+                    <h3>기본</h3>
+                    <article>
+                        <h4>Reset.css</h4>
+                        <div class="explanation-box">
+                            <a href="https://www.jsdelivr.com/package/npm/reset-css">사이트 바로가기</a>
+                        </div>
+                    </article>
+                    <article>
+                        <h4>div 한화면에 꽉차게 작업</h4>
+                        <table class="default-table">
+                            <caption class="sr-only">기본적인 html에 대한 설명</caption>
+                            <colgroup>
+                                <col style="width: 25%" />
+                                <col style="width: 75%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">height: 100%;</th>
+                                    <td>
+                                        <pre>
+                                            html, body {
+                                                margin: 0;
+                                                height: 100%;
+                                                overflow: hidden;
+                                            }
+                                        </pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <section id="zIndex">
+                    <h3>z-index 사용법</h3>
+                    <table class="default-table">
+                        <caption class="sr-only">z-index에 대한 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">z-index 사용법(html)</th>
+                                <td>
+                                    <pre>
+                                        &lt;section&gt;
+                                            &lt;article&gt;
+                                            &lt;article&gt;                                
+                                        &lt;/section&gt;
+                                    </pre>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">z-index 사용법(SCSS)</th>
+                                <td>
+                                    <pre>
+                                        section{
+                                            z-index:1;
+        
+                                            article{
+                                                &:first-child{
+                                                    z-index:3;
+                                                }
+                                                &:last-child{
+                                                    z-index: 2;
+                                                }
+                                            }
+                                        }
+                                    </pre>
+                                 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>z-index 사용법</h3>
+                    <table class="default-table">
+                        <caption class="sr-only">z-index에 대한 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">z-index 사용법(html)</th>
+                                <td>
+                                    <pre>
+                                        &lt;section&gt;
+                                            &lt;article&gt;
+                                            &lt;article&gt;                                
+                                        &lt;/section&gt;
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">z-index 사용법(SCSS)</th>
+                                <td>
+                                    <pre>
+                                        section{
+                                            z-index:1;
+        
+                                            article{
+                                                &:first-child{
+                                                    z-index:3;
+                                                }
+                                                &:last-child{
+                                                    z-index: 2;
+                                                }
+                                            }
+                                        }
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="unit">
+                    <h3>단위</h3>
+                    <p class="notice">단위에는 여러가지가 있으나 "두가지"만 사용하나 절때 정답은 아닙니다. </p>
+                    <table class="default-table">
+                        <caption class="sr-only">단위에 대한 설명</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">px</th>
+                                <td>기본적인 단위로써 웹에 사용할때 주로 사용(모바일 포함)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vw</th>
+                                <td>모바일 버전에서 "<span class="bold">font-size</span>" 크기 지정할때만 사용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="flex">
+                    <h3>display: flex</h3>
+                    <article>
+                        <h4>display: flex 이용</h4>
+                        <div class="explanation-box">
+                            2021년 현재 트랜드에 맞춰 레이아웃을 잡을때 display:inline-block를 자제하고 "<span class="bold">display: flex</span>"를 지향
+                        </div>
+                    </article>
+                    <article>
+                        <h4>display: flex 사용법</h4>
+                        <table class="default-table">
+                            <caption class="sr-only">flex 사용법에 대한 설명</caption>
+                            <colgroup>
+                                <col style="width: 25%" />
+                                <col style="width: 75%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">세로정렬</th>
+                                    <td>
+                                        <ul>
+                                            <li>"<span class="bold">align-items: center</span>"를 사용하여 세로 가운데 정렬 가능</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">가로정렬</th>
+                                    <td>
+                                        <ul>
+                                            <li>"<span class="bold">justify-content: space-between</span>"를 사용하여 양끝 정렬 가능</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">아이템 순서</th>
+                                    <td>
+                                        <ul>
+                                            <li>"<span class="bold">order</span>"를 이용하여 아이템 순서를 지정</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <section id="animation">
+                    <h3>애니메이션</h3>
+                    <table class="default-table">
+                        <caption class="sr-only">애니메이션 활용법</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">마지막상태 유지</th>
+                                <td>animation-fill-mode: forwards;(축약형은 forwards;만 입력) </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section> 
+        </section>  
+    </main>
+
+    <!-- Footer Area-->
+    <footer id="footer"></footer>
+</body>
+</html>
