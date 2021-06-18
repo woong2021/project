@@ -1,5 +1,5 @@
 <template>
-    <div class="lds-facebook">
+    <div class="lds-facebook" v-if="loading">
         <div></div>
         <div></div>
         <div></div>
