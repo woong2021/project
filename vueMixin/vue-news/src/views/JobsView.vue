@@ -10,7 +10,7 @@ import ListMixin from '../Mixins/ListMixin.js';
 
 export default {
     components: {
-        ListItem
+        ListItem,
     },
     mixins: [ListMixin],
 }

@@ -159,9 +159,29 @@ pre{
                 content:"";
             }
             
+            &::marker{
+                display: none;
+            }
+
             div{
                 + p {
                     margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    ol{
+        li{
+            > ul{
+                li{
+                    list-style-type: disclosure-open;
+
+                    > ol{
+                        li{
+                            list-style-type: decimal-leading-zero; 
+                        }
+                    }
                 }
             }
         }

@@ -277,7 +277,10 @@ pre, .explanation-box, .explanation-box-pre { margin: 15px 0; padding: 10px 20px
 pre { background-color: #000000; color: #ffffff; font-family: 'NanumGothic', 'serif'; font-size: 15px; line-height: 1.5; }
 
 .explanation-box ul li:before { content: ""; }
+.explanation-box ul li::marker { display: none; }
 .explanation-box ul li div + p { margin-bottom: 20px; }
+.explanation-box ol li > ul li { list-style-type: disclosure-open; }
+.explanation-box ol li > ul li > ol li { list-style-type: decimal-leading-zero; }
 
 .explanation-box-pre { padding: 0 15px; }
 

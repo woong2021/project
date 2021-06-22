@@ -190,9 +190,12 @@
                     </pre>
                 </div>
                 <p>비동기 처리를 위해 프로미스 대신 콜백 함수를 사용</p>
-            </article>
+            </article>    
+        </section>
+        <secition>
+            <h3>Promise</h3>
             <article>
-                <h4>Promise</h4>
+                <h4>기본 문법</h4>
                 <div class="explanation-box-pre">
                     <pre>
                         function getData(callback){
@@ -307,7 +310,16 @@
                     </pre>
                 </div>
             </article>
-        </section>
+            <article>
+                <h4>에러 처리</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        .then()
+                        .catch();
+                    </pre>
+                </div>
+            </article>
+        </secition>
         <section id="">
             <h3>ES6</h3>
             <article>
@@ -453,8 +465,45 @@
                 <div class="explanation-box">
                     호출되기 전까지 코드 실행과 동작을 하지 않는 특징이 있음
                 </div>
-            </article>             
+            </article>          
         </section>
+        <section>
+            <h3>Async & Awaut</h3>
+            <div class="notice">
+                Async & Await 는 자바스크립트 비동기 처리 패턴의 최신 문법
+            </div>
+            <article>
+                <h4>기본 문법</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        async function fetchData(){
+                            var list = await getUserList();
+                            console.log(list);
+                        }
+
+                        function getUserList(){
+                            return new Promise(function (resolve, reject){
+                                var userList = ['user1','user2','user3'];
+                                resolve(userList);
+                            });
+                        }
+                    </pre>
+                    <p>promise 객체를 반환하는 API 호출 함수 앞에 "await"를 붙임</p>
+                </div>
+            </article>
+            <article>
+                <h4>오류처리</h4>
+                <div class="explanation-box-pre">
+                    <pre>
+                        try{
+
+                        }catch{
+
+                        }
+                    </pre>
+                </div>
+            </article>
+        </section>   
     </main>
     <script>
         $(function(){
