@@ -20,11 +20,19 @@
             white-space: wrap;
             word-break: keep-all;
             line-height: 1.5;
+            font-size: 14px;
         }
 
         th{
             background: $gray;
             font-weight: 400;
+        }
+
+        td{
+            .sub-title{     
+                padding: 10px 0;
+                background: aliceblue;
+            }
         }
     }
 }

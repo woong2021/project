@@ -48,7 +48,7 @@ ul li {
 
     font : {
         family: 'Nanum_Gothic_Normal';
-        size: 16px;
+        size: 14px;
     }
 }
 
@@ -81,7 +81,7 @@ ol {
 
 /* H Tag */
 h1 {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 h2 {
@@ -90,7 +90,7 @@ h2 {
     border-bottom: 2px solid $black;
 
     font: {
-        size: 30px;
+        size: 28px;
         weight: 600;
     }
 }
@@ -100,7 +100,7 @@ h3 {
     margin: 5px 0;
     padding: 10px 20px;
     background: $h3;
-    font-size: 18px;
+    font-size: 16px;
     color: $white;
 }
 
@@ -110,7 +110,7 @@ h4 {
     left: 15px;
 
     font : {
-        size: 16px;
+        size: 14px;
         weight: 600;
     }
 
@@ -125,11 +125,11 @@ h4 {
 }
 
 h5 {
-    font-size: 24px;
+    font-size: 12px;
 }
 
 h6 {
-    font-size: 22px;
+    font-size: 10px;
 }
 
 ol {
@@ -142,11 +142,12 @@ pre,
 .explanation-box,
 .explanation-box-pre {
     margin: 15px 0;
-    padding: 10px 20px;
+    padding: 0 20px;
     border: 1px solid;
     width: 100%;
     min-height: 40px;
     box-sizing: border-box;
+    line-height: 40px;
 }
 
 pre {
@@ -337,6 +338,7 @@ figure {
 /* Tab Menu */
 #tabList {
     display: flex;
+    margin-bottom: 10px;
     border: 1px solid;
     width: 100%;
 
@@ -359,4 +361,13 @@ figure {
     &.current {
         display: block;
     }
+}
+
+.colorscripter-code{
+    font-size: 12px;
+}
+
+.colorscripter-code-table{
+    background: #000000 !important;
+    width: 100%;
 }
