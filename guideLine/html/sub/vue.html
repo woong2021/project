@@ -740,6 +740,10 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>프로젝트 삭제</th>
+                            <td>rm -rf [폴더명]</td>
+                        </tr>
+                        <tr>
                             <th>server 실행</th>
                             <td>"<span class="bold">npm run serve</span>" 명령어로 실행 (server가 아닌 serve가 맞음) </td>
                         </tr>
@@ -1468,29 +1472,143 @@
             </section>
         </section>
         <section id="applications" class="tab-content">
-            <h3>외부 라이브러리 모듈화 방법 (차트)</h3>
-            <div class="explanation-box">
-                <ol>
-                    <li>외부 라이브러리 모듈화
+            <section>
+                <h3>Chart.js</h3>
+                <article>
+                    <h4>API 정보</h4>
+                    <div class="explanation-box">
+                        <a href="https://www.chartjs.org/docs/latest/getting-started/installation.html">API 바로가기</a>
+                    </div>
+                </article>
+                <article>
+                    <h4>NPM 설치</h4>
+                    <div class="explanation-box-pre">
+                        <pre>npm install chart.js</pre>
+                    </div>
+                </article>
+                <article>
+                    <h4>3.X 버전 import</h4>
+                    <div class="explanation-box-pre">
+                        <pre>import Chart from 'chart.js/auto';</pre>
+                    </div>
+                </article>
+                <article>
+                    <h4>설치시 에러</h4>
+                    <table class="default-table">
+                        <caption class="sr-only">Chart.js 에러</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"> 'myChart' is assigned a value but never used </th>
+                                <td>
+                                    <ul>
+                                        <li>root폴더에 "vue.config.js" 파일 생성</li>
+                                        <li>
+                                            <div class="explanation-box-pre">
+                                                <pre>
+                                                    module.exports = {
+                                                        devServer: {
+                                                            overlay: false
+                                                        }
+                                                    }
+                                                </pre>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article>
+                    <h4>Chart 의 모듈화</h4>
+                    <div class="explanation-box">
                         <ul>
-                            <li>이유: Vue.js 관련 라이브러리가 없을 때 일반 라이브러리를 결합할 수 있어야 함</li>
                             <li>
-                                종류
-                                <ol>
-                                    <li>차트</li>
-                                    <li>데이터 피커</li>
-                                    <li>테이블</li>
-                                    <li>스피너</li>
-                                </ol>
+                                <div class="vue-37"></div>
+                                <p>모듈화 작업을 위하여 차트를 파일로 분리</p>
+                            </li>
+                            <li>
+                                <div class="vue-38"></div>
+                                <p>"nounted()" 안에 차트를 추가 </p>
+                            </li>
+                            <li>
+                                <div class="vue-39"></div>
+                                <p>"app.vue" 에서 import 하여 사용</p>
                             </li>
                         </ul>
-                    </li>
-                </ol>
-            </div>
-            <article>
-                <h4></h4>
-                
-            </article>
+                    </div>
+                </article>
+                <article>
+                    <h4>Chart 의 플러그인</h4>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>라이브러리를 컴포넌트 마다 불러오는 불필요한 로직과 코드를 줄이기 위해 플러그인을 사용 </li>
+                            <li><a href="https://vuejs.org/v2/guide/plugins.html#ad">API 바로가기</a></li>
+                        </ul>
+                    </div>
+                    <div class="explanation-box-pre">
+                        <pre>
+                            import Chart from 'chart.js/auto';
+
+                            export default {
+                                install(Vue){
+                                    console.log('chart plugin loaded');
+                                    Vue.prototype.$_Chart = Chart;
+
+                                    this.$_Chart
+                                }
+                            }
+                        </pre>
+                    </div>
+                    <div class="explanation-box">
+                        <ul>
+                            <li>
+                                <div class="vue-40"></div>
+                                <p>pluging 폴더를 생상한후 플러그인파일을 생성</p>
+                            </li>
+                            <li>
+                                <div class="vue-41"></div>
+                                <p>"$_chart"를 이용하여 플러그인화 작업</p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h3>컴포넌트 디자인 패턴</h3>
+                <table class="default-table">
+                    <caption class="sr-only">컴포넌트 디자인 패턴</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Common</th>
+                            <td>기본적인 컴포넌트 등록과 컴포넌트 통신</td>
+                        </tr>
+                        <tr>
+                            <th>Slot</th>
+                            <td>마크업 확장이 가능한 컴포넌트</td>
+                        </tr>
+                        <tr>
+                            <th>Controlled</th>
+                            <td>결합력이 높은 컴포넌트</td>
+                        </tr>
+                        <tr>
+                            <th>Renderless</th>
+                            <td>데이터 처리 컴포넌트</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <article>
+                    <h4>Common Approach</h4>
+                </article>
+            </section>
         </section>
     </main>
     <!-- Footer Area-->

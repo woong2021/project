@@ -227,13 +227,25 @@ ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
 
 .vue-35 { background: url("../images/sub/vue/img-vue-35.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
 
-.vue-23 { height: 100px; }
+.vue-36 { background: url("../images/sub/vue/img-vue-36.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-37 { background: url("../images/sub/vue/img-vue-37.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-38 { background: url("../images/sub/vue/img-vue-38.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-39 { background: url("../images/sub/vue/img-vue-39.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-40 { background: url("../images/sub/vue/img-vue-40.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-41 { background: url("../images/sub/vue/img-vue-41.png") no-repeat; background-size: contain; height: 200px; border: 1px solid orange; border: 0; }
+
+.vue-23, .vue-37 { height: 100px; }
 
 .vue-16, .vue-27 { height: 150px; }
 
 .vue-31 { height: 200px; }
 
-.vue-18, .vue-19, .vue-20, .vue-22, .vue-24, .vue-25, .vue-30, .vue-32, .vue-33, .vue-34 { height: 300px; }
+.vue-18, .vue-19, .vue-20, .vue-22, .vue-24, .vue-25, .vue-30, .vue-32, .vue-33, .vue-34, .vue-38, .vue-39 { height: 300px; }
 
 .vue-26, .vue-35 { height: 400px; }
 
@@ -243,10 +255,10 @@ ol.num-list li { padding: 10px; border: 1px solid #000000; height: 50px; }
 /* Bullet */
 /* Common */
 /* Font-face */
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url("../fonts/NanumGothic-Regular.eot"); src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype"); }
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 700; src: url("../fonts/NanumGothic-Bold.eot"); src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype"); }
-@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
-body, table, div, p, ul li { margin-bottom: 10px; font-family: 'Nanum Gothic'; font-size: 16px; }
+@font-face { font-family: 'Nanum_Gothic_Normal'; font-style: normal; font-weight: 400; src: url("../fonts/NanumGothic-Regular.eot"); src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Regular.woff2") format("woff2"), url("../fonts/NanumGothic-Regular.woff") format("woff"), url("../fonts/NanumGothic-Regular.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum_Gothic_Bold'; font-style: normal; font-weight: 700; src: url("../fonts/NanumGothic-Bold.eot"); src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-Bold.woff2") format("woff2"), url("../fonts/NanumGothic-Bold.woff") format("woff"), url("../fonts/NanumGothic-Bold.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum_Gothic_ExtraBold'; font-style: normal; font-weight: 800; src: url("../fonts/NanumGothic-ExtraBold.eot"); src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
+body, table, div, p, ul li { margin-bottom: 10px; font-family: 'Nanum_Gothic_Normal'; font-size: 16px; }
 
 body { margin-bottom: 0; }
 
@@ -295,7 +307,7 @@ a:hover { font-weight: 700; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
-.graph li { position: relative; margin: 10px 0; padding: 15px  20px; border-radius: 50px; background: -webkit-gradient(linear, left top, right top, from(#6861e8), to(#be00ff)); background: linear-gradient(90deg, #6861e8 0%, #be00ff 100%); left: 0; color: white; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.graph li { position: relative; margin: 10px 0; padding: 15px 20px; border-radius: 50px; background: -webkit-gradient(linear, left top, right top, from(#6861e8), to(#be00ff)); background: linear-gradient(90deg, #6861e8 0%, #be00ff 100%); left: 0; color: white; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .graph li[data-score="100%"] { width: 100%; }
 .graph li[data-score="90%"] { width: 90%; }
 .graph li[data-score="80%"] { width: 80%; }

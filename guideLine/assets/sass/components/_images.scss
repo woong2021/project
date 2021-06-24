@@ -79,7 +79,7 @@
     }
 }
 /* Vue */
-@for $i from 1 through 35{
+@for $i from 1 through 41{
     @if($i < 10){
         .vue-0#{$i}{
             @include imagePush(vue,"0#{$i}");
@@ -95,7 +95,8 @@
     }
 }
 
-.vue-23{
+.vue-23,
+.vue-37{
     height: 100px;
 }
 
@@ -118,7 +119,9 @@
 .vue-30,
 .vue-32,
 .vue-33,
-.vue-34{
+.vue-34,
+.vue-38,
+.vue-39{
     height: 300px;
 }
 

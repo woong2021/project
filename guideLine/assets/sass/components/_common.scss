@@ -7,60 +7,64 @@
 /* Common */
 /* Font-face */
 @font-face {
-    font-family: 'Nanum Gothic';
+    font-family: 'Nanum_Gothic_Normal';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/NanumGothic-Regular.eot');
     src: url('../fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/NanumGothic-Regular.woff2') format('woff2'),
-         url('../fonts/NanumGothic-Regular.woff') format('woff'),
-         url('../fonts/NanumGothic-Regular.ttf') format('truetype');
-  }
+        url('../fonts/NanumGothic-Regular.woff2') format('woff2'),
+        url('../fonts/NanumGothic-Regular.woff') format('woff'),
+        url('../fonts/NanumGothic-Regular.ttf') format('truetype');
+}
 
 @font-face {
-font-family: 'Nanum Gothic';
-font-style: normal;
-font-weight: 700;
-src: url('../fonts/NanumGothic-Bold.eot');
-src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    font-family: 'Nanum_Gothic_Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NanumGothic-Bold.eot');
+    src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/NanumGothic-Bold.woff2') format('woff2'),
         url('../fonts/NanumGothic-Bold.woff') format('woff'),
         url('../fonts/NanumGothic-Bold.ttf') format('truetype');
 }
 
 @font-face {
-font-family: 'Nanum Gothic';
-font-style: normal;
-font-weight: 800;
-src: url('../fonts/NanumGothic-ExtraBold.eot');
-src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    font-family: 'Nanum_Gothic_ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/NanumGothic-ExtraBold.eot');
+    src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
         url('../fonts/NanumGothic-ExtraBold.woff') format('woff'),
         url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
 }
 
-body, table, div, p, ul li {
+body,
+table,
+div,
+p,
+ul li {
     margin-bottom: 10px;
 
     font : {
-        family:'Nanum Gothic';
+        family: 'Nanum_Gothic_Normal';
         size: 16px;
     }
 }
 
-body{
+body {
     margin-bottom: 0;
 }
 
 ul {
     list-style-type: none;
-    
-    li{
+
+    li {
         position: relative;
         margin-top: 10px;
         left: 10px;
 
-        &:before{
+        &:before {
             content: "-";
             position: absolute;
             left: -10px;
@@ -68,18 +72,19 @@ ul {
     }
 }
 
-ol{
-    li{
+ol {
+    li {
         margin-bottom: 10px;
         list-style-type: decimal;
     }
 }
 
 /* H Tag */
-h1{
+h1 {
     font-size: 32px;
 }
-h2{
+
+h2 {
     margin-bottom: 15px;
     padding: 15px 0;
     border-bottom: 2px solid $black;
@@ -89,7 +94,8 @@ h2{
         weight: 600;
     }
 }
-h3{
+
+h3 {
     display: inline-block;
     margin: 5px 0;
     padding: 10px 20px;
@@ -97,7 +103,8 @@ h3{
     font-size: 18px;
     color: $white;
 }
-h4{
+
+h4 {
     position: relative;
     margin: 20px 0;
     left: 15px;
@@ -107,8 +114,8 @@ h4{
         weight: 600;
     }
 
-    &:before{
-        content:"";
+    &:before {
+        content: "";
         position: absolute;
         background: $h4;
         left: -15px;
@@ -116,22 +123,24 @@ h4{
         height: 16px;
     }
 }
-h5{
+
+h5 {
     font-size: 24px;
 }
-h6{
+
+h6 {
     font-size: 22px;
 }
 
-ol{
+ol {
     position: relative;
     left: 30px;
-    list-style: decimal-leading-zero;  
+    list-style: decimal-leading-zero;
 }
 
 pre,
 .explanation-box,
-.explanation-box-pre{
+.explanation-box-pre {
     margin: 15px 0;
     padding: 10px 20px;
     border: 1px solid;
@@ -140,46 +149,48 @@ pre,
     box-sizing: border-box;
 }
 
-pre{
+pre {
     background-color: $black;
     color: $white;
+
     font : {
         family: 'NanumGothic', 'serif';
-        size : 15px;
+        size: 15px;
     }
+
     line-height: 1.5;
-    
+
 }
 
-.explanation-box{
-    ul{
-        li{
-            
-            &:before{
-                content:"";
+.explanation-box {
+    ul {
+        li {
+
+            &:before {
+                content: "";
             }
-            
-            &::marker{
+
+            &::marker {
                 display: none;
             }
 
-            div{
-                + p {
+            div {
+                +p {
                     margin-bottom: 20px;
                 }
             }
         }
     }
 
-    ol{
-        li{
-            > ul{
-                li{
+    ol {
+        li {
+            >ul {
+                li {
                     list-style-type: disclosure-open;
 
-                    > ol{
-                        li{
-                            list-style-type: decimal-leading-zero; 
+                    >ol {
+                        li {
+                            list-style-type: decimal-leading-zero;
                         }
                     }
                 }
@@ -187,70 +198,91 @@ pre{
         }
     }
 }
-.explanation-box-pre{
+
+.explanation-box-pre {
     padding: 0 15px;
 }
 
-.bold{
+.bold {
     font-weight: 900;
     color: brown;
 }
 
-a{
+a {
     text-decoration: none;
     color: $black;
 
-    &:hover{
+    &:hover {
         font-weight: 700;
     }
 }
 
-.notice{
+.notice {
     margin-bottom: 30px;
-    padding:0 10px;
-    border:1px solid #ff0000;
-    background:rgb(248, 218, 222);
+    padding: 0 10px;
+    border: 1px solid #ff0000;
+    background: rgb(248, 218, 222);
     line-height: 40px;
     box-sizing: border-box;
 
-    @media (min-width: 320px){
+    @media (min-width: 320px) {
         height: auto;
     }
 
-    @media (min-width: 768px){
-        height: 40px; 
+    @media (min-width: 768px) {
+        height: 40px;
     }
 }
 
-.sr-only{
-	position: absolute;
+.sr-only {
+    position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    border: 0;	
+    border: 0;
 }
 
 .graph {
-    li{
+    li {
         position: relative;
-        margin:10px 0;
-        padding: 15px  20px;
+        margin: 10px 0;
+        padding: 15px 20px;
         border-radius: 50px;
-        background: linear-gradient(90deg, rgba(104,97,232,1) 0%, rgba(190,0,255,1) 100%);
+        background: linear-gradient(90deg, rgba(104, 97, 232, 1) 0%, rgba(190, 0, 255, 1) 100%);
         left: 0;
-        color:white;
-        box-sizing:border-box;
+        color: white;
+        box-sizing: border-box;
 
-        &[data-score="100%"]{width:100%}
-        &[data-score="90%"]{width:90%}
-        &[data-score="80%"]{width:80%}
-        &[data-score="70%"]{width:70%}
-        &[data-score="50%"]{width:50%}
-        &[data-score="30%"]{width:30%}
-        &[data-score="20%"]{width:20%}
+        &[data-score="100%"] {
+            width: 100%
+        }
+
+        &[data-score="90%"] {
+            width: 90%
+        }
+
+        &[data-score="80%"] {
+            width: 80%
+        }
+
+        &[data-score="70%"] {
+            width: 70%
+        }
+
+        &[data-score="50%"] {
+            width: 50%
+        }
+
+        &[data-score="30%"] {
+            width: 30%
+        }
+
+        &[data-score="20%"] {
+            width: 20%
+        }
 
         &:before {
             position: absolute;
@@ -261,32 +293,32 @@ a{
     }
 }
 
-figure{
+figure {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid;
 
-    @media (min-width: 320px){
+    @media (min-width: 320px) {
         width: 100%;
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
         width: 33%;
     }
-    
 
-    img{
+
+    img {
         width: 100%;
     }
 
-    figcaption{
+    figcaption {
         text-align: center;
     }
 }
 
-#index{
-    figure{
+#index {
+    figure {
         padding: 0;
         border: 0;
         width: 100%;
@@ -294,35 +326,37 @@ figure{
 }
 
 /* font-color */
-.red{
+.red {
     color: $red;
 }
-.blue{
+
+.blue {
     color: $bgBlue;
 }
 
 /* Tab Menu */
-#tabList{
+#tabList {
     display: flex;
     border: 1px solid;
     width: 100%;
 
-    article{
+    article {
         width: 25%;
         height: 40px;
         text-align: center;
         line-height: 40px;
 
-        &.current{
+        &.current {
             background: $bgBlue;
             color: $white;
         }
     }
 }
-.tab-content{
+
+.tab-content {
     display: none;
 
-    &.current{
+    &.current {
         display: block;
     }
 }
