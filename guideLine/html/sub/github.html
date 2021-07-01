@@ -23,158 +23,221 @@
 
     <!-- Main Content -->
     <main id="container">
-        <section id="gitCli">
-            <h2>GIT (CLI)</h2>
-            <h3>기본문법</h3>
-            <p class="notice">- gitBash에서 작업 진행</p>
-            <table class="default-table">
-                <caption class="sr-only">gitBash에서 작업 진행</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">$pwd</th>
-                        <td>현재 나의 위치 확인</td>
-                    </tr>
-                    <tr>
-                        <th>$ls</th>
-                        <td>현재 위치에 디렉토리및 파일 확인</td>
-                    </tr>
-                    <tr>
-                        <th>$cd</th>
-                        <td>디렉토리 선택</td>
-                    </tr>
-                    <tr>
-                        <th>$cd ..</th>
-                        <td>상위 디렉토리 선택</td>
-                    </tr>
-                    <tr>
-                        <th>$git init</th>
-                        <td>git으로 버전관리 할 프로젝트 선택(git 초기화)</td>
-                    </tr>
-                    <tr>
-                        <th>$ls -al</th>
-                        <td>현재 위치에 디렉토리및 파일 확인(숨은 디렉토리까지)</td>
-                    </tr>
-                    <tr>
-                        <th>$git add [파일명]</th>
-                        <td>"commit" 할 파일 선택</td>
-                    </tr>
-                    <tr>
-                        <th>$ git add .</th>
-                        <td>"commit" 할 파일 전체 선택</td>
-                    </tr>
-                    <tr>
-                        <th>$git commit -m "[메모]"</th>
-                        <td>선택한 파일들을 한 묶음으로 만들고 메모 입력</td>
-                    </tr>
-                    <tr>
-                        <th>$git log</th>
-                        <td>생성한 커밋 보기</td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2>Github</h2>
+        <section id="tabList">
+            <article data-tab="CLI" class="current">CLI</article>
+            <article data-tab="GUI">GUI</article>
+            <article data-tab="Github">Github</article>
+            <article data-tab="Error">Error</article>
         </section>
-        <section id="remote">
-            <h3>원격 저장소에 올리기</h3>
-            <table class="default-table">
-                <caption class="sr-only">원격 저장소에 올리기</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">$git remote add [저장할 주소]</th>
-                        <td>$git remote add origin https://github.com/woong2021/project.git</td>
-                    </tr>
-                    <tr>
-                        <th>git remote -v</th>
-                        <td>원격저장소 연결상태 확인</td>
-                    </tr>
-                    <tr>
-                        <th>$git push origin master</th>
-                        <td>gitHub 사이트에 commit 하기</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="clone">
-            <h3>원격 저장소에 받아오기</h3>
-            <table class="default-table">
-                <caption class="sr-only">원격 저장소에 받아오기</caption>
-                <colgroup>
-                    <col style="width: 25%" />
-                    <col style="width: 75%" />
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">$git clone [받아올 주소]</th>
-                        <td>
-                            <p class="clone"></p>
-                            <p>$git clone https://github.com/woong2021/project.git .</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>$rm -rf [디렉토리명]</th>
-                        <td>디렉토리 삭제</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="Error">
-            <h3>Error</h3>
+        <section id="CLI" class="tab-content current">
+            <h3>GIT (CLI)</h3>
+            <p class="notice">CLI란 "Command-line interface"의 약자로 터미널을 통해 상호작용하는 방식</p>
             <article>
-                <h4>LF will be replaced by CRLF</h4>
+                <h4>GIT 초기화</h4>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto">
+                    <table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td style="padding:6px 0;text-align:left">
+                                <div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%">
+                                    <div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">init</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <article>
+                <h4>CLI 명령어</h4>
                 <table class="default-table">
-                    <caption class="sr-only">오류 해결방법</caption>
+                    <caption class="sr-only">CLI 명령어</caption>
                     <colgroup>
                         <col style="width: 25%" />
                         <col style="width: 75%" />
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">해결방법</th>
-                            <td>
-                                <div class="explanation-box-pre">
-                                    <pre>git config --global core.autocrlf true</pre>
-                                </div>
-                            </td>
+                            <th scope="row">$pwd</th>
+                            <td>현재 나의 위치 확인</td>
+                        </tr>
+                        <tr>
+                            <th>$cd</th>
+                            <td>디렉토리 선택</td>
+                        </tr>
+                        <tr>
+                            <th>$cd ..</th>
+                            <td>상위 디렉토리 선택</td>
+                        </tr>
+                        <tr>
+                            <th>$ls</th>
+                            <td>현재 위치에 디렉토리및 파일 확인</td>
+                        </tr>
+                        <tr>
+                            <th>$ls -al</th>
+                            <td>현재 위치에 디렉토리및 파일 확인(숨은 디렉토리까지)</td>
                         </tr>
                     </tbody>
                 </table>
             </article>
             <article>
-                <h4>Vue-Cli-Service 에러 - 외부 명령, 실행할 수 있는 프로그램 ...</h4>
+                <h4>버전 생성</h4>
                 <table class="default-table">
-                    <caption class="sr-only">오류 해결방법</caption>
+                    <caption class="sr-only">버전 생성</caption>
                     <colgroup>
                         <col style="width: 25%" />
                         <col style="width: 75%" />
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">해결방법</th>
+                            <th>$git add [파일명]</th>
+                            <td>"commit" 할 파일 선택</td>
+                        </tr>
+                        <tr>
+                            <th>$ git add .</th>
+                            <td>"commit" 할 파일 전체 선택</td>
+                        </tr>
+                        <tr>
+                            <th>$git commit -m "[메모]"</th>
+                            <td>선택한 파일들을 한 묶음으로 만들고 메모 입력</td>
+                        </tr>
+                        <tr>
+                            <th>$git log</th>
+                            <td>생성한 커밋 보기</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>브렌치</h4>
+                <div>
+                    <h5>브렌치 생성</h5>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">$&nbsp;<span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">checkout</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>b&nbsp;[브렌치명]</div></div></td></tr></table></div>
+                </div>
+                <div>
+                    <h5>원격 저장소에 브랜치 등록</h5>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">$&nbsp;<span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">push</span>&nbsp;<span style="color:#4be6fa">origin</span>&nbsp;[브렌치명]</div></div></td></tr></table></div>
+                </div>
+                <div>
+                    <h5>local 브렌치와 remote 브렌치 연결</h5>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">$&nbsp;<span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">branch</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span><span style="color:#0086b3"></span><span style="color:#ff3399">-</span>set<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>upstream<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>to&nbsp;<span style="color:#4be6fa">origin</span><span style="color:#ff3399">/</span>[브렌치명]</div></div></td></tr></table></div>
+                </div>
+                <div>
+                    <h5>브렌치 목록 확인</h5>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">$&nbsp;<span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">branch</span></div></div></td></tr></table></div>
+                </div>
+            </article>
+            <article>
+                <h4>원격 저장소에 올리기</h4>
+                <table class="default-table">
+                    <caption class="sr-only">원격 저장소에 올리기</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">$git remote add [저장할 주소]</th>
+                            <td>$git remote add origin https://github.com/woong2021/project.git</td>
+                        </tr>
+                        <tr>
+                            <th>git remote -v</th>
+                            <td>원격저장소 연결상태 확인</td>
+                        </tr>
+                        <tr>
+                            <th>$git push origin [브랜치명(master)]</th>
+                            <td>gitHub 사이트에 commit 하기</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>원격 저장소에서 받아오기</h4>
+                <table class="default-table">
+                    <caption class="sr-only">원격 저장소에서 받아오기</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">$git clone [받아올 주소] .</th>
                             <td>
-                                <div class="explanation-box-pre">
-                                    <pre>
-                                        // 설치하기 이전에 기존 vue-cli 삭제
-                                        npm uninstall vue-cil -g
-
-                                        // 그리고 재설치
-                                        npm install -g @vue/cli
-
-                                        // 제대로 안될 때 [node_modules 삭제]
-                                        npm uninstall node_modules
-                                    </pre>
-                                </div>
+                                <p class="clone"></p>
+                                <p>$git clone https://github.com/woong2021/project.git .</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>$rm -rf [디렉토리명]</th>
+                            <td>디렉토리 삭제</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h4>원격 저장소의 데이터 가져오기</h4>
+                <table class="default-table">
+                    <caption class="sr-only">원격 저장소의 데이터 가져오기</caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 75%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">원격 저장소의 데이터 가져오기</th>
+                            <td>
+                                <p>$git pull origin [브렌치명(master)]</p>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </article>
+        </section>
+        <section id="GUI" class="tab-content"></section>
+        <section id="Github" class="tab-content">
+            <section>
+                <h3>다른 사용자 추가</h3>
+            </section>
+        </section>
+        <section id="Error" class="tab-content">
+            <section >
+                <h3>Error</h3>
+                <article>
+                    <h4>LF will be replaced by CRLF</h4>
+                    <table class="default-table">
+                        <caption class="sr-only">오류 해결방법</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">해결방법</th>
+                                <td>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#ff3399">git</span>&nbsp;<span style="color:#4be6fa">config</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span><span style="color:#0086b3"></span><span style="color:#ff3399">-</span>global&nbsp;core.autocrlf&nbsp;<span style="color:#c10aff">true</span></div></div></td></tr></table></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article>
+                    <h4>Vue-Cli-Service 에러 - 외부 명령, 실행할 수 있는 프로그램 ...</h4>
+                    <table class="default-table">
+                        <caption class="sr-only">오류 해결방법</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 75%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">해결방법</th>
+                                <td>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#0086b3"></span><span style="color:#ff3399">/</span><span style="color:#0086b3"></span><span style="color:#ff3399">/</span>&nbsp;설치하기&nbsp;이전에&nbsp;기존&nbsp;vue<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>cli&nbsp;삭제</div><div style="padding:0 6px; white-space:pre; line-height:100%">npm&nbsp;uninstall&nbsp;vue<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>cil&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>g</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#0086b3"></span><span style="color:#ff3399">/</span><span style="color:#0086b3"></span><span style="color:#ff3399">/</span>&nbsp;그리고&nbsp;재설치</div><div style="padding:0 6px; white-space:pre; line-height:100%">npm&nbsp;install&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>g&nbsp;@vue<span style="color:#0086b3"></span><span style="color:#ff3399">/</span>cli</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#0086b3"></span><span style="color:#ff3399">/</span><span style="color:#0086b3"></span><span style="color:#ff3399">/</span>&nbsp;제대로&nbsp;안될&nbsp;때&nbsp;[node_modules&nbsp;삭제]</div><div style="padding:0 6px; white-space:pre; line-height:100%">npm&nbsp;uninstall&nbsp;node_modules</div></div></td></tr></table></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
         </section>
     </main>
     

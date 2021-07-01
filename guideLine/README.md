@@ -238,3 +238,18 @@
 - [github.html] "caption" 없는 테이블에 caption 추가
 - [github.html] "error"부분에 "Vue-Cli-Service"관련 오류 업데이트
 ```
+
+### 2021.06.25
+
+```
+- [공통] gnb 영역에서 "GuideLine" 메뉴 숨김처리
+- [github.html] 탭메뉴 추가 및 컨텐츠 분리
+- [github.html] Color Script 적용
+- [htmlcss.html] Color Script 미흡한 부분 적용
+```
+
+### 2021.07.01
+
+```
+- 프로젝트 종료 (projectNext 프로젝트로 이관)
+```
